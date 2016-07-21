@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/hk.edu.polyu.comp.LoongPlugin_1.1.1.jar" id="hk.edu.polyu.comp.LoongPlugin" version="1.1.1">
-      <category name="hk.edu.polyu.comp.LoongPlugin"/>
-   </feature>
-   <category-def name="hk.edu.polyu.comp.LoongPlugin" label="Loong"/>
-</site>
