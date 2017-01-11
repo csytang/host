@@ -96,38 +96,88 @@
         <div class="page-contents">
           <!-- #####Begin main area-->
           <section id="main-area">
+          	<section class = "slim-container">
+            <div class = "row">
+              <div class="text-danger col-md-6 col-md-offset-2">
+                  <div class="checkbox filter-checkbox" data-filter="a_level">
+                    <label>
+                      <input type="checkbox" id="a_level" value="a_level" checked="">Conference or Journal Papers in A Level
+                    </label>
+                  </div>
+               </div>
+            </div>
+            <div class = "row">
+              <div class="text-warning col-md-6 col-md-offset-2">
+                  <div class="checkbox filter-checkbox" data-filter="b_level">
+                    <label>
+                      <input type="checkbox" id="b_level" value="b_level" checked="">Conference or Journal Papers in B Level
+                    </label>
+                  </div>
+              </div>
+            </div>
+            <div class = "row">
+              <div class="text-info col-md-6 col-md-offset-2">
+                  <div class="checkbox filter-checkbox" data-filter="c_level">
+                    <label>
+                      <input type="checkbox" id="c_level" value="c_level" checked="">Conference or Journal Papers in C Level
+                    </label>
+                  </div>
+                </div>
+            </div>
+             <div class = "row">
+              <div class="text-success col-md-6 col-md-offset-2">
+                  <div class="checkbox filter-checkbox" data-filter="others">
+                    <label>
+                      <input type="checkbox" id="others" value="others" checked="">Papers in subfields or not covered in the ranking (also known as rubbish)
+                    </label>
+                  </div>
+                </div>
+            </div>
+            </section>
             <section class="slim-container">
               <div class="container">
                 <div class="ol-timeline scrollable-timeline">
                   <div class="tl-item active pub-item with-thumb"><span class="item-section">2017</span>
-                    <div class="elem-wrapper"><span class="label label-warning">SANER'2017</span></div>
-                    <div class="content-wrapper">
-                      <p class="title">Yutian Tang, and Hareton Leung, "StiCProb: A Novel Feature Mining Approach Using Conditional Probability"</p>
-                      <div class="description">
-                        <div>In Proceedings of 24th IEEE Internaltional Conference on Software Analysis, Evolution, and Reengineering (SANER), 2017.(AR 34/140 = 24%)<span class="block-elem">[<span class = "glyphicon glyphicon-paperclip"> </span> <a href = "./paper/saner2017.pdf">paper</a>][<span class = "glyphicon glyphicon-hdd"> </span><a href = ".././loong/">supporting webhost</a>][<span class = "glyphicon glyphicon-floppy-disk"> </span> <a href = "https://github.com/csytang/Loong">code</a>]</span></div>
-                      </div>
+                  <!--start papers in 2017-->
+                  <div class="b_level filter">
+                        <div class="elem-wrapper"><span class="label label-warning">SANER'2017</span></div>
+                        <div class="content-wrapper">
+                          <p class="title">Yutian Tang, and Hareton Leung, "StiCProb: A Novel Feature Mining Approach Using Conditional Probability"</p>
+                          <div class="description">
+                            <div>In Proceedings of 24th IEEE Internaltional Conference on Software Analysis, Evolution, and Reengineering (SANER), 2017.(AR 34/140 = 24%)<span class="block-elem">[<span class = "glyphicon glyphicon-paperclip"> </span> <a href = "./paper/saner2017.pdf">paper</a>][<span class = "glyphicon glyphicon-hdd"> </span><a href = ".././loong/">supporting webhost</a>][<span class = "glyphicon glyphicon-floppy-disk"> </span> <a href = "https://github.com/csytang/Loong">code</a>]</span></div>
+                          </div>
+                        </div>
                     </div>
+                   <!--end papers in 2017-->  
                   </div>                
                   <div class="tl-item pub-item with-thumb"><span class="item-section">2015</span>
-                    <div class="elem-wrapper"><span class="label label-success">SOFTENG'15</span></div>
-                    <div class="content-wrapper">
-                      <h3 class="title"><b>Yutian Tang</b>, and Hareton Leung, "Feature Mining for Product Line Construction".</h3>
-                      <div class="description">
-                        <div> In Proceedings of The First International Conference on Advances and Trends in Software Engineering (SOFTENG), 2015 <span class="block-elem">[<span class = "glyphicon glyphicon-paperclip"> </span> <a href = "./paper/softeng2015.pdf">paper</a>]</span>
+                   <!--begin papers in 2015--> 
+                   <div class="others filter">
+                        <div class="elem-wrapper"><span class="label label-success">SOFTENG'15</span></div>
+                        <div class="content-wrapper">
+                          <h3 class="title"><b>Yutian Tang</b>, and Hareton Leung, "Feature Mining for Product Line Construction".</h3>
+                          <div class="description">
+                            <div> In Proceedings of The First International Conference on Advances and Trends in Software Engineering (SOFTENG), 2015 <span class="block-elem">[<span class = "glyphicon glyphicon-paperclip"> </span> <a href = "./paper/softeng2015.pdf">paper</a>]</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  
+                  <div class="tl-item pub-item with-thumb">
+                  <div class="others filter">
+                    <div class="elem-wrapper"><span class="label label-success">ICEIS'2015</span></div>
+                      <div class="content-wrapper">
+                        <h3 class="title"><b>Yutian Tang</b>, and Hareton Leung, "Top-down Feature Mining Framework for Software Product Line".</h3>
+                        <div class="description">
+                          <div> In Proceedings of International Conference on Enterprise Information System (ICEIS), 2015.<span class="block-elem">[<span class = "glyphicon glyphicon-paperclip"> </span> <a href = "./paper/iceis2015.pdf">paper</a>]</span>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  
-                  <div class="tl-item pub-item with-thumb">
-                    <div class="elem-wrapper"><span class="label label-success">ICEIS'2015</span></div>
-                    <div class="content-wrapper">
-                      <h3 class="title"><b>Yutian Tang</b>, and Hareton Leung, "Top-down Feature Mining Framework for Software Product Line".</h3>
-                      <div class="description">
-                        <div> In Proceedings of International Conference on Enterprise Information System (ICEIS), 2015.<span class="block-elem">[<span class = "glyphicon glyphicon-paperclip"> </span> <a href = "./paper/iceis2015.pdf">paper</a>]</span></div>
-                      </div>
-                    </div>
-                  </div>
+                  <!---end paper 2015-->
                 </div>
               </div>
             </section>
@@ -169,5 +219,20 @@
     <!-- Only for local and can be removed on server-->
     <script src="../assets/js/custom.js"></script>
     <!-- #####End scripts-->
+    <script type = "text/javascript">
+      $(document).ready(function(){
+
+    $(".filter-checkbox").click(function(){
+        var value = $(this).attr('data-filter');
+        if(document.getElementById(value).checked==true){
+            $('.filter').filter('.'+value).show();
+        }else{
+            $('.filter').filter('.'+value).hide();
+        }
+
+    });
+
+});
+    </script>
   </body>
 </html>
