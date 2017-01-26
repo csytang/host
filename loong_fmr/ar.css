@@ -1,9 +1,10 @@
 #nav {
 width: 220px;
 float: left;
+position: fixed;
 margin-left: 1px;
 padding: 10px;
-border:1px dotted gray;
+border:1px solid gray;
 }
 .selected {background-color:#ffffcc}
 
@@ -12,7 +13,7 @@ border:1px dotted gray;
 	margin-left: 250px;
 	margin-right:8px;
 	border-left: 1px solid #006;
-	border:1px dotted gray;
+	border:1px solid gray;
 	margin-bottom: 8px;
 }
 
@@ -33,7 +34,7 @@ margin-top:8px;
 
 .code {
 	background-color: #EAEAEA;
-	border:1px dotted gray;
+	border:1px solid gray;
 	margin: 8px;
 	padding: 8px;
 	font-size: 90%;
@@ -62,7 +63,7 @@ th { border-bottom: 1px solid black; font-style: italic; font-weight: normal;}
 
 samp { 
 	background-color: #EAEAEA;
-	border:1px dotted gray;
+	border:1px solid gray;
 	margin: 8px;
 	padding: 8px;
 	font-size: 90%;
