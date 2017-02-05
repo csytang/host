@@ -26,7 +26,7 @@
 <body>
 
 
-<img style="width: 120px; height: 120px; float: left;" alt="Loong Logo" src="loong.png" />
+<img style="width: 120px; height: 120px; float: left;" alt="Loong Logo" src="typec.png" />
 <h1 align="center">TypeC: Variability-aware C-program Analyzer</h1>
 
 
@@ -45,8 +45,9 @@
 
 <div class="link"><a href="#howto">Howto Tutorial</a></div>
 
-<div class="link"><a href="#tools">Other Tools</a></div>
+<div class="link"><a href="#cases">Subject Systems</a></div>
 
+<div class = "link"><a href = "#reftools">Related Tools</a></div>
 <div class = "link"><a href="#data">Experiment and Data</a></div>
 
 <div class="link"><a href="#contact">Contact</a></div>
@@ -67,133 +68,37 @@
 </a>Description</h2>
 
 
-<p class="abstract"><span style="font-weight: bold;">Loong</span>
-is a software product line tool for analyzing and decomposing legacy code and cosntructing product line. It follows the paradigm of virtual separation of concerns, i.e., developers do not physically extract the feature code, and it allows developers to select seeds for each feature inside the feature model. Then the feature mining process will be actived to extract code segments that implement each feature. Code fragments belonging to a feature are shown with a background color. At last, each possible configurations for the product line will be extracted as a product varaint for the product line. In Loong, it implements several feature mining strategies including text comparsion, topology analysis, type checking, and our resolve-binding strategy. You can also consider implement your own feature mining strategy and integrated with loong, which allows you to compare you algorithm with peers. Please reference the tutorial to see how to add your algorithm to Loong easily.
-
-<p class="abstract"><span style="font-weight: bold;">Loong FMR</span> is an extension on Loong Plug-in, and works as a <span style="font-weight: bold;">conditional
-compilation</span> parser,
-for example using <span style="font-weight: bold; font-family: monospace;">#ifdef</span>
-and <span style="font-weight: bold; font-family: monospace;">#endif</span>
-statements. However, in contrast to traditional preprocessors, which
-typically work on plain text or tokens, Loong provides a number of
-innovations. The conditional compilation in C allows project in a dynamic mod with configuration options selcted. LoongFMR follows this pattern and extends it to Java. Therefore, module is the basic component in this research and decided by configurations (#ifdef pattern in C)
+<p class="abstract"><span style="font-weight: bold;">TypeC</span>
+is a configuration assist toolkit for product lines by building configuration profiles.
 </p>
 
 
+<h2><a name = "cases" id = "cases"></a>Subject Systems</h2>
+To assess our work and tool, we use TypeC to analyze 20 public available open source projects from different domains including compilers, database management systems, operating systems, and application software. The following table contains (1) the names of all analyzed software systems, (2) its version (development versions with date of download in brackets), (3) the domain the software refers to, and (4) the output of the analysis as CSV file.
 
 
-
-<h2><a name="download"></a>Download</h2>
-
-
-
-<p><span style="font-weight: bold;">Source code</span></p>
-
-
-<p>LoongFMR is open source (GPL license). The source code is
-available at GitHub.com:<a href = "https://github.com/csytang/LoongFMR">github.com/csytang/LoongFMR</a> <p>
-
-
-
-
-<h2><a name="howto" id="howto"></a>Howto</h2>
-
-<p>LoongFMR is an extension of our Loong Eclipse Plugin, therefore you can follow the basic framework described in our Loong tool at <a href = ".././loong/">here</a> <p>
-
-<h2>Examples / Case Studies</h2>
+<h2><a name = "reftools" id = "reftools">Related Tools</h2>
+<p>
+The general framework we adopt is Eclipse <a href=  "http://www.eclipse.org/cdt/">CDT(C/C++ Development Tooling)</a> plugin. Also, we use <a href= "http://cs.nyu.edu/xtc/">xtc/superC</a> to support the process of preprocessing and extracting all configurations in C.</p>
 
 <p>
-Available examples:</p>
-
-
+In addition, we also reference following tools during the development of typeC, authors would like to thanks all contributors of these great tools:
 <ul>
 
 
-  <li>Prevalyer (Java)</li>
+  <li><a href="http://ckaestne.github.io/TypeChef/">TypeChef</a></li>
 
 
-  <li>MobileMedia (Java)</li>
+  <li><a href="http://fosd.net/cppstats">cppstarts</a></li>
 
-  <li>Berkeley DB (Java and documentation)</li>
-
-
-  <li>ArgoUML (Java)</li>
-
-
+  <li><a href = "http://www.anarres.org/projects/jcpp/">JCPP- A Java C Preprocessor</a></li>
 </ul>
-
-
-<p>In Loong FMR and our research paper, we compare our approach and other architecture recovery approach and intergrate them into our plugin. That is, you donot need to download each of them, and you can find the source code <a href = "https://drive.google.com/open?id=0B9l0qvk6pnW0SEdCdE1taTNjVGc">here</a>.</p>
-
-<h2><a name="tool" id="tools"></a>Other Tools</h2>
-
-<p>
-Available Related Approached:</p>
-
-
-<ul>
-
-
-  <li><a href = "http://www.chrisyttang.org/loong_fmr/bunch/">Bunch</a></li>
-
-
-  <li><a href = "http://www.chrisyttang.org/loong_fmr/acdc/">ACDC</a></li>
-
-  <li><a href = "http://www.chrisyttang.org/loong_fmr/arc/">ARCADE</a></li>
-
-
-  <li><a href = "http://dblab.cs.toronto.edu/project/limbo/">LIMBO</a></li>
-
-
-</ul>
-<p>*Note that in the LIMBO project page, you cannot find the source code of limbo. However, it has been implemeneted and intergrated into ARCADE. That means, you can find the implementation of LIMBO in ARCADE and our project.
 </p>
-
-<h2><a name="data" id="data"></a>Experiment and Data</h2>
-<p>We also reserve the data of our work online at following url: <a href = "https://drive.google.com/open?id=0B9l0qvk6pnW0SEdCdE1taTNjVGc">LoongFMR data at Google Drive</a></p>
-<div class="tree well">
-	<ul>
-        		<li><span><i class="icon-folder-open"></i> LoongFMR_Case Study</span> 
-                    <ul>
-                        <li>
-	                        <span><i class="icon-leaf"></i><b> file:acdc_clusteringresult.rsf</b></span> the clustering result using ACDC algorithm
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:arc_clusteringresult.rsf</b></span> the clustering result using Architecture Recovery with Concern
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:bunch_clusteringresult.rsf </b></span> result using bunch tool. The original output is in .bunch format, in our LoongFMR, we provide a tool to convert a .bunch file into a .rsf file.
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:limbo_clusteringresult.rsf</b></span> result using LIMBO.
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:wca_uem_clusteringresult.rsf</b></span> the clustering result using  UE distance.
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:wca_uenm_clusteringresult.rsf</b></span> result using UE-NM distance
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:vms_clusteringresult.rsf</b></span> result using variability module system
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:.././data/$_ground_truth.rsf</b></span> ground truth of this project
-                        </li>
-                        <li>
-	                        <span><i class="icon-leaf"></i> <b>file:.././data/$_deps.rsf</b></span> dependency facts extracted for this project
-                        </li>
-                    </ul>
-              
-        		</li>
-   			</ul>
-</div>
-
-
 
 <h2><a name="contact" id="contact"></a>Contact</h2>
 
 
-<p><em>LoongFMR</em> was developed at the Hong Kong Polytechnic University, by Yutian Tang(Chris).
+<p><em>TypeC</em> was developed at the Hong Kong Polytechnic University, by Yutian Tang(Chris).
 For
 information about the
 project, please contact the development team via <em>csytang
@@ -202,11 +107,11 @@ project, please contact the development team via <em>csytang
 
 
 <p>For bug reports and feature requests you can also create a
-ticket in <a href="https://github.com/csytang/LoongFMR/issues">LoongFMR's bug tracker</a> or you can write an email to <a href = "mailto:loongplugin@gmail.com">loongplugin(AT)gmail.com</a>. In the email, please specify which sub-tool you use in Loong.
+ticket in <a href="https://github.com/csytang/TypeC/issues">TypeC's bug tracker</a>
 </p>
 
 
-<p><em>Loong</em> Contributers: </p>
+<p><em>TypeC</em> Contributers: </p>
 
 
 <ul>
@@ -216,7 +121,7 @@ ticket in <a href="https://github.com/csytang/LoongFMR/issues">LoongFMR's bug tr
 Hong Kong, project lead) </li>
 
 
-  <li><a href="http://www4.comp.polyu.edu.hk/~cshleung/">Hareton Leung</a> (Hong Kong Polytechnic Uni., Hong Kong)</li>
+  <li><a href="http://www4.comp.polyu.edu.hk/~cshleung/">Dr. Hareton Leung</a> (Hong Kong Polytechnic Uni., Hong Kong)</li>
 
 
 </ul>
