@@ -74,8 +74,168 @@ is a configuration assist toolkit for product lines by building configuration pr
 
 
 <h2><a name = "cases" id = "cases"></a>Subject Systems</h2>
-To assess our work and tool, we use TypeC to analyze 20 public available open source projects from different domains including compilers, database management systems, operating systems, and application software. The following table contains (1) the names of all analyzed software systems, (2) its version (development versions with date of download in brackets), (3) the domain the software refers to, and (4) the output of the analysis as CSV file.
+To assess our work and tool, we use TypeC to analyze 20 public available open source projects from different domains including compilers, database management systems, operating systems, and application software. The following table contains (1) the names of all analyzed software systems, (2) its version (development versions with date of download in brackets), (3) the domain the software refers to, (4) the program database of each system(CSV), and (4) configuration profiles for each system(CSV).
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg .tg-7462{font-weight:bold;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#fd6864}
+.tg .tg-f8ho{font-weight:bold;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#6665cd}
+.tg .tg-184d{font-weight:bold;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#67fd9a}
+.tg .tg-g3hv{font-weight:bold;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#fffe65;vertical-align:top}
+.tg .tg-1s24{font-weight:bold;font-family:"Comic Sans MS", cursive, sans-serif !important;;background-color:#38fff8;vertical-align:top}
+.tg .tg-yw4l{vertical-align:top}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-7462">software system</th>
+    <th class="tg-184d">version</th>
+    <th class="tg-f8ho">domain</th>
+    <th class="tg-g3hv">ProgramDatabase</th>
+    <th class="tg-1s24">Configurations Profiles</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">apache</td>
+    <td class="tg-yw4l">2.2.11</td>
+    <td class="tg-yw4l">web server</td>
+    <td class="tg-yw4l">apache_db</td>
+    <td class="tg-yw4l">apache_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">berkeley db</td>
+    <td class="tg-yw4l">4.7.25</td>
+    <td class="tg-yw4l">database</td>
+    <td class="tg-yw4l">berkeleydb_db</td>
+    <td class="tg-yw4l">berkeledydb_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">emacs</td>
+    <td class="tg-yw4l">22.3</td>
+    <td class="tg-yw4l">text editor</td>
+    <td class="tg-yw4l">emacs_db</td>
+    <td class="tg-yw4l">emacs_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">gcc</td>
+    <td class="tg-yw4l">4.3.3</td>
+    <td class="tg-yw4l">compiler framework</td>
+    <td class="tg-yw4l">gcc_db</td>
+    <td class="tg-yw4l">gcc_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">gimp</td>
+    <td class="tg-yw4l">2.6.4</td>
+    <td class="tg-yw4l">graphics editor</td>
+    <td class="tg-yw4l">gimp_db</td>
+    <td class="tg-yw4l">gimp_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">glibc</td>
+    <td class="tg-yw4l">2.9</td>
+    <td class="tg-yw4l">programming library</td>
+    <td class="tg-yw4l">glibc_db</td>
+    <td class="tg-yw4l">glib_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">libxml 2</td>
+    <td class="tg-yw4l">2.7.3</td>
+    <td class="tg-yw4l">XML library</td>
+    <td class="tg-yw4l">libxml_db</td>
+    <td class="tg-yw4l">libxml_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">linux</td>
+    <td class="tg-yw4l">2.6.28.7</td>
+    <td class="tg-yw4l">operation system</td>
+    <td class="tg-yw4l">linux_db</td>
+    <td class="tg-yw4l">linux_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">mplayer</td>
+    <td class="tg-yw4l">1.0rc2</td>
+    <td class="tg-yw4l">media player</td>
+    <td class="tg-yw4l">mplayer_db</td>
+    <td class="tg-yw4l">mplayer_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">mpsolve</td>
+    <td class="tg-yw4l">2.2</td>
+    <td class="tg-yw4l">mathematical software</td>
+    <td class="tg-yw4l">mpsolve_db</td>
+    <td class="tg-yw4l">mpsolve_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">opensolaris</td>
+    <td class="tg-yw4l">2009-05-08</td>
+    <td class="tg-yw4l">operation system</td>
+    <td class="tg-yw4l">opensolaris_db</td>
+    <td class="tg-yw4l">opensolaris_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">parrot</td>
+    <td class="tg-yw4l">0.9.1</td>
+    <td class="tg-yw4l">virtual machine</td>
+    <td class="tg-yw4l">parrot_db</td>
+    <td class="tg-yw4l">parrot_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">php</td>
+    <td class="tg-yw4l">5.2.8</td>
+    <td class="tg-yw4l">program interpreter</td>
+    <td class="tg-yw4l">php_db</td>
+    <td class="tg-yw4l">php_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">pidgin</td>
+    <td class="tg-yw4l">2.4.0</td>
+    <td class="tg-yw4l">instant messenger</td>
+    <td class="tg-yw4l">pidgin_db</td>
+    <td class="tg-yw4l">pidgin_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">postgresql</td>
+    <td class="tg-yw4l">2009-05-08</td>
+    <td class="tg-yw4l">database system</td>
+    <td class="tg-yw4l">postgresql_db</td>
+    <td class="tg-yw4l">postgresql_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">python</td>
+    <td class="tg-yw4l">2.6.1</td>
+    <td class="tg-yw4l">program interpreter</td>
+    <td class="tg-yw4l">python_db</td>
+    <td class="tg-yw4l">python_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">sylpheed</td>
+    <td class="tg-yw4l">2.6.0</td>
+    <td class="tg-yw4l">e-mail client</td>
+    <td class="tg-yw4l">sylpheed_db</td>
+    <td class="tg-yw4l">sylpheed_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">vim</td>
+    <td class="tg-yw4l">7.2</td>
+    <td class="tg-yw4l">text editor</td>
+    <td class="tg-yw4l">vim_db</td>
+    <td class="tg-yw4l">vim_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">xorg-server</td>
+    <td class="tg-yw4l">1.5.1</td>
+    <td class="tg-yw4l">X server</td>
+    <td class="tg-yw4l">xorgserver_db</td>
+    <td class="tg-yw4l">xorserver_cfg</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">xterm</td>
+    <td class="tg-yw4l">2.4.3</td>
+    <td class="tg-yw4l">terminal emulator</td>
+    <td class="tg-yw4l">xterm_db</td>
+    <td class="tg-yw4l">xterm_cfg</td>
+  </tr>
+</table>
 
 <h2><a name = "reftools" id = "reftools">Related Tools</h2>
 <p>
@@ -95,7 +255,7 @@ In addition, we also reference following tools during the development of typeC, 
 </ul>
 </p>
 
-<h2><a name="contact" id="contact"></a>Contact</h2>
+<h2><a name="contact" id="contact"></a>Contact and Reports Bugs</h2>
 
 
 <p><em>TypeC</em> was developed at the Hong Kong Polytechnic University, by Yutian Tang(Chris).
