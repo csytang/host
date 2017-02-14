@@ -1,13 +1,19 @@
-<?xml version="1.0" ?>
-<rss version="2.0">
-<channel>
-<title>Chris Tang's Homepage::The Hong Kong Polytechnic University</title>
-<description>Chris Tang's Homepage</description>
-<link>http://www.chrisyttang.org</link>
-<item>
-<title>Chris Tang's Home</title>
-<description>Chris Tang's Homepage</description>
-<link>http://www.chrisyttang.org</link>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Chris Tang's Homepage::The Hong Kong Polytechnic University</title>
+        <link>http://www.chrisyttang.org</link>
+        <description>Chris Tang's Homepage</description>
+        <generator>Feeder 2.0(1111) http://reinventedsoftware.com/feeder/</generator>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <language>en</language>
+        <pubDate>周二, 14 2月 2017 14:37:14 +0800</pubDate>
+        <lastBuildDate>周二, 14 2月 2017 14:37:14 +0800</lastBuildDate>
+        <item>
+            <title>Our paper "StiCProb: A Novel Feature Mining Approach Using Conditional Probability" has been accepted @SANER 2017</title>
+            <link>http://www.chrisyttang.org</link>
+            <description><![CDATA[find more at our project site <a href="http://www.chrisyttang.org/loong/">http://www.chrisyttang.org/loong/</a>]]></description>
+            <guid isPermaLink="false">our-paper-sticprob-a-novel-feature-mining-approa</guid>
+        </item>
+    </channel>
 </rss>
