@@ -1,6 +1,3 @@
-
-<!-- - var pageTitleImage = dirPrefix+"assets/img/page-title-bg-dark-1.jpg"-->
-<!-- - var pageTitleParallaxMode = 'bg-title'-->
 <!DOCTYPE html>
 
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/WebPage">
@@ -13,7 +10,7 @@
     <meta name="Content-Type-Script" content="text/javascript">
     <meta name="Content-Type-Style" content="text/css">
     <!-- author of this doc-->
-    <meta name="author" content="chrisyttang.org">
+    <meta name="Yutian Tang" content="www.chrisyttang.org">
     <!-- ################################-->
     <!-- #### add SEO metadata here-->
     <!-- ################################-->
@@ -37,10 +34,19 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300italic,400,400italic,700,700italic&amp;subset=latin,greek,cyrillic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Exo+2:400,200,300,400italic,500,700,900&amp;subset=latin,greek,cyrillic" rel="stylesheet" type="text/css">
     <!-- #####End load google fonts-->
-    <title>Contact - Chris Tang</title>
+    <title>Misc. - Chris Tang</title>
   </head>
   <!-- #####End head-->
-  <body class="fullwidth bg-gray">
+  <body class="fullwidth bg-gray sticky-header">
+    <div class="page-head h-400 center-it parallax-layer dark" data-img-src="../assets/img/bg/misc.jpg" data-parallax-mode="mode-title">
+      <div class="container">
+        <div class="tb-vcenter-wrapper">
+          <div class="title-wrapper vcenter parallax-layer" data-parallax-mode="mode-header-demo-2">
+            <h1 class="title">Misc.</h1>
+          </div>
+        </div>
+      </div>
+    </div>
     <div id="wrapper" class="boxed-layout-padding">
       <header id="header" data-sticky-threshold='-300' class=" light sticky-light">
         <div class="head-main slim-container text-center">
@@ -59,13 +65,13 @@
             </li>
             <li><a href=".././projects/" title="Projects"><span>Projects</span></a>
             </li>
-            <li><a href="http://blog.chrisyttang.org" title="Blog"><span>Blog</span></a>
+            <li><a href="https://blog.chrisyttang.org" title="Blog"><span>Blog</span></a>
             </li>
             <li><a href=".././gallery/" title="Gallery"><span>Gallery</span></a>
             </li>
-            <li><a href=".././misc/" title="Misc"><span>Misc</span></a>
+            <li class="current-menu-item"><a href="#" title="Misc"><span>Misc</span></a>
             </li>
-            <li class="current-menu-item"><a href="contact.html" title="Contact"><span>Contact</span></a>
+            <li><a href=".././contact/" title="Contact"><span>Contact</span></a>
             </li>
           </ul>
           <!-- #####Begin icons beside menu-->
@@ -83,42 +89,46 @@
       <!-- end #header-->
       <section id="contents">
         <!-- handle parallax mods-->
-        <div class="page-head h-400 center-it parallax-layer dark" data-img-src="../assets/img/bg/contactbg.jpg" data-parallax-mode="mode-title">
-          <div class="container">
-            <div class="tb-vcenter-wrapper">
-              <div class="title-wrapper vcenter">
-                <h4 class="head">For research cooperation and free discussion</h4>
-                <h1 class="title">Contact</h1>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="page-contents">
           <!-- #####Begin main area-->
           <section id="main-area">
             <section class="section slim-container">
+            <p>I reserve several interesting and useful links here, also my twitter and lastest new. 
+            </p>
               <div class="container">
-                <div class="row">
-                  <div class="col-md-6 col-md-offset-3 text-center pull-up-200 contact-form">
-                    <div class="heading-with-sub">
-                      <h4 class="subtitle">&nbsp;</h4>
-                    </div>
-                    <div class="sp-line-50 m-bottom-20"></div>
-                    <form id="contact-form" action="php/contact/contact.php">
-                      <label for="name">Name</label>
-                      <input type="text" name="name" class="m-bottom-20 form-control">
-                      <label for="email">Email</label>
-                      <input type="email" name="email" class="m-bottom-20 form-control">
-                      <label for="subject">Subject</label>
-                      <input type="text" name="subject" class="m-bottom-20 form-control">
-                      <label>Message</label>
-                      <textarea rows="6" type="textarea" name="message" class="m-bottom-20 form-control"></textarea>
-                      <input type="submit" value="Send it" class="btn btn-medium btn-skin-dark btn-thick-border btn-block">
-                    </form>
-                  </div>
-                </div>
+                <h1>News</h1>
+                <p>
+                	<ul>
+                    <li>Our paper was accepted @ ICPC'2017::2017-02-28</li>
+                    <li>Our paper was accepted @ SANER'2017::2016-11-23</li>
+                    </ul>
+                </p>
+              	<h1>Talks::Tech and Non-tech</h1>
+              	<p>
+                    <ul>
+                    <li>Jo Atlee::<a href = "https://livestream.com/itmsstudio/events/6919492?t=1485444595837"><b>Detecting and Resolving Software Errors</b></a></li>
+                    <li>Christian Kastner::<a href = "https://scs.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=5c80c0ae-4420-4b0a-ab35-58ad4817c6fa"><b>Starting an Academic Career: Reflection on Habits that Worked for Me</b></a>(<font color = "red">highly recommend</font>)</li>
+                    </ul>
+              	</p>
+                <h1>Tutorals and MOOC</h1>
+                <p>
+                <ul>
+                	<li>Boyd and Vandenberghe::<a href = "http://stanford.edu/~boyd/cvxbook/"><b>Convex Optimization</b></a>
+                    </li>
+                </ul>
+                </p>
+                <h1>Articles and blogs</h1>
+                    <p>
+                        <ul>
+                        	<li>Raul Pacheco-Vega::<a href = "http://www.raulpacheco.org/2017/01/finding-the-most-relevant-information-in-a-paper-when-reading-a-three-step-method/?utm_content=buffer339ba&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer"><b>Finding the most relevant information in a paper when reading: A three-step method</b></a></li>
+                            <li>Vincent Granville::<a href= "http://www.datasciencecentral.com/profiles/blogs/the-mathematics-of-machine-learning"><b>The Mathematics of Machine Learning</b></a></li>
+                            
+                        </ul>
+                    </p>      
               </div>
+              <a class="twitter-timeline" data-lang="en" data-width="600" data-height="500" data-theme="dark" data-link-color="#E81C4F" href="https://twitter.com/csytang">Tweets by csytang</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </section>
+            
           </section>
           <!-- #####End main area
           -->
@@ -137,7 +147,7 @@
             <div class="container">
               <div class="col-md-6 col-md-offset-3">
                 <ul class="social-icons shape-circle hover-theme m-top-20">
-                  <li><a href="https://www.facebook.com/csytang"><i class="fa fa-facebook"></i></a></li>
+                   <li><a href="https://www.facebook.com/csytang"><i class="fa fa-facebook"></i></a></li>
                   <li><a href="https://twitter.com/csytang"><i class="fa fa-twitter"></i></a></li>
                   <li><a href="https://github.com/csytang"><i class="fa fa-github"></i></a></li>
                   <li><a href="https://blog.chrisyttang.org"><i class="fa fa-rss"></i></a></li>
@@ -152,10 +162,11 @@
       </footer>
       <!-- end #footer-->
     </div>
-    <span class="subtitle">If you want to work with me or discuss my research work, please contact me</span>    <!-- #####Begin scripts-->
+    <!-- #####Begin scripts-->
     <script src="../assets/js/vendors/vendors.js"></script>
     <!-- Local Revolution tools-->
     <!-- Only for local and can be removed on server-->
+    
     <script src="../assets/js/custom.js"></script>
     <!-- #####End scripts-->
   </body>
