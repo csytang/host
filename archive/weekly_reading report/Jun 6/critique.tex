@@ -1,0 +1,375 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+
+\usepackage{xspace}
+\usepackage{url}
+\usepackage{booktabs}
+
+\clubpenalty 10000
+\widowpenalty 10000
+\def\topfraction{0.9}
+\def\bottomfraction{0.9}
+\def\textfraction{0.1}
+
+% margins
+%\topmargin 0truein
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{description}
+\item[Type:] Weekly reading report  \hfill {\bf Date:} \today
+\item[Paper:] [Variability-Aware Parsing in the Presence of Lexical Macros and Conditional Compilation] Christian Kaestner, Paolo G. Giarrusso, Tillmann Rendel, Sebastian Erdweg, Klaus Ostermann, and Thorsten Berger. \emph{In Proceedings of the 26th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA) (Portland, OR), New York, NY, October 2011. ACM Press.} 
+\end{description}
+
+\paragraph{Summary:}
+In this paper, authors proposed a novel \underline{variability-aware parser} that can parse almost all unpreprocessed code without heuristics in practicable time.
+
+\paragraph{What problem(s) are they solving?} In practice, it is unrealistic to parse code without preprocessing it. This paper proposed a variability-aware parser to parse, analyse, and process unpreprocessed code to further support variability-aware error detection, program understanding, reengineering, refactoring and other code transformations.
+
+\paragraph{Motivation(Why are these problems important):} Current attempts to parse un-preprocess C code are:
+\begin{itemize}
+	\item \textbf{unsound:} A variability-aware parser is \underline{unsound} if it produces a parse result which does not correctly represent the result from preprocessing and parsing in all variants. (\emph{\textbf{not} collect the results from all variants}) 
+	\item \textbf{incomplete:} A variability-aware parser is \underline{incomplete} if it rejects a code fragment even though preprocessing and parsing would succeed for all variants. (\emph{\textbf{Reject code without preprocessing} even if there is one valid configuration});
+	\item \textbf{exponential explosion:} when the number of feature is large.
+\end{itemize}
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)}
+The main contribution of this work is a variability-aware parsing framework. 
+\begin{itemize}
+	\item  Comparing with three common strategies to parse un-preprocessed C code:
+		\subitem \textbf{brute force}: parse and analyze the preprocessed variants in isolation, it suffers from \underline{exponential explosion} and quickly becomes infeasible in practice when the number of features grows;(break \textbf{exponential explosion})
+		\subitem \textbf{manual code preparation}: support only a subset of possible preprocessor usage;(break \textbf{complete})
+		\subitem \textbf{heuristics and partial analysis}: exploit repeating patterns and idioms, such as the common include-guard pattern or capitalised letters for macro names;(break \textbf{soundness}) 
+\end{itemize}
+
+\paragraph{What methods are they using?}\mbox{}\\
+
+\textbf{Variability-aware Lexer}\newline
+\textbf{Step 1. Conditional-token Stream}
+\begin{enumerate}
+	\item Token-based lexer;
+	\item Each token has a \textit{presence condition}; resulting in \textit{conditional-token stream};
+	\item \textit{Presence condition} serves as the \textbf{subscript} to tokens, and separate tokens by ``$\cdot $'' and empty token sequences as ``$\O $''. For example, a conditional-token stream ``$3\cdot * \cdot 7 \cdot + \cdot 1_{A} \cdot 0_{\neg A}$''
+\end{enumerate}
+\textbf{Step 2. File inclusion and macros}
+\begin{enumerate}
+	\item When including a header file, continue reading tokens from that file. \textit{Only when there is a macro, look up for expansion in the header file.}
+	\item When reading a macro token $<=>$ expand it based on the macro;
+	\item \textbf{Multiple definitions of a macro} $<=>$ return all possible expansions with corresponding presence conditions. For example, a conditional-token stream with macro expansion :
+	$$3\cdot *_{X} \cdot 7_{X} \cdot + \cdot 1_{Y\wedge Z}  \cdot 4_{Y\wedge \neg Z} \cdot *_{Y} \cdot 1_{Y\wedge X} \cdot 2_{Y\wedge \neg X} \cdot 0 _{\neg Y}$$
+\end{enumerate}
+
+
+\textbf{A Library of Variability-aware Parser Combinators}\newline
+\begin{enumerate}
+	\item Transfer the \textit{conditional token stream} into abstract syntax tree;
+	\item ``$\diamond$'' to represent a \texttt{Choice};
+	\item \textbf{Split} the parser context on conditional tokens (
+	\underline{split when necessary});
+	\item \textbf{Join} the parser contexts again to produce choice nodes in the abstract syntax tree \\(\underline{join early to avoid parsing tokens repeatedly});
+	\item \textbf{Context Splitting.}\\
+	use the function \texttt{next} to determine whether there is a need on splitting\\
+	$ \mid $ next: VParser[Token]\\
+	$ \mid $ next$\left ( ctx, \O \right )=$ FAIL$<$``unexpected end of file''$>$\\
+	$ \mid $ next$\left ( ctx, t_{pc}\cdot rest \right )=$\\
+	$ \mid --$ SUCC$<t_{pc},rest>$, if $ctx$ implies $pc$\\
+	$ \mid --$ next$\left ( ctx, rest \right )=$, if $ctx$ contradicts $pc$\\
+	$ \mid --$ SPLIT\\
+	\item \textbf{Filtering.}\\
+	\texttt{Filter} function that checks all successful parse results from next and replaces them by failures in case the expected token does not match.
+	\item \textbf{Joining contexts.}\\
+	Joining of parse results that attempts to join the results of another parser. The key idea is to \underline{move variability out of a split} parse result into the resulting abstract syntax tree.
+	\item \textbf{When to join?}\\ 
+	\underline{Joining after typical fine-grained program structures} seems to be a good balance between computation overhead and low amount of repeated parsing. 
+	\item \textbf{Sequencing}\\ A sequence parser combinator ($p\sim q$), The produced parser \underline{continues all successful results} (and only successful results) of the first parser with the second parser. 
+	\item \textbf{Alternatives}\\ The parser combinator for alternatives ($p\mid q$), it replaces all failures with the result of the second parser, called with the corresponding context.
+	\item \textbf{Repetition}\\ Parser combinators for repetition ($p^{∗}$ or $p^{+}$) can be constructed with sequencing and alternatives.
+	\item \textbf{Function application}\\ This paper adopts \textbf{Repetition} combinators.\\
+		- Split parser context as late as possible and provide facilities to join parser context early.\\
+		- If we attempt to join after each parsing step, we guarantee to consume each token only once in token streams with only disciplined annotation.\\
+		- Although we need to reason about the relationship be- tween parser context and presence condition for every single token, this can be done efficiently with contemporary SAT solvers, even for complex formulas with hundreds of features. 
+\end{enumerate}
+
+\subparagraph{Summary}
+
+\paragraph{Would you have solved the problem differently?}[TODO]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 2%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [A Variability-Aware Module System] Christian Kästner, Klaus Ostermann, and Sebastian Erdweg.\emph{In Proceedings of the 27th Annual ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications (OOPSLA), pages 773--792, New York, NY: ACM Press, October 2012.} 
+\end{description}
+
+\paragraph{Summary:} 
+
+\paragraph{What problem(s) are they solving?} 
+\paragraph{Motivation(Why are these problems important):}
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)}
+\paragraph{What methods are they using?}
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [Scalable Analysis of Variable Software] J. Liebig, A. von Rhein, C. Kästner, S. Apel, J. Dörre, and C. Lengauer.\emph{In Proceedings of the European Software Engineering Conference and ACM SIGSOFT Symposium on the Foundations of Software Engineering (ESEC/FSE), New York, NY: ACM Press, August 2013} 
+\end{description}
+
+\paragraph{Summary:} In this paper, authors build a \textit{module system} to cope with scale problem in real-world projects. 
+\paragraph{What problem(s) are they solving?} In this paper, it try to solve the problems in following perspectives: 
+\begin{itemize}
+	\item sampling and variability-aware analysis(Variable abstract syntax tree);
+	\item scalable variability-aware analysis;
+	\item variable control-flow graph;
+	\item variability-aware liveness analysis;
+	\item variability-aware type checking;
+\end{itemize}
+
+\paragraph{Motivation(Why are these problems important):} Previous work, including parsing, type checking, data-flow analysis, model checking, and deductive verification. While these work are promising, variability-aware analyses have not been applied to large-scale, real-world systems so far; previous work concentrated mostly either on formal foundations or \underline{is limited with respect to practicality}.
+
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)} 
+\textbf{Comparing with the sampling analysis}
+\begin{enumerate}
+	\item \textbf{Single-conf heuristic.} to analyze only a single representative variant that enables most.
+	\item \textbf{Random heuristic.} a simple approach to select samples is to generate them randomly. For \textit{n} features, make \textit{n} random, independent decisions whether to enable the corresponding configuration option.
+	\item \textbf{Code-coverage heuristic.} select a minimal sample set of variants, such that every lexical code fragment of the systems' code base is included in, at least, one variant.
+	\item \textbf{Pair-wise heuristic} using the pair-wise heuristic, the sample set contains a minimal number of samples that cover all pairs of configuration options, whereby each sample is likely to cover multiple pairs.
+\end{enumerate}
+
+
+\paragraph{What methods are they using?}
+\textbf{Variable abstract syntax trees}\\
+\begin{enumerate}
+	\item Add \texttt{Choice} node expresses \underline{the choice between two or more alternative subtrees};
+	\item \texttt{Choice(Prop,A,B)} to represent the with the condition \texttt{Prop}, if  \texttt{Prop} is enabled, it will jump to A, otherwise B;
+\end{enumerate}
+
+\textbf{Variability-aware type checking}\\
+\begin{enumerate}
+	\item Extend the symbol table, a symbol is not mapped to a single type, it map to a conditional type;
+	\item During expression typing, assign a variable type (choice of types) to each expression, where already looking up a name in a symbol table may return a variable type;
+	\item Use variability model(if available) to filter all type errors that occur only in invalid variant;
+\end{enumerate}
+
+\textbf{Variable control-flow graphs}\\
+\begin{enumerate}
+	\item define a variability-aware \underline{successor function} that may return different successor set for different variants, or, equivalently, but with more sharing.
+	\item using the result of \underline{successor function}, we determine for every possible successor, a corresponding presence condition, which we store as \underline{annotation of the edge} in the variable CFG.
+\end{enumerate}
+
+\textbf{Variability-aware liveness analysis}\\
+\begin{enumerate}
+	\item \texttt{uses} computes all variables read;
+	\item \texttt{defines} computes all variables written to;
+	\item based on \texttt{uses} and \texttt{defines} to compute the live variables and along with presence conditions 
+\end{enumerate}
+
+\textbf{Principle: Keeping variability local}\\
+\begin{enumerate}
+	\item \textit{late splitting}: perform the analysis without variability until we encounter it.
+	\item \textit{local variability representation}: keeping variability local in intermediate results. Instead of copying the entire symbol table for a single variable entry, we have only a single symbol table with conditional entries.
+	\item \textit{early joining}: attempts to join intermediate results as early as possible.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 4%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [Mining Configuration Constraints: Static Analyses and Empirical Results] S. Nadi, T. Berger, C. Kästner, and K. Czarnecki.\emph{In Proceedings of the 36th International Conference on Software Engineering (ICSE), pages 140--151, June 2014.} 
+\end{description}
+
+\paragraph{Summary:} Extracting the configuration constraints from the source code and mapping the constraint from feature model.
+
+\paragraph{Motivation(Why are these problems important):}
+\begin{itemize}
+	\item Many systems have no documented variability model or rely on information textual descriptions of constraints;
+	\item Identifying the sources of configuration constraints is essential to support automatically creating variability models.
+\end{itemize}
+
+
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)}
+\begin{itemize}
+	\item an extension and combination of existing analyses to extract configuration constraints;
+	\item a novel constraint extraction technique based on feature use and code structure;
+	\item a quantitative study of the effectiveness of such techniques to recover constraints;
+	\item a qualitative study of sources of constraints in existing models.
+\end{itemize}
+
+\paragraph{What methods are they using?} 
+\subparagraph{Problem Space} enforced configuration constraints can stem from technical restrictions present in the solution space such as dependencies between two code artifacts.
+\begin{itemize}
+	\item Constraints from the existing variability models;
+	\item $\mid$ - hierarchy constraints
+	\item $\mid$ - cross-tree constraints
+\end{itemize}
+\subparagraph{Solution Space} extract global configuration constraints from the code (\underline{in all variants}, any configuration \textit{violating} this constraint is \textit{ill-defined} by some specification)
+\begin{itemize}
+	\item \textbf{Build-time errors}: Every valid configuration of the system must not contain build-time errors, such that it can be successfully preprocessed, parsed, type checked, and linked.
+	\item \textbf{Feature Effect}: Every valid configuration of the system should yield a lexically different program.
+\end{itemize}
+
+\textbf{Build-time errors}\\
+\begin{itemize}
+	\item \textbf{Preprocessor Errors}: test \underline{\#ERROR directives} and extract the relation(configuration) reach this directive;
+	\item \textbf{Parser Errors}: syntax error, but TypeChef reports \underline{syntax error} with corresponding presence condition;
+	\item \textbf{Type Errors} report type error with presence condition;
+	\item \textbf{Constraints} == extracted from each error(preprocessor, parser, type error)
+	\item \textbf{Linker Constraints} (1) check only linkage within the application and discard symbols defined in libraries (2) extract global across file constraints, derive linker errors and corresponding constraints;
+\end{itemize}
+
+\textbf{Feature effects}
+\begin{itemize}
+	\item \textbf{feature effect} detecting nesting among \#IFDEFs, that is, a nested feature should not be selected without the outer feature, then create a constraint.
+	\item (1) \textit{collect all unique PCs} of all code fragments
+	\item (2) compute a feature's effect. $==>$ if a feature $f \in F$ has \underline{an no effect} in a PC $\phi in P$ if $\phi[f\leftarrow True]$ is equivalent to $\phi[f\leftarrow False]$. Otherwise, using $\phi[f\leftarrow True] \oplus \phi[f\leftarrow False]$ to show substituting $f$ is different.
+	\item (3) from (2), we can extract the constraints like: $f\rightarrow \vee \phi\left [ f\leftarrow True \right ]\oplus \phi\left [ f\leftarrow False \right ]$;
+\end{itemize}
+
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [Variational Data Structures: Exploring Tradeoffs in Computing with Variability] E. Walkingshaw, C. Kästner, M. Erwig, S. Apel, and E. Bodden.\emph{In Proceedings of the 13rd SIGPLAN Symposium on New Ideas in Programming and Reflections on Software at SPLASH (Onward!), pages 213--226, New York, NY: ACM Press, 2014.} 
+\end{description}
+
+\paragraph{Summary:} First research on variational data structures will benefit not only customisable software, but many other application domains that must cope with variability.
+
+\paragraph{What problem(s) are they solving?} 
+\paragraph{Motivation(Why are these problems important):}
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)}
+\paragraph{What methods are they using?}
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 6%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [Morpheus: Variability-Aware Refactoring in the Wild] J. Liebig, A. Janker, F. Garbe, S. Apel, and C. Lengauer.\emph{In Proceedings of the IEEE/ACM International Conference on Software Engineering (ICSE), pages 380–391. IEEE Computer Society, May 2015.} 
+\end{description}
+
+\paragraph{Summary:}
+\paragraph{What problem(s) are they solving?} 
+\paragraph{Motivation(Why are these problems important):}
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)}
+\paragraph{What methods are they using?}
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [Partial Preprocessing C Code for Variability Analysis] Christian Kästner, Paolo G. Giarrusso, and Klaus Ostermann\emph{In Proceedings of the Fifth International Workshop on Variability Modelling of Software-intensive Systems (VaMoS) (Namur, Belgium), pages 137-140, New York, NY, USA, January 2011. ACM Press.} 
+\end{description}
+
+\paragraph{Summary:}
+\paragraph{What problem(s) are they solving?} It is hard to analyze code that was not already preprocessed
+\paragraph{Motivation(Why are these problems important):}	
+- It is hard to process C code due to preprocessor:
+	\begin{itemize}
+		\item The C preprocessor is token-based and uses lexical macro and no mechanism to detect potential problem in the underlying code.(\textbf{Token based no error detection})
+		\item  Deeply interwined with the file-inclusion mechanism (\#include) and macro facilities(\#define and \#undef)(\textbf{A lots interaction})
+		\item Conditional compilation is not only used for variability implementation also used for include guards(\textbf{Distinguish macro for variability and normal issue})
+	\end{itemize}
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)}
+\begin{itemize}
+	\item A comprehensive description of the problem of analysing variability in pre-cpp code;
+	\item partially preprocessing code by evaluation file inclusion and macros but not conditional compilation;
+	\item Implementation on top of C preprocessor;
+	\item Evaluation on top of a C preprocessor;
+\end{itemize}
+
+\paragraph{What methods are they using?}
+\begin{itemize}
+	\item \textbf{Presence condition}: 
+\end{itemize}
+
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [Presence-Condition Simplification in Highly Configurable Systems] A. von Rhein, A. Grebhahn, S. Apel, N. Siegmund, D. Beyer, and T. Berger. \emph{In Proceedings of the IEEE/ACM International Conference on Software Engineering (ICSE), pages 178–188. IEEE Computer Society, May 2015.} 
+\end{description}
+
+\paragraph{Summary:}
+\paragraph{What problem(s) are they solving?} 
+\paragraph{Motivation(Why are these problems important):}
+
+
+	
+\paragraph{What methods are they using?}
+
+
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%paper 12%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\begin{description}
+\item[Paper:] [TypeChef: Toward Type Checking \#ifdef Variability in C] Andy Kenner, Christian Kästner, Steffen Haase, and Thomas Leich.\emph{In Proceedings of the Second Workshop on Feature-Oriented Software Development (FOSD) (Eindhoven, The Netherlands), pages 25-32, New York, NY, USA, October 2010. ACM Press.} 
+\end{description}
+
+\paragraph{Summary:}
+\paragraph{What problem(s) are they solving?} An initial solution for type checking. To guarantee that all potential variants of a product line are well-typed without generating all variants. (check types before running the preprocessor with a specific feature combination)
+\paragraph{Motivation(Why are these problems important):} 
+\paragraph{What is the contribution of the work?(i.e. what is interesting or new?)} 
+\begin{itemize}
+	\item outline the difficulties of product-line–aware type checking
+	\item an initial solution with TypeChef
+	\item partial preprocessor to handle file inclusion and macro substitution
+	\item how TypeChef can detect inconsistencies
+\end{itemize}
+\paragraph{What methods are they using?}\mbox{}\\
+
+\textbf{Partial Preprocessor}\\
+\begin{itemize}
+	\item A \textit{partial preprocessor}: combine \underline{macro expansion} and \underline{file inclusion}; 
+	\item \textit{include guard} is not considered as variability factor;
+\end{itemize}
+
+\textbf{Expansion to Disciplined Annotations}
+In contrast, TypeChef considers conditional compilation directives at finer granularity or around partial elements as undisciplined. In general it is always possible to expand undisciplined annotations to disciplined ones.
+
+\textbf{Parsing} Implement a parser with the parser generate ANTLR based on an existing GNU C grammar.
+
+\textbf{Reference Analysis}
+\begin{itemize}
+	\item TypeChef looks up references that should be checked.
+	\item cond', create a set of formulas that we can later feed into a solver;
+	\item cond', 
+\end{itemize}
+
+
+
+\paragraph{Would you have solved the problem differently?}[TODO]
+\paragraph{Do all the pieces of their work fit together logically?}
+
+
+
+\bibliographystyle{abbrv}
+\bibliography{critique}
+
+\end{document}
