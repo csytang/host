@@ -91,11 +91,11 @@ form {
 }
 
 body {
-	background: #fff url('../images/bg2.jpg');
+	background: #fff url('../images/bg.jpg');
 }
 
 #main {
-	background: url('../images/bg2.jpg') repeat;
+	background: url('../images/bg.jpg') repeat;
 }
 
 .hide {
