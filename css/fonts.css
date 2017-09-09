@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'TitilliumText25L1wt';
+    src: url('fonts/titilliumtext25l005-webfont.eot');
+    src: url('fonts/titilliumtext25l005-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/titilliumtext25l005-webfont.woff') format('woff'),
+         url('fonts/titilliumtext25l005-webfont.ttf') format('truetype'),
+         url('fonts/titilliumtext25l005-webfont.svg#TitilliumText25L1wt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
