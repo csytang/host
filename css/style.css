@@ -180,17 +180,6 @@ p {
 	text-decoration: underline;
 }
 
-.download {
-	margin-right: 23px;
-	float: right;
-	background: url('../images/download.png') top right no-repeat;
-	height: 18px;
-	display: inline-block;
-	font-weight: bold;
-	color: #cb282b;
-	padding-right: 23px;
-}
-
 .profileimage {
 	float: left;
 	width: 198px;
