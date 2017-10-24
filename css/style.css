@@ -186,6 +186,10 @@ p {
 	text-decoration: underline;
 }
 
+ul li{
+	margin-bottom:8px;
+}
+
 .profileimage {
 	float: left;
 	width: 198px;
