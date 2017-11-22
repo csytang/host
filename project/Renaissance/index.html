@@ -4,7 +4,7 @@
 </head><body data-gr-c-s-loaded="true"><div id="OuterCanvas"><div id="InnerCanvas">
   <div id="Page">
     <div class="title">
-      <span class="name">Renaissance: An Android Studio Plugin for Android Program Slicing</span>
+      <span class="name">Renaissance: An Android Studio Plugin for Android Program Understanding</span>
       <span><a class="pubauthor" style="padding-left:405px" target="_blank" href="http://chrisyttang.org">Chris Tang</a></span>
 </div>
   <div class="heading">
@@ -13,15 +13,34 @@
   
   <div class = "entry">
     <p>
-      Renaissance is initially inspired by <a href = "https://github.com/MIT-PAC/droidsafe-src">DroidSafe: Android Static Analysis Tool</a>.<br>
-      The detailed description of DroidSafe could be found in research work <a href = "https://people.csail.mit.edu/rinard/paper/ndss15.droidsafe.pdf">Information-Flow Analysis of Android Applications in DroidSafe</a><br>
-      The main functions of related tools are compared in following figure.<br>
+      Renaissance is initially inspired by a list of anroid program understanding tools.
+      <ul>
+        <li><a href = "https://github.com/MIT-PAC/droidsafe-src">DroidSafe: Android Static Analysis Tool</a> The detailed description of DroidSafe could be found in research work <a href = "https://people.csail.mit.edu/rinard/paper/ndss15.droidsafe.pdf">Information-Flow Analysis of Android Applications in DroidSafe</a><br>
+      </ul>
+      The main functions of these tools are compared in following figure.<br>
       <img src = "./images/tool_compare.png" width = 800/>
     </p>
-    <p>The <b>main functions</b> of Renaissance include:
+    <p>The Renaissance tool include several components.
+      <ul>
+        <li><b>renaissance-infoflow</b>: The <i>renaissance-infoflow</i> explores the program and extract the information flow from Android programs;
+        <li><b>renaissance-pointsto</b>: The <i>renaissance-pointsto</i> is a points-to analysis toolkit for Android applications;
+        <li><b>renaissance-slicing</b>: The <i>renaissance-slicing</i> is a program slicing tool for Android applications.
+      </ul>
     </p>
   </div>
-  
+  <div id="demo" class="heading" style="clear:left">
+    <p>Demo/Sceenshot</p>
+  </div>
+  <div id="download" class="heading" style="clear:left">
+    <p>Download Binary Version</p>
+  </div>
+  <div class="entry">
+      <p>* Please notice, we donot open source this project at this time
+      </p>
+  </div>
+  <div id="Tutoral" class="heading" style="clear:left">
+    <p>Tutoral</p>
+  </div>
   <div id="discuss" class="heading" style="clear:left">
     <p>Bugs/Issues/Discussion</p>
   </div>
