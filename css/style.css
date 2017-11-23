@@ -253,7 +253,8 @@ ul li{
 
 .copyright {
 	margin-top: -10px;
-	color: #999999;
+	color: #003153;
+	text-shadow: 2px 2px 5px #00477D;
 	font-size: 11px;
 	text-align: center;
 }
