@@ -1,0 +1,354 @@
+@inproceedings{KruegerASE17,
+author={Stefan Kr\"{u}ger and Sarah Nadi and Michael Reif and Karim Ali and Mira Mezini and Eric Bodden and Florian G\"{o}pfert and Felix G\"{u}nther and Christian Weinert and Daniel Demmler and Ram Kamath},
+title={CogniCrypt: Supporting Developers in using Cryptography},
+booktitle={Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering (ASE '17) -- Tool Demo Track},
+url_Paper={https://dl.dropboxusercontent.com/s/qthky7jppw0hvc0/Kruger_ASE17.pdf},
+year={2017}
+}
+
+
+
+@inproceedings{AlMasricCASCON17,
+author={Samer {Al Masri} and Nazim Uddin Bhuiyan and Sarah Nadi and Matthew Gaudet},
+title={Software Variability Through C++ Static Polymorphsim: A Case Study of Challenges and Open Problems in Eclipse OMR},
+year={2017},
+booktitle={Proceedings of the 27th Annual International Conference on Computer Science and Software Engineering (CASCON '17) -- Position Paper},
+url_Paper={https://dl.dropboxusercontent.com/s/214g26olgyotqvd/AlMasri_CASCON17.pdf}
+}
+
+
+
+@article{SalvaneschiTSE17,
+author={Guido Salvaneschi and Sebastian Proksch and Sven Amann and Sarah Nadi and Mira Mezini},
+title={On the Positive Effect of Reactive Programming on Software Comprehension: {An} Empirical Study},
+journal = {IEEE Transactions on Software Engineering},
+year={2017},
+publisher={IEEE},
+url_Paper={https://dl.dropboxusercontent.com/s/s7834qnhjbxvjpy/Salvaneschi_TSE17.pdf}
+}
+
+
+
+@inproceedings{ProkschSANER17,
+author={Sebastian Proksch and Sarah Nadi and Sven Amann and Mira Mezini},
+title={Enriching In-IDE Process Information with Fine-grained Source Code History},
+booktitle={Proceedings of the 24th IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER '17)},
+year={2017},
+addendum = {(Acceptance Ratio: 34/140 = 24\%)},
+url_Paper={https://dl.dropboxusercontent.com/s/4pus24phiq7gmmt/Proksch_SANER17.pdf}
+}
+
+
+
+@inproceedings{Proksch:2016,
+ author = {Sebastian Proksch and Sven Amann and Sarah Nadi and Mira Mezini},
+ title = {Evaluating the Evaluations of Code Recommender Systems: A Reality Check},
+ booktitle = {Proceedings of the 31st IEEE/ACM International Conference on Automated Software Engineering (ASE '16)},
+ year = {2016},
+ isbn = {978-1-4503-3845-5},
+ location = {Singapore, Singapore},
+ pages = {111--121},
+ keywords = {Artificial Evaluation, Empirical Study, IDE Interaction Data},
+ url_Paper={https://dl.dropboxusercontent.com/s/j4gu0145t4ry0xs/Proksch_ASE16.pdf}
+}
+
+ 
+
+@inproceedings{CerganiSWAN16,
+author={Ervina Cergani and Sebastian Proksch and Sarah Nadi and Mira Mezini},
+title={Addressing Scalability in API Method Call Analytics},
+shorthand={\createlabel{SWAN '16}{}},
+year={2016},
+booktitle={2nd International Workshop on Software Analytics (SWAN '16)},
+url_Paper={https://dl.dropboxusercontent.com/s/ivpkf1xe24awadd/Cergani_SWAN16.pdf}
+}
+
+
+
+@inproceedings{AmannICPC16,
+author={Sven Amann and Sebastian Proksch and Sarah Nadi},
+title={{FeedBaG:} An Interaction Tracker for Visual Studio
+},
+booktitle= {Proceedings of the 24th International Conference on Program Comprehension -- Tool Track (ICPC '16)},
+url_Paper={https://dl.dropboxusercontent.com/s/cklhtceox0vaoqt/Amann_ICPC16.pdf},
+year={2016}
+}
+
+
+
+@inproceedings{NadiICSE2016,
+author={Sarah Nadi and Stefan Kr\"{u}ger and Mira Mezini and Eric Bodden},
+title={"Jumping Through Hoops": Why do Java Developers Struggle with Cryptography {APIs}?},
+booktitle= {Proceedings of the 38th International Conference on Software Engineering (ICSE '16)},
+year={2016},
+addendum = {(Acceptance Ratio: 101/530 = 19\%)},
+url_Paper={https://dl.dropboxusercontent.com/s/1bantpje27z4p0s/NADI_ICSE16.pdf},
+url_Slides={https://www.slideshare.net/sarah_nadi/why-java-developers-struggle-with-cryptography-apis}
+}
+
+
+
+@misc{NADIVamos16,
+author={Sarah Nadi and Stefan Kr\"{u}ger},
+title={Variability Modeling of Cryptographic Components (Clafer Experience Report)},
+howpublished={Proceedings of the 10th International Workshop on Variability Modelling of Software-intensive Systems (VaMoS '16)},
+year={2016},
+url_Paper={https://dl.dropboxusercontent.com/s/47jsvcjxsvdq80x/NADI_Vamos16.pdf}
+}
+
+
+
+@inproceedings{AmannSANER16,
+author={Sven Amann and Sebastian Proksch and Sarah Nadi and Mira Mezini},
+title={A Study of Visual Studio Usage in Practice},
+booktitle = {Proceedings of the 23rd IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER '16)},
+year={2016},
+addendum = {(Acceptance Ratio: 52/140 = 37\%)},
+url_Paper={https://dl.dropboxusercontent.com/s/338pavhxbo2nf7q/Amann_SANER16.pdf}
+}
+
+
+
+@inproceedings{AmannMSR16,
+author={Sven Amann and Sarah Nadi and Hoan A. Nguyen and Tien N. Nguyen and Mira Mezini},
+title={MUBench: A Benchmark for API-Misuse Detectors
+},
+booktitle= {Proceedings of the 13th International Conference on Mining Software Repositories -- Data Showcase Track (MSR '16)},
+year={2016},
+url_Paper={https://dl.dropboxusercontent.com/s/k3wus9nib7tyipq/Amann_MSR16_MUBench.pdf}
+}
+
+
+
+@inproceedings{ProkschMSR16,
+author={Sebastian Proksch and Sven Amann and Sarah Nadi and Mira Mezini},
+title={A Dataset of Simplified Syntax Trees for C\#},
+booktitle= {Proceedings of the 13th International Conference on Mining Software Repositories -- Data Showcase Track (MSR '16)},
+url_Paper={https://dl.dropboxusercontent.com/s/tk67f6iguy7mssf/Proksch_MSR16.pdf},
+year={2016}
+}
+
+
+
+@inproceedings{ArztOnward2015,
+ author = {Steven Arzt and Sarah Nadi and Karim Ali and Eric Bodden and Sebastian Erdweg and Mira Mezini},
+ title = {Towards Secure Integration of Cryptographic Software},
+ booktitle = {Proceedings of the SIGPLAN Symposium on New Ideas in Programming and Reflections on Software at SPLASH (ONWARD '15)},
+ year = {2015},
+ location = {Pittsburg, PA, USA},
+url_Paper= {https://dl.dropboxusercontent.com/s/5rfyf3a9bqheyv9/Arzt_Onward2015.pdf},
+ numpages = {13},
+ url_Slides={https://www.slideshare.net/sarah_nadi/onward15},
+ note={(Acceptance Rate: 17/37 = 35%)}
+}
+
+
+
+@inproceedings{Medeiros2015,
+ author = {Fl\'{a}vio Medeiros and Christian K\"{a}stner and M\'{a}rcio Ribeiro and Sarah Nadi and Rohit Gheyi},
+ title = {The Love/Hate Relationship with the C Preprocessor: An Interview Study},
+ booktitle = {Proceedings of the 29th European Conference on Object-Oriented Programming (ECOOP '15)},
+ year = {2015},
+url_Paper= {https://dl.dropboxusercontent.com/s/7uak2b8441xdttf/Medeiros_ECOOP15.pdf},
+ pages = {999-1022},
+ note= {(Acceptance Rate: 31/136 = 23%)}
+}
+        
+
+@article {NadiTSE2015,
+    title = {Where do configuration constraints stem from? An extraction approach and an empirical        
+    study},
+	year = {2015},
+	journal = {IEEE Transactions on Software Engineering (TSE)},
+	author = {Sarah Nadi and Thorsten Berger and Christian K{\"a}stner and Krzysztof Czarnecki},
+    pages = {820 - 841,},
+    volume = {99},
+url_Paper={https://dl.dropboxusercontent.com/s/w1tnc2mlzh5in0z/NADI_TSE_2015.pdf}
+}
+
+
+
+@misc{GermanConf,
+author={Thorsten Berger and Sarah Nadi},
+title={Variability Models in Large-Scale Systems: A Study and a Reverse-Engineering Technique},
+howpublished={Proceedings of the German Software Engineering Conference},
+location={Dresden, Germany},
+year ={2015},
+url_Paper={https://dl.dropboxusercontent.com/s/tio0t4rhm01zx71/Berger_GermanSE_15.pdf}
+}
+
+
+
+@misc{ZhouReleng2015,
+    author={Shurui Zhou and Jafar Al-Kofahi and Tien N. Nguyen and Christian K{\"a}stner and Sarah Nadi},
+	location={Florence, Italy},
+url_Paper={https://dl.dropboxusercontent.com/s/7x5mlos4p3yidkq/Zhou_RELENG_15.pdf},
+	year={2015},
+	publisher={ACM Press},
+	howpublished={Proceedings of the 3rd International Workshop on Release Engineering (RELENG '15)},
+	title={Extracting Configuration Knowledge from Build Files with Symbolic Analysis},
+}
+
+
+
+@phdthesis{NadiPhDThesis,
+author={Sarah Nadi},
+title        = {Variability Anomalies in Software Product Lines},
+  school       = {University of Waterloo, Canada},
+  year         = 2014,
+url_Paper={https://uwspace.uwaterloo.ca/bitstream/handle/10012/8610/NADI_SARAH.pdf?sequence=3}}
+
+
+
+@inproceedings{NadiICSE2014,
+ author = {Sarah Nadi and Thorsten Berger and Christian K{\"a}stner and Krzysztof Czarnecki},
+ title = {Mining configuration constraints: Static analyses and empirical results},
+ booktitle = {Proceedings of the 36th International Conference on Software Engineering (ICSE '14)},
+ year = {2014},
+ location = {Hyderabad, India},
+ pages = {140 -151},
+ numpages = {12},
+url_Paper={https://dl.dropboxusercontent.com/s/f9gy8kzv6dwwwgl/NADI_ICSE14.pdf},
+note={(Acceptance Rate: 99/495 = 20%)}
+} 
+
+
+
+@inproceedings{Hemmati:2013,
+ author = {Hadi Hemmati and Sarah Nadi and Olga Baysal and Oleksii Kononenko and Wei Wang and Reid Holmes and Michael W. Godfrey},
+ title = {The MSR cookbook: Mining a decade of research},
+ booktitle = {Proceedings of the 10th Working Conference on Mining Software Repositories (MSR '13)},
+ year = {2013},
+ location = {San Francisco, CA, USA},
+ pages = {343-352},
+ note={(Acceptance Rate: 31/81 = 38%)},
+ numpages = {10},
+ acmid = {2487150},
+ publisher = {IEEE Press},
+url_Paper={https://dl.dropboxusercontent.com/s/77wsmwvdg8yzqh3/Hemmati_MSR_2013.pdf}
+} 
+
+
+
+@inproceedings{Nadi:MSR2013,
+ author = {Sarah Nadi and Christian Dietrich and Reinhard Tartler and Richard C. Holt and Daniel Lohmann},
+ title = {Linux variability anomalies: What causes them and how do they get fixed?},
+ booktitle = {Proceedings of the 10th Working Conference on Mining Software Repositories (MSR '13)},
+ year = {2013},
+ location = {San Francisco, CA, USA},
+ pages = {111-120},
+ note={(Acceptance Rate: 31/81 = 38%)},
+ numpages = {10},
+ acmid = {2487112},
+ publisher = {IEEE Press},
+url_Paper={https://dl.dropboxusercontent.com/s/ifffnko4yw84pvl/NADI_MSR_2013.pdf},
+url_Slides={https://www.slideshare.net/sarah_nadi/linux-variability-anomalies-what-causes-them-and-how-do-they-get-fixed}
+} 
+
+
+
+@misc{NadiDS2013,
+ author = {Sarah Nadi},
+ title = {A study of variability spaces in Open Source Software},
+ howpublished = {Proceedings of the 35th International Conference on Software Engineering, Doctoral Symposium (ICSE '13)},
+ year = {2013},
+ location = {San Francisco, CA, USA},
+ pages = {1353-1356},
+ note={(Acceptance Rate: 19/35 = 54%)},
+ numpages = {4}, 
+ publisher = {IEEE Press},
+url_Paper={https://dl.dropboxusercontent.com/s/limcm132hrw7mmy/NADI_ICSE2013_DS.pdf}
+} 
+
+
+
+@article {NadiJournal2013,
+author = {Sarah Nadi and Richard C. Holt},
+title = {{The Linux kernel: A case study of build system variability}},
+journal = {Journal of Software: Evolution and Process (JSEP)},
+volume = {26},
+number = {8},
+issn = {2047-7481},
+url_Paper = {https://dl.dropboxusercontent.com/s/requ48q7nz4rg3b/NADI_JSEP_2013.pdf},
+doi = {10.1002/smr.1595},
+pages = {730--746},
+keywords = {software variability, variability anomalies, Linux, build systems, Kbuild},
+year = {2013},
+}
+
+
+
+@INPROCEEDINGS{NadiCSMR2012, 
+author={Sarah Nadi and Richard C. Holt}, 
+booktitle={Proceedings of the 16th European Conference on Software Maintenance and Reengineering (CSMR '12)},
+title={Mining Kbuild to detect variability anomalies in Linux}, 
+year={2012}, 
+pages={107-116},
+note={(Acceptance Rate: 30/108 = 27%). Invited for a special issue of JSEP},
+ISSN={1534-5351},
+url_Paper={https://dl.dropboxusercontent.com/s/fe2o3sv3h1mrrk4/NADI_CSMR2012.pdf},
+url_Slides={https://www.slideshare.net/secret/4wbQYFAsJtJdlp}}
+
+
+
+@INPROCEEDINGS{NadiWCRE2011, 
+author={Sarah Nadi and Richard C. Holt}, 
+booktitle={Proceedings of the 18th Working Conference on Reverse Engineering (WCRE '11)}, 
+title={Make it or break it: Mining anomalies from Linux Kbuild}, 
+year={2011}, 
+pages={315-324},
+url_Paper={https://dl.dropboxusercontent.com/s/tof4mq511qqltsg/NADI_WCRE2011.pdf},
+note={(Acceptance Rate: 27/104 = 26%)}
+}
+
+
+
+@INPROCEEDINGS{NadiCSMR2010, 
+author={Sarah Nadi and Richard C. Holt and Serge Mankovskii}, 
+booktitle={Proceedings of the 14th European Conference on Software Maintenance and Reengineering (CSMR '10)}, 
+title={Does the past say it all? Using history to predict change sets in a CMDB}, 
+year={2010}, 
+pages={97-106},
+note={ (Acceptance Rate: 21/80 = 26%)},
+ISSN={1534-5351},
+url_Paper={https://dl.dropboxusercontent.com/s/fe2o3sv3h1mrrk4/NADI_CSMR2012.pdf}}
+
+
+
+@mastersthesis{NadiMMathThesis,
+author={Sarah Nadi},
+title        = {{DRACA:} Decision-support for Root Cause Analysis and Change Impact Analysis},
+  school       = {University of Waterloo, Canada},
+  year         = 2009,
+url_Paper={https://uwspace.uwaterloo.ca/bitstream/handle/10012/4889/NADI_SARAH.pdf?sequence=1}}
+
+
+
+@inproceedings{NadiCASCON2009,
+ author = {Sarah Nadi and Richard C. Holt and Ian Davis and Serge Mankovskii},
+ title = {DRACA: Decision support for root cause analysis and change impact analysis for CMDBs},
+ booktitle = {Proceedings of the 2009 Conference of the Center for Advanced Studies on Collaborative Research (CASCON '09)},
+ year = {2009},
+ location = {Ontario, Canada},
+ pages = {1-11},
+ note={(Acceptance Rate: 22/88 = 25%). Best Paper Award},
+ numpages = {11},
+ publisher = {IBM Corp.},
+url_Paper={https://dl.dropboxusercontent.com/s/ob1c6zcl3vv6f74/Nadi_cascon09.pdf}
+} 
+
+
+
+
+@article {AlyPervasive2008,
+author = {Sherif G. Aly and Sarah Nadi and Karim Hamdan},
+title = {A Java-Based programming language support of location 
+management in pervasive systems},
+journal = {International Journal of Computer Science and Network Security (IJCSNS)},
+volume={8},
+number={6},
+pages={329-336},
+url_Paper={https://dl.dropboxusercontent.com/s/xgh03eg08v5yl6w/aly_pervasive.pdf},
+year = {2008},
+}
+
