@@ -1,9 +1,0 @@
-@conference{iceis15,
-author={Yutian Tang and Hareton Leung},
-title={Top-down Feature Mining Framework for Software Product Line},
-booktitle={Proceedings of the 17th International Conference on Enterprise Information Systems},
-year={2015},
-pages={71-81},
-doi={10.5220/0005370300710081},
-isbn={978-989-758-097-0},
-}
