@@ -41,16 +41,16 @@ id,venue,long_name
 45,METRICS,International Software Metrics Symposium
 46,IWPSE,International Workshop on Principles of Software Evolution
 47,ECOOP,European Conference on Object-Oriented Programming
-48,PhD Thesis,PhD Thesis
-49,Master's Thesis,Master's Thesis
+48,ICEIS,International Conference on Enterprise Information Systems
+49,SOFTENG,International Conference on Advances and Trends in Software Engineering
 53,MUD,Workshop on Mining Unstructured Data
 55,VISSOFT,Working Conference on Software Visualization
 56,AWSA,ASERC Workshop on Software Architecture
 57,ICDE,International Conference on Data Engineering
 58,QRS,"International Conference on Software Quality, Reliability and Security"
 59,ASE,Automated Software Engineering
-60,ICEIS,International Conference on Enterprise Information Systems
-61,SOFTENG,International Conference on Advances and Trends in Software Engineering
+60,,
+61,,
 62,,
 63,,
 64,,

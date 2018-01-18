@@ -1,5 +1,5 @@
 id,Type,Topic,Year,Title,Authors,URL,pdf,Venue,Details
-1,CO,1,2015,Top-down Feature Mining Framework for Software Product Line.,101 103,,paper/iceis2015.pdf,60,17th International Conference on Enterprise Information (ICEIS)
-2,CO,1,2015,Feature Mining for Product Line Construction,101 103,,paper/softeng2015.pdf,61,The First International Conference on Advances and Trends in Software Engineering
+1,CO,1,2015,Top-down Feature Mining Framework for Software Product Line.,101 103,,paper/iceis2015.pdf,48,17th International Conference on Enterprise Information (ICEIS)
+2,CO,1,2015,Feature Mining for Product Line Construction,101 103,,paper/softeng2015.pdf,49,The First International Conference on Advances and Trends in Software Engineering
 3,CO,1,2017,StiCProb: A novel feature mining approach using conditional probability,101 103,,paper/saner2017.pdf,16,"24th IEEE International Conference on Software Analysis, Evolution, and Reengineering"
 4,CO,1,2017,Constructing Feature Model by Identifying Variability-aware Modules,101 103,,paper/icpc2017.pdf,23,25th IEEE International Conference on Program Comprehension.
