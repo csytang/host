@@ -142,13 +142,11 @@ str+=" <a class='pubLink pdflink fa fa-file-powerpoint-o' data-toggle='modal' hr
                 // author names
                 var authors = this.Authors;
                     str+="<div class=\"authorNames\"><span class='header'></span> ";
-//console.log(kshf.dt_id.Authors[101].data.Name);
-//console.log(this.Title);
-//console.log(authors.length);
+
                 for(var j=0; j<authors.length; j++){
                       str+=kshf.dt_id.Authors[authors[j]].data.Name;
                         
-                    //str+=authData.Name;
+                    	//str+=authData.Name;
                         
                         if(j!==authors.length-1 && authors[j+1]!==226) { str+=', '; }
                     }
@@ -156,12 +154,12 @@ str+=" <a class='pubLink pdflink fa fa-file-powerpoint-o' data-toggle='modal' hr
 
                 // Venue + details
                     str+="<div class='venueInfo'><span style='font-weight:bolder;'>"+this.Details+"</span>";
-                    /*if(this.Venue) {
+                    if(this.Venue) {
                         str+=" " + kshf.dt_id.Venues[this.Venue].data[2];
-                    }*/
-                    /*if(this.details.trim()!=="") {
+                    }
+                    if(this.details.trim()!=="") {
                         str+=this.details;
-                    }*/
+                    }
                     str+="</div>";
                /* // keywords
                     var cats = this.Topics;
