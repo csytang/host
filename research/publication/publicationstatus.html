@@ -116,9 +116,9 @@ itemDisplay: {
                 // paper name
 
                     str+="<span style='font-size: 15px;'> [</span>";
-//console.log(this)
-//console.log(this.Type);
-            str+="<span style='font-size: 15px;'>"+kshf.dt_id.VenueTypes[this.Type].data.keyword+"</span>";
+                    //console.log(this)
+                    //console.log(this.Type);
+                    str+="<span style='font-size: 15px;'>"+kshf.dt_id.VenueTypes[this.Type].data.keyword+"</span>";
                     str+="<span style='font-size: 15px;'>] </span>";
                    
                     str+="<span class='paperName'><b>"+this.Title+"</b></span>";
@@ -131,8 +131,7 @@ itemDisplay: {
                         str+="<a class='pubLink doilink' href='http://dx.doi.org/"+this.doi+"' target='_blank'>[doi]</a>";
                     }*/
                     if(this.URL.trim()!==""){
-                        
-str+=" <a class='pubLink pdflink fa fa-file-powerpoint-o' data-toggle='modal' href='"+this.URL+"' onClick='onclickslide("+this.id+")' target='_blank'></a>";
+                        str+=" <a class='pubLink pdflink fa fa-file-powerpoint-o' data-toggle='modal' href='"+this.URL+"' onClick='onclickslide("+this.id+")' target='_blank'></a>";
                     }
 
                     str+="</div>";
@@ -144,16 +143,18 @@ str+=" <a class='pubLink pdflink fa fa-file-powerpoint-o' data-toggle='modal' hr
                     str+="<div class=\"authorNames\"><span class='header'></span> ";
 
                 for(var j=0; j<authors.length; j++){
-                      str+=kshf.dt_id.Authors[authors[j]].data.Name;
+                    str+=kshf.dt_id.Authors[authors[j]].data.Name;
                         
-                    	//str+=authData.Name;
-                        
-                        if(j!==authors.length-1 && authors[j+1]!==226) { str+=', '; }
+                	//str+=authData.Name;
+                    
+                    if(j!==authors.length-1 && authors[j+1]!==226) {
+                        str+=', '; 
                     }
+                }
                     str+="</div>";
 
                 // Venue + details
-                    str+="<div class='venueInfo'><span style='font-weight:bolder;'>"+this.Details+"</span>";
+                str+="<div class='venueInfo'><span style='font-weight:bolder;'>"+this.Details+"</span>";
                     /*if(this.Venue) {
                         str+=" " + kshf.dt_id.Venues[this.Venue].data[2];
                     }*/
@@ -207,18 +208,19 @@ str+="<br>";
             { title: "Topic", catTableName: "Topics", catLabel: "topic", layout:"right",
             },
             
-        //   { name: "Publication Year", panel: "right", collapsed: false, type: "interval",  value:"Year"},
              { name: "Publication Year", panel: "right", collapsed: false, type: "categorical",  catSortBy:{value: "id", inverse: true}, value: "Year" },
         
             
             
-            { title: "Venue", catTableName: "Venues", catLabel: "venue", layout:"right",
+            { 
+                title: "Venue", catTableName: "Venues", catLabel: "venue", layout:"right", catSortBy:{value: "id", inverse: true}
             },
             
             
             
             
-    { title: "Type", catTableName: "VenueTypes", catLabel: "keyword", layout:"right",
+            { 
+                title: "Type", catTableName: "VenueTypes", catLabel: "keyword", layout:"right",
             },
             
             
