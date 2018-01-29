@@ -1,89 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Publication page for Yutian Tang">
-    <meta name="author" content="Yutian Tang">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>Yutian Tang (Chris) | Publication</title>
 
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
     <!-- Custom styles for this template -->
-    <link href="../css/narrow-jumbotron.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="../../css/home.css" rel="stylesheet">
   </head>
 
   <body>
 
     <div class="container">
-      <div class="header">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Research</a>
-			         <div class="dropdown-menu">
-                  <a class="dropdown-item active" href="#">Publication</a>
-                  <a class="dropdown-item" href="../dataset">Dataset</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="../service">Service</a>
-			         </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Code</a>
-			  <div class="dropdown-menu">
-			      <a class="dropdown-item" href="../project/#spl">Software Product Line</a>
-			      <a class="dropdown-item" href="../project/#android">Android</a>
-			      <a class="dropdown-item" href="../project/#script">Scripts</a>
-			      <div class="dropdown-divider"></div>
-			      <a class="dropdown-item" href="../project/#demo">Demos</a>
-			  </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Misc</a>
-			  <div class="dropdown-menu">
-			      <a class="dropdown-item" href="#">Links</a>
-			  </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="modal" data-target="#contactModal" href="">Contact</a>
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-dark" href="#">Yutian Tang</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+          </div>
+        </div>
+      </header>
 
-                <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <pre><code>#include &lt;string.h&gt;<br>strcat("csytang","@comp.polyu.edu.hk");</code></pre>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </li>
-          </ul>
+      <div class="nav-scroller py-1 mb-2">
+        <nav class="nav justify-content-between">
+          <a class="p-2 text-muted" href="../../index.html">Home</a>
+          <a class="p-2 text-muted" href="#">Publication</a>
+          <a class="p-2 text-muted" href="#">Dataset</a>
+          <a class="p-2 text-muted" href="#">Code</a>
+          <a class="p-2 text-muted" href="#">Teaching</a>
+          <a class="p-2 text-muted" href="#">Service</a>
+          <a class="p-2 text-muted" href="#">Misc</a>
+          <a class="p-2 text-muted" data-toggle="modal" data-target="#contactModal" href="#">Contact</a>
+         
         </nav>
-        
-        <h3 class="text-muted">Yutian Tang</h3>
       </div>
 
-      <div class="container">
-      	<iframe src="publicationstatus.html" width="100%" height="800px"></iframe>
+      <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Contact</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                     <pre><code>#include &lt;string.h&gt;<br>strcat("csytang","@comp.polyu.edu.hk");</code></pre>
+                  </div>
+                  <div class="modal-footer">
+                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+              </div>
+        </div>
       </div>
+
+      
+
+    <div class="container">
+      	<iframe src="publicationstatus.html" width="100%" height="800px"></iframe>
+    </div>
 	  
-      <footer class="footer">
-        <p>&copy; Yutian Tang 2016-2018</p>
-      </footer>
+    <footer class="blog-footer">
+      <p>Copyright © 2018 Yutian Tang. All Rights Reserved.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
 		
 
     </div> <!-- /container -->
