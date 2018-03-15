@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bugrepository name="TwidereProject_Twidere-Android">
+	<bug id="13">
+		<closedTime>Sun Nov 09 05:03:01 CST 2014</closedTime>
+		<buginformation>
+			<summary>A bug in AsyncTaskManager.java </summary>
+			<description>May be a bug ? public <T> int add(final ManagedAsyncTask<T, ?, ?> task, final boolean exec, final T... params) {    final int hashCode = task.hashCode();    mTasks.add(task);    if (exec) {        execute(hashCode); // This line should be params, Is it a bug?    }    return hashCode;    }</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.BaseSupportThemedActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AccountsDrawerFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.SettingsActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.HomeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.QuickMenuFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.BaseThemedActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.BaseSupportFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.BasePreferenceActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.Constants.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.LinkHandlerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.TwidereConstants.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.ParcelableStatusesListFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.constant.SharedPreferenceConstants.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.iface.IThemedActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="170">
+		<closedTime>Mon Jun 15 08:44:15 CST 2015</closedTime>
+		<buginformation>
+			<summary>quote tweets' text truncated after original link </summary>
+			<description>璁惧锛欸oogle Nexus 4 绯荤粺锛欰ndroid 5.1.1 Twidere鐗堟湰锛�0.3.0(dev 2015-05-01) 鐜拌薄锛氳嫢鎺ㄦ枃涓檮甯︾殑鎺ㄦ枃缃戝潃锛堝涓嬫墍绀猴級浣嶄簬姝ｆ枃鏈熬浠ュ鐨勫叾浠栦綅缃紝灏嗕細鍑虹幇鎴柇鐜拌薄銆� 鏍锋湰锛歨ttps://twitter.com/chenshaoju/status/609984187441872896 瀵瑰簲鎴浘锛�</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.text.OriginalStatusSpan.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="185">
+		<closedTime>Tue Jun 30 01:26:51 CST 2015</closedTime>
+		<buginformation>
+			<summary>'Delete' item not shown for quoted status </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="230">
+		<closedTime>Mon Nov 02 07:06:41 CST 2015</closedTime>
+		<buginformation>
+			<summary>Unable to remove host mappings </summary>
+			<description>绯荤粺鐗堟湰锛欰ndroid 5.1.1 Twidere鐗堟湰锛�0.3.0 (dev 2015-10-24) 鐜拌薄锛氭棤娉曠Щ闄よ嚜瀹氫箟涓绘満鏄犲皠 澶嶇幇姝ラ锛� 鍚姩Twidere锛岃繘鍏ヨ瀹�->缃戠粶->楂樼骇->鑷畾涔変富鏈烘槧灏勶紝鐒跺悗鎸変綇涓�涓潯鐩笉鏉撅紝寰呭嚭鐜板瀮鍦炬《鍥炬爣鍚庢澗寮�锛屽苟鐐瑰嚮鍨冨溇妗跺浘鏍囥�� 缁撴灉锛氬緟鍒犻櫎鐨勬潯鐩苟娌℃湁琚秷闄ゃ�� 鏈熸湜鐨勭粨鏋滐細琚垹闄ょ殑鏉＄洰鍙互姝ｇ‘鐨勮鍒犻櫎銆� logcat锛氭湭鑳芥崟鑾峰埌鏈夋晥淇℃伅銆�</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.HostMappingsListFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="233">
+		<closedTime>Wed Nov 04 12:40:35 CST 2015</closedTime>
+		<buginformation>
+			<summary>Incorrect text handling - Unicode Control Characters. </summary>
+			<description>Twidere doesn't correctly handle Unicode characters in the range U+007F to U+009F. Consider this Tweet https://twitter.com/edent/status/660619240077197312 The API returns Nothing\u0083\u0084\u0085\u0086 odd\u0087\u0088\u0089\u008a going\u008b\u008c \u008don\u008e \u008f\u0090\u0091here! This is how it is rendered on the latest version of Twidere. I'd suggest that the character either be stripped out, or encoded correctly before display.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.TwitterContentUtils.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.HtmlEscapeHelper.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.HtmlBuilder.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.CodePointArray.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="242">
+		<closedTime>Sun Nov 22 03:59:38 CST 2015</closedTime>
+		<buginformation>
+			<summary>Can't open twitter links </summary>
+			<description>hi, on the latest two versions of Twidere i can't open twitter links anymore. nothing happens when i click on them.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.ErrorInfo.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.impl.ActivityImplMapper.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.util.InternalParseUtil.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.MessagesConversationFragment.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.TwitterException.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.impl.ErrorInfoImpl.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsContentRecyclerViewFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.DirectMessagesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AccountsDashboardFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsContentListViewFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.CustomTabsFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.api.twitter.UserStreamCallback.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.ViewStatusDialogFragment.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.impl.IDsImplMapper.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.text.SafeSpannableString.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="249">
+		<closedTime>Mon Feb 29 02:02:19 CST 2016</closedTime>
+		<buginformation>
+			<summary>"Edit media" button does nothing </summary>
+			<description>Twidere 0.3.0-131 from F-Droid, Android 5.1.1 (Cyanognemod 12.1). The Edit menu item works in the Gallery app.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMediaUpdate.java</file>
+			<file>twidere.src.main.java.org.mariotaku.dynamicgridview.DraggableAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.dynamicgridview.DraggableArrayAdapter.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="250">
+		<closedTime>Wed Nov 25 02:31:51 CST 2015</closedTime>
+		<buginformation>
+			<summary>Favorite count is not increased / star is not set when favoriting in conversation view </summary>
+			<description>On Twidere 0.3.0-130 from F-Droid.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.TwitterContentUtils.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableLocation.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsParcelableStatusesAdapter.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.Nullables.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.UserListSelectorActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.HomeActivity.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMedia.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.TwitterLinkHandlerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsStatusesAdapter.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.ParseUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.APIEditorActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsActivitiesAdapter.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ObjectCursor.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="251">
+		<closedTime>Wed Nov 25 01:16:53 CST 2015</closedTime>
+		<buginformation>
+			<summary>After deleting a tab, Twidere does not offer a restart </summary>
+			<description>... and as a result, the actual tabs shown are in an outdated state. Twidere 0.3.0-135 from F-Droid.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.SavedSearch.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.api.SavedSearchesResources.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.impl.SavedSearchImpl.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.HostsFileParser.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.app.TwidereApplication.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.CustomTabsFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.AsyncTwitterWrapper.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.DestroySavedSearchDialogFragment.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.util.TwitterConverter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="259">
+		<closedTime>Fri Feb 05 03:44:44 CST 2016</closedTime>
+		<buginformation>
+			<summary>Settings 鈫� Notifications 鈫� [account] 鈫� Light Color glitch </summary>
+			<description>When you change this setting and press "OK" in the dialog, it does not update in the parent view. Version 0.3.0-dev-135</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.preference.ColorPickerPreference.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="274">
+		<closedTime>Wed Mar 02 04:00:22 CST 2016</closedTime>
+		<buginformation>
+			<summary>RTL text in username causes glitches </summary>
+			<description>If a user's name contains RTL text (for example Arabic or Hebrew) Twidere displays the name incorrectly in timeline view: _example@ 賲孬丕賱 rather than 賲孬丕賱 @example_ For example: Here's how the Tweet is displayed on Twitter's mobile site: If we take a look at the user's page, you'll see that the user info box at the top is displaying the @ name correctly although the Arabic text is hidden behind the "Follow" button.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableCardEntity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.NameView.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableBindingValue.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.BaseRecyclerViewAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.StatusViewHolder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.iface.IContentCardAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="279">
+		<closedTime>Thu Feb 04 13:43:43 CST 2016</closedTime>
+		<buginformation>
+			<summary>Retweets won't be translated </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.TwitterContentUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="284">
+		<closedTime>Fri Jan 15 15:28:29 CST 2016</closedTime>
+		<buginformation>
+			<summary>Icon misplaced </summary>
+			<description>Icon will misplaced in Notifications tab when profile image is turned off http://imgur.com/tYZXtty</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.NameView.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.ActivityTitleSummaryViewHolder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsActivitiesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.StatusViewHolder.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="287">
+		<closedTime>Thu Jan 21 14:39:25 CST 2016</closedTime>
+		<buginformation>
+			<summary>UI glitches when swiping tabs quickly </summary>
+			<description>When quickly swiping through my tabs, the white underline sometimes indicates a wrong current tab. Plus, the content of two tabs overlap or share the screen. Nexus 5 / OmniROM 5.1.1 / Twidere F-Droid 94ad1a6</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.service.BackgroundOperationService.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.MouseScrollDirectionDecider.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.ExtendedRecyclerView.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.io.ContentLengthInputStream.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.TwitterUpload.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsContentRecyclerViewFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="292">
+		<closedTime>Thu Feb 04 18:49:50 CST 2016</closedTime>
+		<buginformation>
+			<summary>User filters not working </summary>
+			<description>I can add filters by keyword, sources or links, but not users. After searching and clicking on the name, the windows closes and returns to the list.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.dagger.GeneralComponent.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.BaseFiltersFragment.java鈫�twidere.src.main.java.org.mariotaku.twidere.fragment.support.BaseFiltersFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.FiltersFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="293">
+		<closedTime>Tue Jan 26 14:05:27 CST 2016</closedTime>
+		<buginformation>
+			<summary>Force close when trying to play YouTube video </summary>
+			<description>Using version 0.3.0-dev160115 Whenever I try to open a YouTube video in a tweet, Twidere will crash completely. Also, if I expand the tweet, the video shows up twice: once as an inline video, and once as an embedded YouTube video. Image of this behavior: http://i.imgur.com/7NoQlJ1.jpg It would be ideal to fix the crash caused by the video player on the top rather than get rid of it, as the one on the bottom cannot use full screen.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableCardEntity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.card.CardBrowserFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwitterCardFragmentFactory.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMedia.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwitterCardUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="305">
+		<closedTime>Fri Jan 29 04:13:56 CST 2016</closedTime>
+		<buginformation>
+			<summary>Wrong time at GNU social posts </summary>
+			<description>I have made the observation that posts from GNU social have the wrong time. It is like the "clock" for GNU social posts gains an hour. As the following screenshot (the blurring is added by me) shows the newest posts have been posted "in 57 minutes" instead of 3 minutes ago. Twidere version is 0.3.0 dev 2016-01-26 and this bug also existed in the current version from F-Droid when I once tried GNU social with it some days ago.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.util.TwitterDateConverter.java</file>
+			<file>twidere.src.test.java.org.mariotaku.twidere.util.TwidereMathUtilsTest.java鈫�twidere.src.androidTest.java.org.mariotaku.twidere.util.TwidereMathUtilsTest.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.api.twitter.util.TwitterDateConverterTest.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="308">
+		<closedTime>Thu Feb 04 18:25:35 CST 2016</closedTime>
+		<buginformation>
+			<summary>Crash when opening video in Tweet </summary>
+			<description>http://paste.omnirom.org/view/99ea4a5f 36f92bd, OmniRom 5.1.1, Nexus 5</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.test.okhttp3.OkHttpClientTest.java</file>
+			<file>twidere.src.debug.java.org.mariotaku.twidere.util.DebugModeUtils.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.model.UploadLogEvent.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMedia.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.UploadLogsTask.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.app.TwidereApplication.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.AsyncTwitterWrapper.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsContentRecyclerViewFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="311">
+		<closedTime>Thu Feb 04 13:25:13 CST 2016</closedTime>
+		<buginformation>
+			<summary>ProgressSaveFileTask.java line 46 </summary>
+			<description>in org.mariotaku.twidere.task.ProgressSaveFileTask.showProgress Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b349b3f5d3a7f76b935f7c</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.iface.IExtendedActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.BaseAppCompatActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="312">
+		<closedTime>Thu Feb 04 14:19:50 CST 2016</closedTime>
+		<buginformation>
+			<summary>MediaViewerActivity.java line 323 </summary>
+			<description>in org.mariotaku.twidere.activity.support.MediaViewerActivity.onOptionsItemSelected Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b35a6bf5d3a7f76b93ce55</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMedia.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="313">
+		<closedTime>Thu Feb 04 18:33:43 CST 2016</closedTime>
+		<buginformation>
+			<summary>AnnotatedHandlerFinder.java line 86 </summary>
+			<description>in com.squareup.otto.AnnotatedHandlerFinder.loadAnnotatedMethods Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b3983ef5d3a7f76b95396c</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.UserListSelectorActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserListsFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="314">
+		<closedTime>Fri Feb 05 03:44:44 CST 2016</closedTime>
+		<buginformation>
+			<summary>MediaViewerActivity.java line 826 </summary>
+			<description>in org.mariotaku.twidere.activity.support.MediaViewerActivity$ImagePageFragment.showProgress Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b3e3c2f5d3a7f76b96c3e6</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.preference.ColorPickerPreference.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="316">
+		<closedTime>Sat Feb 06 05:19:18 CST 2016</closedTime>
+		<buginformation>
+			<summary>Unable to change DM font size </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.iface.IDirectMessagesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.MessageConversationAdapter.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="322">
+		<closedTime>Sun Feb 07 07:50:32 CST 2016</closedTime>
+		<buginformation>
+			<summary>Twidere tries to obtain location each time I open it / unlock lockscreen / start writing a tweet </summary>
+			<description>I have an unofficial Kitkat build for my FP1, which features a built-in app permission management. The issue I denied location access to Twidere the first time, it asked me for it. Now I get a notification overlay each time, location access gets denied. Some sceenshots to illustrate my point: This is after unlocking the lockscreen (note the notification overlay in the bottom of the screenshot): This is when I open Twidere: This is when I start writing a tweet (note that I don't attach my location to my tweet): My questions: Is it intended behaviour, that Twidere wants my location in all the above occasions? If yes, how can I turn this behaviour off? If not: Which information, other then the below, do you need to fix this? My system FP1 with MT6589 chip, running on Android KitKat 4.4.4 / Kernel Version 3.4.67 Cheers, :)</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ActivityTracker.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.dagger.DependencyHolder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.app.TwidereApplication.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.util.LocationUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="323">
+		<closedTime>Sun Feb 07 07:50:32 CST 2016</closedTime>
+		<buginformation>
+			<summary>List details cannot hold more than 100 chars instead of 160 characters </summary>
+			<description>Hello, when I add more than 100 characters to a list's description, I get an error warning: "Error 85: Failed list validation." This description triggers the error: My system FP1 with MT6589 chipset running on Android Kitkat 4.4.4</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ActivityTracker.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.dagger.DependencyHolder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.app.TwidereApplication.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.util.LocationUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="326">
+		<closedTime>Mon Feb 08 12:28:37 CST 2016</closedTime>
+		<buginformation>
+			<summary>Unable to open tweet location </summary>
+			<description>Twidere shows an intent picker instead of open map directly. Location is blank for Google build.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="327">
+		<closedTime>Mon Feb 08 09:50:48 CST 2016</closedTime>
+		<buginformation>
+			<summary>Headers.java line 283 </summary>
+			<description>in okhttp3.Headers$Builder.checkNameAndValue Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b7abcdf5d3a7f76ba868d2</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.auth.OAuthAuthorization.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.ParseUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwitterAPIFactory.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.auth.OAuthToken.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.StatusUpdate.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="328">
+		<closedTime>Mon Feb 08 03:32:58 CST 2016</closedTime>
+		<buginformation>
+			<summary>DataStoreUtils.java line 713 </summary>
+			<description>in org.mariotaku.twidere.util.DataStoreUtils.getLongFieldArray Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b7acfbf5d3a7f76ba86de9</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.JsonSerializer.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.UploadLogsTask.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.BugReporter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.DirectMessagesFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="329">
+		<closedTime>Mon Feb 08 11:38:58 CST 2016</closedTime>
+		<buginformation>
+			<summary>Utils.java line 2676 </summary>
+			<description>in org.mariotaku.twidere.util.Utils.startRefreshServiceIfNeeded Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b7ad5df5d3a7f76ba86f95</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.BaseAccountPreferenceFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.app.TwidereApplication.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.AccountRefreshSettingsFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.receiver.ConnectivityStateReceiver.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="330">
+		<closedTime>Mon Feb 08 10:45:11 CST 2016</closedTime>
+		<buginformation>
+			<summary>UserFragment.java line 344 </summary>
+			<description>in org.mariotaku.twidere.fragment.support.UserFragment.showRelationship Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b7b355f5d3a7f76ba88850</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="331">
+		<closedTime>Mon Feb 08 11:44:44 CST 2016</closedTime>
+		<buginformation>
+			<summary>Utils.java line 2454 </summary>
+			<description>in org.mariotaku.twidere.util.Utils.setMenuForStatus Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b7c5f2f5d3a7f76ba8d1d9</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsStatusesFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="332">
+		<closedTime>Mon Feb 08 12:37:04 CST 2016</closedTime>
+		<buginformation>
+			<summary>MediaViewerActivity.java line 223 </summary>
+			<description>in org.mariotaku.twidere.activity.support.MediaViewerActivity.instantiateMediaFragment Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b7ce96f5d3a7f76ba8f0bc</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="335">
+		<closedTime>Tue Feb 09 03:42:09 CST 2016</closedTime>
+		<buginformation>
+			<summary>ParcelableActivitiesAdapter.java line 63 </summary>
+			<description>in org.mariotaku.twidere.adapter.ParcelableActivitiesAdapter.getTimestamp Number of crashes: 1 Impacted devices: 1 There's a lot more information about this crash on crashlytics.com: https://fabric.io/mariotaku-lees-projects/android/apps/org.mariotaku.twidere/issues/56b80ae7f5d3a7f76ba9bf06</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ParcelableActivitiesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsParcelableStatusesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsActivitiesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.net.TwidereDns.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="339">
+		<closedTime>Tue Feb 09 11:25:10 CST 2016</closedTime>
+		<buginformation>
+			<summary>Long wait for start </summary>
+			<description>For 0.3.0 version on my device (nexus 5, Android 6.0.1) first launch (when app isn't in memory) takes much more time than at previous version. I need 2-3 seconds after press the icon to see app instead of nearly instantly launching at previous version.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.media.preview.PreviewMediaExtractor.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.MainActivity.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.media.preview.provider.TwitterPicProvider.java鈫�twidere.component.common.src.main.java.org.mariotaku.twidere.util.media.preview.provider.TwitterMediaProvider.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsStatusesFragment.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.test.okhttp3.OkHttpClientTest.java</file>
+			<file>twidere.component.common.src.androidTest.java.org.mariotaku.twidere.common.ApplicationTest.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsActivitiesAdapter.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.util.media.preview.PreviewMediaExtractorTest.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.QuickSearchBarActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="346">
+		<closedTime>Wed Feb 10 02:04:23 CST 2016</closedTime>
+		<buginformation>
+			<summary>Remember position failing </summary>
+			<description>The new update isn't remembering the position and reloads at the latest tweet.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsStatusesFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="348">
+		<closedTime>Wed Feb 10 06:16:26 CST 2016</closedTime>
+		<buginformation>
+			<summary>First item flashing while refresh </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ParcelableActivitiesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AbsParcelableStatusesAdapter.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableStatus.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="354">
+		<closedTime>Mon Feb 29 07:55:28 CST 2016</closedTime>
+		<buginformation>
+			<summary>Crash during login to GNU Social instances </summary>
+			<description>It doesn't seem to matter where I try to login with the released version (eg. https://api.loadaverage.org/ Basic auth) the screen will go blank and then Twidere will restart. The bigger problem is that after this it won't be able to refresh the timeline or send new tweets until I destroy the database and kill the running process. Then it'll work again (no reauthentication needed).</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.StatusAdapterLinkClickHandler.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.StatusLinkClickHandler.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMedia.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.media.preview.provider.InstagramProvider.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.SignInActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="359">
+		<closedTime>Sun Feb 21 11:56:51 CST 2016</closedTime>
+		<buginformation>
+			<summary>Location toggle not working after it's turned off once </summary>
+			<description>https://twitter.com/54c3_/status/697726819630497792</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="361">
+		<closedTime>Sun Feb 21 11:56:51 CST 2016</closedTime>
+		<buginformation>
+			<summary>MediaViewerActivity: Youtube videos not shareable </summary>
+			<description>In the MediaViewerActivity, Youtube videos are not shareable via the share symbol. No menu opens, it just happens nothing. Other videos seem to work fine.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="372">
+		<closedTime>Sun Feb 21 11:56:51 CST 2016</closedTime>
+		<buginformation>
+			<summary>Notification Sound / Vibration Not Working </summary>
+			<description>The latest version of Twidere for Android does not show any kind of notification besides the little bell icon on the notifications bar. That's happening for mention notifications on Moto G and LG G2, as far as I've tested. Before that, there was sound, but it was the default notification sound and LED color as well, despite any custom configuration.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.AccountPreferences.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.preference.NotificationTypePreference.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="377">
+		<closedTime>Sun Feb 21 11:56:51 CST 2016</closedTime>
+		<buginformation>
+			<summary>Force close when export settings </summary>
+			<description>Application crashs when I try to export the settings. Backup file is 0 bytes. 3.0.5-SNAPSHOT-160213-3</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.constant.SharedPreferenceConstants.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="380">
+		<closedTime>Sun Feb 21 11:56:51 CST 2016</closedTime>
+		<buginformation>
+			<summary>Media viewer doesn't support images in DM </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.test.DeadLockTest.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.TwidereConstants.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.util.TwitterDateConverter.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.util.TwitterAPIFactoryTest.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.TwitterException.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.BugReporter.java</file>
+			<file>twidere.src.fdroid.java.org.mariotaku.twidere.util.TwidereBugReporter.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="381">
+		<closedTime>Sun Feb 21 11:56:51 CST 2016</closedTime>
+		<buginformation>
+			<summary>Profile image too small for user item </summary>
+			<description></description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.test.DeadLockTest.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.TwidereConstants.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.util.TwitterDateConverter.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.util.TwitterAPIFactoryTest.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.TwitterException.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.BugReporter.java</file>
+			<file>twidere.src.fdroid.java.org.mariotaku.twidere.util.TwidereBugReporter.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="389">
+		<closedTime>Thu Mar 03 15:23:34 CST 2016</closedTime>
+		<buginformation>
+			<summary>Saving media </summary>
+			<description>Previously, image name was like "5v4cbu2za3ef3i3bst9o4ofr50.jpg". Now, it something like "https___pbs_twimg_com_media_CbAf.jpg". Video not save in separate folder and not save in video format, it was named like "https___video_twimg_com_ext_tw_v"</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.CacheProvider.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.task.SaveFileTaskTest.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.task.SaveFileTask.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ThemeUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="393">
+		<closedTime>Sun Feb 28 14:38:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>Some pictures can't be viewed </summary>
+			<description>OS: Android 6.0.1 Version: 3.0.6 some pictures can be previewed like this one but can not be viewed the picture after click the preview or the link reload but still blank</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.imageviewer.RapidImageDecoder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.imageviewer.RapidImageRegionDecoder.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="395">
+		<closedTime>Thu Mar 03 15:23:35 CST 2016</closedTime>
+		<buginformation>
+			<summary>Attaching image to reply hides text </summary>
+			<description>On the new tweet layout, attaching an image to a reply and opening the keyboard hides the text box. To view/edit the text, the keyboard must be closed and the cursor moved. Possible solution is to reduce the thumbnails for attached images? (The text box should still be the most important element)</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.MediaTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.TwitterAPIStatusesLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ArrayRecyclerAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.AsyncTwitterWrapper.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwitterAPIFactory.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.ConversationLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="396">
+		<closedTime>Sat Feb 27 11:57:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>Reply label isn't displayed after state restored in compose dialog </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="398">
+		<closedTime>Sat Feb 27 11:57:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>Notifications - Mentions only not working </summary>
+			<description>Using 3.0.6. I cant disable notifications for favorites and retweets, no matter if "Mentions only" in the notification options is turned on or not, I will be notified about every fav or retweet.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="399">
+		<closedTime>Sun Feb 28 14:38:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>Remember position setting doesn't work on lists tabs </summary>
+			<description>Since the latest updates "remember position" doesn't work on my twitter lists tab anymore. when i close Twidere and open it again i always find myself on top. :( sony xperia z3c android 5.1</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsStatusesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserTimelineFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserFavoritesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.TabPagerIndicator.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusesSearchFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserListTimelineFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="401">
+		<closedTime>Sat Feb 27 11:57:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>"Like"/fav star is not saved between timeline and tweet view </summary>
+			<description>When I "like" a tweet in my timeline and then go to the tweet detail view the "like" is not shown? Seems like a recent regression.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.menu.support.FavoriteItemProvider.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.Utils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="402">
+		<closedTime>Sat Feb 27 11:57:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>No like animation in status detail conversation item </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="403">
+		<closedTime>Sat Feb 27 11:57:17 CST 2016</closedTime>
+		<buginformation>
+			<summary>Wrong item selected for status context menu </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsStatusesFragment.java</file>
+			<file>twidere.extension.shortener.gist.src.main.java.org.mariotaku.twidere.extension.shortener.gist.GithubFactory.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.HomeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.Constants.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.provider.TwidereDataStore.java</file>
+			<file>twidere.extension.twitlonger.src.main.java.org.mariotaku.twidere.extension.twitlonger.TwitLongerFactory.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.SignInActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.iface.IBaseFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.BaseSupportFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="406">
+		<closedTime>Sat Feb 27 11:57:17 CST 2016</closedTime>
+		<buginformation>
+			<summary>Scroll to last item when position saved but old items cleared </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ContentListScrollListener.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsStatusesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AbsContentRecyclerViewFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="411">
+		<closedTime>Sun Feb 28 14:38:16 CST 2016</closedTime>
+		<buginformation>
+			<summary>Can only type numbers in RetypeEmail Verification Dialog </summary>
+			<description>If encountered RetypeEmail verification, you can only type numbers, no characters, which makes it impossible to pass the verification. I have a modification here, works for me: // Insert at SignInActivity.java:922            if ("RetypeEmail".equalsIgnoreCase(challengeType)) {                editVerification.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);            } else {                editVerification.setInputType(InputType.TYPE_CLASS_NUMBER | InputType.TYPE_NUMBER_VARIATION_PASSWORD);            }</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.SignInActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="415">
+		<closedTime>Mon Feb 29 07:47:11 CST 2016</closedTime>
+		<buginformation>
+			<summary>Video in tweet won't playing </summary>
+			<description>https://twitter.com/supponf2211/status/703962505630994434</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.MediaViewerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.media.TwidereMediaDownloader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.media.MediaExtra.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="417">
+		<closedTime>Mon Feb 29 07:47:11 CST 2016</closedTime>
+		<buginformation>
+			<summary>Click on a new interaction notification doesn't stop the notification for good </summary>
+			<description>When i get the notification about new interaction in status bar and i click on it i am sent to interactions tab and the notification disapear. But it gets back later (on refresh) and it keeps comming back until i swipe the notification. I don't know whether this is intentional or a bug but i think it should dissapear for good on click since i've already been sent to the interactions tab to read it. Sony Xperia Z3c Android 5.1.1</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.HomeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.MessagesConversationFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="418">
+		<closedTime>Mon Feb 29 07:47:11 CST 2016</closedTime>
+		<buginformation>
+			<summary>Filters not applied in status view </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.MediaTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.TwitterAPIStatusesLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.StatusCodeMessageUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.UserFavoritesLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DataStoreUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.RetweetsOfMeLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.TweetSearchLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.UserListTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.ConversationLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.support.UserTimelineLoader.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="421">
+		<closedTime>Thu Mar 03 15:23:34 CST 2016</closedTime>
+		<buginformation>
+			<summary>Wrong unread count when clicked notifications to open timeline </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.TabSpec.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DataImportExportUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.SettingsWizardActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.CompareUtils.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.TwidereConstants.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.HomeActivity.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableMedia.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.SupportTabSpec.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DataStoreUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.ParcelableMediaUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.CustomTabUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="433">
+		<closedTime>Wed Mar 02 11:38:58 CST 2016</closedTime>
+		<buginformation>
+			<summary>URL identification issue on 3.0.6.1 </summary>
+			<description>Twidere鐗堟湰锛�3.0.6.1 褰撲腑鏂囧悗杩炲甫涓�涓�.NET 鎴栧煙鍚嶇粨灏剧鏃讹紝Twidere灏嗕細灏嗗叾璇嗗埆涓篣RL锛� 瀹樻柟Web椤甸潰鍒欐棤姝ら棶棰橈細 https://twitter.com/chenshaoju/status/704881596331982850</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.ParcelableStatusUtils.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.util.TwidereDataUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.OnLinkClickHandler.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.ParcelableStatus.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwidereLinkify.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.twitter.model.Status.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.MessageViewHolder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.StatusViewHolder.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="434">
+		<closedTime>Thu Mar 03 15:23:35 CST 2016</closedTime>
+		<buginformation>
+			<summary>Action buttons not hiding in card preview </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.StatusViewHolder.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="435">
+		<closedTime>Thu Mar 03 15:23:35 CST 2016</closedTime>
+		<buginformation>
+			<summary>Compact status card top padding too small </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.ActionIconThemedTextView.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="437">
+		<closedTime>Sun Mar 20 12:50:00 CST 2016</closedTime>
+		<buginformation>
+			<summary>Last status item flashing while load nore </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.ComposeActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ParcelableActivitiesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ParcelableStatusesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.AccountsSpinnerAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.SimpleParcelableUsersAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.AccountsDashboardFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.AsyncTwitterWrapper.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.InternalTwitterContentUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="438">
+		<closedTime>Thu Mar 03 15:23:35 CST 2016</closedTime>
+		<buginformation>
+			<summary>Card ui bugs </summary>
+			<description>1 銆佷娇鐢ㄢ�滅函鐧借儗鏅�濅綔涓哄崱鐗囪儗鏅紝閭ｄ釜杞彂鎸夐挳鍜屽紩鐢ㄦ寜閽篃鏄櫧鑹茬殑锛屼笌鑳屾櫙涓�鏍凤紝鐪嬩笉鍒般�傘�� 2銆侀棿姝囨�х殑鍑虹幇鏀惰棌锛坙ike锛夋寜閽寜涓嬬殑鐜拌薄锛岃〃鐜颁负鏀惰棌鎸夐挳浜簡锛屽疄闄呬笂娌℃湁鏀惰棌杩囥�傘��</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.ActionIconThemedTextView.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.ActionIconButton.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="439">
+		<closedTime>Thu Mar 03 15:23:35 CST 2016</closedTime>
+		<buginformation>
+			<summary>Negative character count while retweeting </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.RetweetQuoteDialogFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="449">
+		<closedTime>Sun Mar 20 12:50:00 CST 2016</closedTime>
+		<buginformation>
+			<summary>bug: twidere crashes irrecoverably when scrolling to tweet containing unicode character U+00AD </summary>
+			<description>I follow someone who frequently tweets this character (intentionally). in Fenix, scrolling to the tweet containing this character will crash the app, but after reopening it it's possible to jump to the top to skip the tweet and use Fenix again. in Twidere, the app crashes and continues crashing immediately after opening. the official Twitter android app does not crash. Unicode Character 'SOFT HYPHEN' (U+00AD)</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.view.holder.StatusViewHolder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.text.SafeSpannableStringBuilder.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.text.SafeSpannableString.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwidereStringUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="466">
+		<closedTime>Sun Mar 20 12:50:00 CST 2016</closedTime>
+		<buginformation>
+			<summary>autocomplete not work when @ someone </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.CachedRelationship.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.MessagesConversationFragment.java</file>
+			<file>twidere.src.androidTest.java.org.mariotaku.twidere.util.TwidereArrayUtilsTest.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.UserFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.BaseRefreshTaskParam.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.ParcelableUsersFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.CursorActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.ParcelableStatusesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.RefreshTaskParam.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.CursorStatusesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.SimpleRefreshTaskParam.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.Constants.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.provider.TwidereDataStore.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.UserAutoCompleteAdapter.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="467">
+		<closedTime>Sun Mar 20 12:50:00 CST 2016</closedTime>
+		<buginformation>
+			<summary>User filters not working for retweets users in status screen </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ContentValuesCreator.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.content.TwidereSQLiteOpenHelper.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.UserFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DataStoreUtils.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.provider.TwidereDataStore.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.InternalTwitterContentUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.MultiSelectEventHandler.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.BaseFiltersFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.AddStatusFilterDialogFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="468">
+		<closedTime>Sun Mar 20 14:16:39 CST 2016</closedTime>
+		<buginformation>
+			<summary>Crash while sending media status without location to Fanfou </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.service.BackgroundOperationService.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.fanfou.model.PhotoStatusUpdate.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.api.fanfou.api.PhotosResources.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="488">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Can't select ringtone in 3.1.1.5 </summary>
+			<description>Twidere Version:3.1.1.5 (Google Play) Android Version: 5.1.1 鐜拌薄锛氬湪璁剧疆->閫氱煡->(閫夋嫨璐﹀彿)->閾冨０锛岄噷锛屾棤娉曟寚瀹氶搩澹帮紝鐐瑰嚮閾冨０鍚庡乏渚х殑閫夋嫨绗﹀彿骞舵湭琚�変腑銆�</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.SettingsDetailsFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.BasePreferenceFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.preference.RingtonePreference.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="490">
+		<closedTime>Wed Mar 30 13:53:22 CST 2016</closedTime>
+		<buginformation>
+			<summary>Retweeted status deleted when trying to quote </summary>
+			<description>https://twitter.com/ShifuPhemmy/status/714716441199714305</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.model.NetworkEvent.java</file>
+			<file>twidere.src.main.java.edu.tsinghua.hotmobi.model.MediaDownloadEvent.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.MediaViewerActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="504">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Feature request: Improve HTML parser </summary>
+			<description>Twidere is reading the contents of the field "statusnet_html" if present. The content seems to be put into some HTML parser. This parser seems to have problems with many HTML elements. So it doesn't do a linebreak after an <br> or </blockquote> or before an <blockquote>. But it does something that a html parser shouldn't do: It parses linebreaks. Since it mostly is a problem that Twidere has especially with Friendica, I will write a workaround for Friendica.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.IncomingFriendshipsFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.ParcelableUsersFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.HtmlSpanBuilder.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="505">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Filters not working for notifications </summary>
+			<description>Currently sources filter is not working</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.SignInActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.MediaTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.RetweetsOfMeLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.APIEditorActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.UserTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.BrowserSignInActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="508">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Keyword filter not work with quoted tweet. </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.SignInActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.MediaTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.RetweetsOfMeLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.APIEditorActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.UserTimelineLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.BrowserSignInActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="509">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Account selector showed for opening status links </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DirectMessageOnLinkClickHandler.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.OnLinkClickHandler.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.WebLinkHandlerActivity.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.TwidereLinkify.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.UserFragment.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="519">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Open in browser not working properly in media viewer </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.service.BackgroundOperationService.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.activity.MediaViewerActivity.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="532">
+		<closedTime>Mon Apr 18 13:12:42 CST 2016</closedTime>
+		<buginformation>
+			<summary>Clicking on user mention may open another user profile with same id </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.ParcelableActivityUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.UserKeyUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.loader.ParcelableUserLoader.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.InternalTwitterContentUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="536">
+		<closedTime>Mon May 16 13:42:48 CST 2016</closedTime>
+		<buginformation>
+			<summary>Links not clickable in activity details </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.StatusFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ParcelableStatusesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.StatusAdapterLinkClickHandler.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.DummyItemAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.VariousItemsAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ThemeUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="537">
+		<closedTime>Mon May 16 13:42:48 CST 2016</closedTime>
+		<buginformation>
+			<summary>Filters not working for favorites </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.adapter.ParcelableActivitiesAdapter.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.ParcelableActivityUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DataStoreUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.CursorActivitiesFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.provider.TwidereDataProvider.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="540">
+		<closedTime>Mon May 16 13:42:48 CST 2016</closedTime>
+		<buginformation>
+			<summary>Link color too dark for some colors </summary>
+			<description>No description provided.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.ThemeUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="544">
+		<closedTime>Mon May 16 13:42:48 CST 2016</closedTime>
+		<buginformation>
+			<summary>Bug repport: Can't accept or reject a following demand </summary>
+			<description>On Galaxy S2 (4.1.2), the accept or reject buttons are not there anymore.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.microblog.library.twitter.api.PrivateFriendsFollowersResources.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="645">
+		<closedTime>Fri Dec 16 02:31:13 CST 2016</closedTime>
+		<buginformation>
+			<summary>Missing source url when resending quoted tweet </summary>
+			<description>Version: latest in Play Store, System: CM14.1 The quoted tweet's url won't show in resend-message Reproduce: quote a tweet with your own comment airplane mode, send tweet and wait for draft notification click send in notification</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.model.draft.UpdateStatusActionExtra.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.ParcelableStatusUpdateUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="653">
+		<closedTime>Fri Dec 16 02:31:13 CST 2016</closedTime>
+		<buginformation>
+			<summary>Entity unescaping in DMs needed </summary>
+			<description>In DMs, ampersands are shown as &amp; rather than & - this applies both to sent and received messages. (F-droid build 3.2.9)</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.model.util.ParcelableDirectMessageUtils.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.InternalTwitterContentUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="654">
+		<closedTime>Wed Dec 14 20:59:03 CST 2016</closedTime>
+		<buginformation>
+			<summary>App renamed to "mhd fwzy"? </summary>
+			<description>Just installed the latest update via Google Play - 3.3.17. It has renamed the app "mhd fwzy". Is this intentional? I'm running Android 7.1 via CM14.1 on a Nexus 6.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.TwidereConstants.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="73">
+		<closedTime>Sun Jan 03 10:24:26 CST 2016</closedTime>
+		<buginformation>
+			<summary>We can't create new posts on GNU social </summary>
+			<description>I've just seen you moved the GH project to here. That's a feature the GS users asked you a few months ago, with the last version we can't add our accounts and it's sort of annoying to stay always with an old version. Update: Loging in: https://server.domain/api Basic "No suffix" enabled Deleting the limit characters: Press ##8943373## The problem: Now we're logged in but we can't post new messages, just replies.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.service.BackgroundOperationService.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="82">
+		<closedTime>Sun Mar 22 08:28:56 CST 2015</closedTime>
+		<buginformation>
+			<summary>Crash while opening a link in a DM </summary>
+			<description>Twidere crash instantly instead of opening the browser.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.DirectMessageOnLinkClickHandler.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.util.OnLinkClickHandler.java</file>
+			<file>twidere.component.common.src.main.java.org.mariotaku.twidere.util.MediaPreviewUtils.java</file>
+		</fixedFiles>
+	</bug>
+	<bug id="93">
+		<closedTime>Tue Mar 31 11:05:29 CST 2015</closedTime>
+		<buginformation>
+			<summary>The order of the tabs won't change </summary>
+			<description>I set an order at the first start-up, but now I can't change it.</description>
+		</buginformation>
+		<fixedFiles>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.support.UserFragment.java</file>
+			<file>twidere.src.main.java.org.mariotaku.twidere.fragment.CustomTabsFragment.java</file>
+		</fixedFiles>
+	</bug>
+</bugrepository>

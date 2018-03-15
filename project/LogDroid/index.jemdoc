@@ -1,0 +1,50 @@
+# jemdoc: menu{MENU}{index.html}
+= LogDroid
+
+
+== LogDroid
+
+The LogDroid tool helps developer automatically instrument log print statement in the source code.
+
+=== Bug report dataset:
+
+Android projects with bug issue:
+
+com.fsck.k9.apk
+
+- [./bugreports/com.fsck.k9.xml bug report]
+- [https://github.com/k9mail/k-9 project page]
+
+org.mariotaku.twidere.apk
+
+- [./bugreports/org.mariotaku.twidere.xml bug report]
+- [https://f-droid.org/wiki/page/org.mariotaku.twidere project page]
+
+org.wordpress.android.apk 
+
+- [./bugreports/org.wordpress.android.xml bug report]
+- [https://github.com/wordpress-mobile/WordPress-Android project page]
+
+org.thoughtcrime.securesms.apk
+
+- [./bugreports/org.thoughtcrime.securesms.xml bug report]
+- [https://github.com/signalapp/Signal-Android project page]
+
+=== Download
+
+~~~
+Download the rawdata, rawdata+experimental result, tutorial, binary tool.
+~~~
+
+=== Compiled APKs
+
+The compiled apks for testing different bug issues are available at: [https://drive.google.com/drive/folders/1gnNOadXL_fCelg8m7gV8pDACYBcfMN4Z?usp=sharing compiled apks]. 
+
+/Note this folder is not public available at this stage./
+
+=== Howto Tutorial
+
+
+== Support or Contact
+
+Having trouble with the tool ? [https://chrisyttang.org Contact support] and we’ll help you sort it out.
