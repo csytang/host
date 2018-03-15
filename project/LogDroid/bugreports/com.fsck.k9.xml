@@ -302,7 +302,7 @@
 		<closedTime>Sun Jan 15 21:44:30 CST 2017</closedTime>
 		<buginformation>
 			<summary>Contact auto selecting first item </summary>
-			<description>If there are "FirstUser@example.com" and "SecondUser@example.com" in my Contacts and i type "User@example.com" then app selects first entry from contacts and i cannot send email to "User@example.com". Previous versions allowed me type address and select one from suggestions if i want. Work around is to end the address with a comma & a space so new address object is created. K-9 Mail version: 5.201</description>
+			<description>If there are "FirstUser@example.com" and "SecondUser@example.com" in my Contacts and i type "User@example.com" then app selects first entry from contacts and i cannot send email to "User@example.com". Previous versions allowed me type address and select one from suggestions if i want. Work around is to end the address with a comma and a space so new address object is created. K-9 Mail version: 5.201</description>
 		</buginformation>
 		<fixedFiles>
 			<file>k9mail.src.main.java.com.fsck.k9.view.RecipientSelectView.java</file>
