@@ -10,25 +10,9 @@ The LogDroid tool helps developer automatically instrument log print statement i
 
 Android projects with bug issue:
 
-com.fsck.k9.apk
+: {Subject systems} [https://github.com/k9mail/k-9 com.fsck.k9.apk], [https://f-droid.org/wiki/page/org.mariotaku.twidere org.mariotaku.twidere.apk], [https://github.com/wordpress-mobile/WordPress-Android org.wordpress.android.apk], [https://github.com/signalapp/Signal-Android org.thoughtcrime.securesms.apk]
 
-- [./bugreports/com.fsck.k9.xml bug report]
-- [https://github.com/k9mail/k-9 project page]
-
-org.mariotaku.twidere.apk
-
-- [./bugreports/org.mariotaku.twidere.xml bug report]
-- [https://f-droid.org/wiki/page/org.mariotaku.twidere project page]
-
-org.wordpress.android.apk 
-
-- [./bugreports/org.wordpress.android.xml bug report]
-- [https://github.com/wordpress-mobile/WordPress-Android project page]
-
-org.thoughtcrime.securesms.apk
-
-- [./bugreports/org.thoughtcrime.securesms.xml bug report]
-- [https://github.com/signalapp/Signal-Android project page]
+: {Bug report} the bug report could be downloaded from [https://archive.org/download/logdroid-bug-report-dataset logdroid-bug-report-dataset]. 
 
 === Download
 
