@@ -4,7 +4,7 @@
 		<closedTime>Sun Nov 09 05:03:01 CST 2014</closedTime>
 		<buginformation>
 			<summary>A bug in AsyncTaskManager.java </summary>
-			<description>May be a bug ? public <T> int add(final ManagedAsyncTask<T, ?, ?> task, final boolean exec, final T... params) {    final int hashCode = task.hashCode();    mTasks.add(task);    if (exec) {        execute(hashCode); // This line should be params, Is it a bug?    }    return hashCode;    }</description>
+			<description>"May be a bug ? public <T> int add(final ManagedAsyncTask<T, ?, ?> task, final boolean exec, final T... params) {    final int hashCode = task.hashCode();    mTasks.add(task);    if (exec) {        execute(hashCode); // This line should be params, Is it a bug?    }    return hashCode;    }"</description>
 		</buginformation>
 		<fixedFiles>
 			<file>twidere.src.main.java.org.mariotaku.twidere.activity.support.BaseSupportThemedActivity.java</file>
