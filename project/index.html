@@ -21,12 +21,28 @@
       <h5 class="my-0 mr-md-auto font-weight-normal">Yutian Tang (Chris)</h5>
       <nav class="my-2 my-md-0 mr-md-3">
         <a class="p-2 text-dark active" href="../index.html">Home</a>
+
+
+
+        <a class="p-2 text-dark dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Research</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="../research/publication/index.html">Publication</a>
+          <a class="dropdown-item" href="../research/service/">Academic Service</a>
+          <a class="dropdown-item" href="#">Code</a>
+        </div>
+
+
+
         <a class="p-2 text-dark" href="../research/publication/index.html">Publications</a>
         <a class="p-2 text-dark dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="#spl">SPL</a>
           <a class="dropdown-item" href="#android">Android</a>
         </div>
+
+
+
+
         <a class="p-2 text-dark" href="../teaching">Teaching</a>
         <a class="p-2 text-dark" href="../misc/">Misc</a>
         <a class="p-2 text-dark" data-toggle="modal" data-target="#contactModal" href="#">Contact</a>
@@ -54,26 +70,39 @@
     </div>
 
     <main role="main" class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h3 class="pb-3 mb-4 font-italic border-bottom">
-           	Research Prototypes and Tools
-          </h3>
-          <div>
-            <h2 id="spl">Software Product Line</h2>
-            <p>Our paper titled "Cross Version Defect Prediction with Representative Data via Sparse Subset Selection" has been accepted at ICPC 2018.</p>
-          </div> <!--/.blog-post -->
-          
-          <div>
-            <h2 id="android">Android Related</h2>
-            <p>Our paper titled "Cross Version Defect Prediction with Representative Data via Sparse Subset Selection" has been accepted at ICPC 2018.</p>
-          </div> <!--/.blog-post -->
+      	<h3 class="pb-3 mb-4 font-italic border-bottom">Research Prototypes and Tools</h3>
+      	
+		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+		  <li class="nav-item">
+		    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#spl" role="tab" aria-controls="pills-home" aria-selected="true">Software Product Line</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#android" role="tab" aria-controls="pills-profile" aria-selected="false">Android</a>
+		  </li>
+		  <li class="nav-item">
+		    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#script" role="tab" aria-controls="pills-contact" aria-selected="false">Scripts</a>
+		  </li>
+		</ul>
+		<div class="tab-content" id="pills-tabContent">
+		  <div class="tab-pane fade show active" id="spl" role="tabpanel" aria-labelledby="pills-home-tab">
+		  	<table class="container">
+  				<tbody>
+			    <tr>
+			      <td class="align-baseline"><a href="https://www.chrisyttang.org/project/loong/" target="_blank"><img src="img/loong.jpg" height="36"></a></td>
+			      <td class="align-baseline">Loong: A colored IDE for feature mining and annotation</td>
+			    </tr>
+			    <tr>
+			      <td class="align-baseline"><a href="https://www.chrisyttang.org/project/loong_fmr/" target="_blank"><img src="img/loongfmr.jpg" height="36"></a></td>
+			      <td class="align-baseline">LoongFMR: Feature model recovery toolkit</td>
+			    </tr>
+			  </tbody>
+			</table>
+		  </div>
+		  <div class="tab-pane fade" id="android" role="tabpanel" aria-labelledby="pills-profile-tab">.under construction.</div>
+		  <div class="tab-pane fade" id="script" role="tabpanel" aria-labelledby="pills-contact-tab">.under construction.</div>
+		</div>
 
-          
-
-        </div><!-- /.blog-main -->
-
-      </div><!-- /.row -->
+	
 
     </main><!-- /.container -->
 
@@ -97,12 +126,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="./js/vendor/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
+    
   </body>
 </html>
