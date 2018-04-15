@@ -80,7 +80,7 @@ fileType:'csv',
                 //{name: "Keywords"},
                 {name: "VenueTypes"},
                 {name: "Topics"},
-                //{name: "AuthorTypes"}
+                {name: "Selected"}
             ]
         },
         loadedCb: function(){
@@ -217,7 +217,9 @@ str+="<br>";
             },
             
             
-            
+            { 
+                title: "Selected", catTableName: "Selected Publication", catLabel: "venue", layout:"right", catSortBy:{value: "id", inverse: true}
+            },
             
             { 
                 title: "Type", catTableName: "VenueTypes", catLabel: "keyword", layout:"right",
