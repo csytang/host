@@ -208,21 +208,21 @@ itemDisplay: {
             /*{ title: "Topics", attribMap: "Type",
                 catLabel: function(){ console.log(this); return kshf.dt_id.VenueTypes[this.id].data.keyword; }
             },*/
-            {title: "Topic", catTableName: "Topics", catLabel: "topic", layout:"right",},
+            {title: "Topic", catTableName: "Topics", collapsed: true, catLabel: "topic", layout:"right",},
             
-             { name: "Publication Year", panel: "right", collapsed: false, type: "categorical",  catSortBy:{value: "id", inverse: true}, value: "Year" },
+             { name: "Publication Year", panel: "right", collapsed: true, type: "categorical",  catSortBy:{value: "id", inverse: true}, value: "Year" },
         
             
             
-            { title: "Venue", catTableName: "Venues", catLabel: "venue", layout:"right", catSortBy:{value: "id", inverse: true}
+            { title: "Venue", catTableName: "Venues", catLabel: "venue",collapsed: true, layout:"right", catSortBy:{value: "id", inverse: true}
             },
             
             
             
-            {title: "Type", catTableName: "VenueTypes", catLabel: "keyword", layout:"right",
+            {title: "Type", catTableName: "VenueTypes", catLabel: "keyword",collapsed: true, layout:"right",
             },
 
-            {name: "CCF Ranking", catTableName: "CCFRanking", catLabel: "ranking", layout:"right", catSortBy:{value: "id", inverse: false}, value: "CCF"
+            {name: "CCF Ranking", catTableName: "CCFRanking", catLabel: "ranking",collapsed: true, layout:"right", catSortBy:{value: "id", inverse: false}, value: "CCF"
             },
             
             
