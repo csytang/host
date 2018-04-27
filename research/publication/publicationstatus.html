@@ -80,6 +80,7 @@ fileType:'csv',
                 //{name: "Keywords"},
                 {name: "VenueTypes"},
                 {name: "Topics"},
+                {name: "CCFRanking"},
             ]
         },
         loadedCb: function(){
@@ -133,7 +134,7 @@ itemDisplay: {
                         str+=" <a class='pubLink pdflink fa fa-file-powerpoint-o' data-toggle='modal' href='"+this.URL+"' onClick='onclickslide("+this.id+")' target='_blank'></a>";
                     }
 
-                    str+="</div>";
+                str+="</div>";
 
                 str+="<span class='item_details'>";
 
@@ -150,7 +151,19 @@ itemDisplay: {
                         str+=', '; 
                     }
                 }
-                    str+="</div>";
+                str+="</div>";
+
+                // CCF Ranking
+                var rankings = this.CCFRanking;
+                str+="div class=\"topics\"><span class='header'></span> ";
+                for(j=0; j<rankings.length; j++){
+                    str+=kshf.dt_id.CCFRanking[rankings[j]].data.keyword;
+                    if(j!==rankings.length-1)  { str+=', '; 
+                    }
+                }
+
+                str+="</div>";
+
 
                 // Venue + details
                 str+="<div class='venueInfo'><span style='font-weight:bolder;'>"+this.Details+"</span>";
@@ -161,7 +174,7 @@ itemDisplay: {
                         str+=this.details;
                     }*/
                     str+="</div>";
-               /* // keywords
+                    /* // keywords
                     var cats = this.Topics;
                     if(cats.length>0){
                         str+="<div class=\"topics\"> <span class='header'>Topics</span>: ";
@@ -171,12 +184,12 @@ itemDisplay: {
                         }
                         str+="</div>";
                     }
-*/
-                // award
+                    */
+                    // award
                     /*if(this.award!==""&this.award!==null){
                         str+="<div class=\"iteminfo iteminfo_3\">&#9733; "+this.award+"</div>";
                     }*/
-str+="<br>";
+                str+="<br>";
                 return str;
             }
         },
@@ -204,21 +217,21 @@ str+="<br>";
             /*{ title: "Topics", attribMap: "Type",
                 catLabel: function(){ console.log(this); return kshf.dt_id.VenueTypes[this.id].data.keyword; }
             },*/
-            { title: "Topic", catTableName: "Topics", catLabel: "topic", layout:"right",
-            },
+            {title: "Topic", catTableName: "Topics", catLabel: "topic", layout:"right",},
             
              { name: "Publication Year", panel: "right", collapsed: false, type: "categorical",  catSortBy:{value: "id", inverse: true}, value: "Year" },
         
             
             
-            { 
-                title: "Venue", catTableName: "Venues", catLabel: "venue", layout:"right", catSortBy:{value: "id", inverse: true}
+            { title: "Venue", catTableName: "Venues", catLabel: "venue", layout:"right", catSortBy:{value: "id", inverse: true}
             },
             
             
             
-            { 
-                title: "Type", catTableName: "VenueTypes", catLabel: "keyword", layout:"right",
+            {title: "Type", catTableName: "VenueTypes", catLabel: "keyword", layout:"right",
+            },
+
+            {title: "CCF Ranking", catTableName: "CCFRanking", catLabel: "keyword", layout:"right", catSortBy:{value: "id", inverse: true}
             },
             
             
