@@ -1,4 +1,5 @@
 id,venue,long_name
+0,Others,Unranked Conference
 1,EMSE,Empirical Software Engineering
 2,JSS,Journal of System and Software
 3,IEEE Software,IEEE Software
@@ -18,7 +19,7 @@ id,venue,long_name
 17,ICPE,International Conference on Performance Engineering
 18,FSE,International Symposium on the Foundations of Software Engineering
 22,CASCON,Centre for Advanced Studies Conference
-23,ICPC,International Conference/Workshop on Program Comprehension
+23,ICPC/IWPC,International Conference/Workshop on Program Comprehension
 25,ICST,"International Conference on Software Testing, Verification, and Validation"
 26,APSEC,Asia Pacific Software Engineering Conference
 27,WSE,International Symposium on Web Systems Evolution
@@ -73,4 +74,4 @@ id,venue,long_name
 81,,
 82,,
 83,,
-84,Others,Unranked Conference
+84,,
