@@ -143,7 +143,12 @@ itemDisplay: {
                     str+="<div class=\"authorNames\"><span class='header'></span> ";
 
                 for(var j=0; j<authors.length; j++){
-                    str+=kshf.dt_id.Authors[authors[j]].data.Name;
+                	if(kshf.dt_id.Authors[authors[j]].data.Name.trim()=="Yutian Tang"){
+                		str+="<b>"+kshf.dt_id.Authors[authors[j]].data.Name+"</b>";
+                	}else{
+                		str+=kshf.dt_id.Authors[authors[j]].data.Name;
+                	}
+                    
                         
                 	//str+=authData.Name;
                     
