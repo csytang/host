@@ -29,7 +29,7 @@ html {
 
 #backtop {
     position: fixed;
-    left:auto;right: 20px;top:auto;bottom: 20px;
+    left:auto;right: 10px;top:auto;bottom: 10px;
     outline: none;
     overflow:hidden;
     color:#d3d3d3;
@@ -39,7 +39,7 @@ html {
     width:40px;
     line-height:40px;
     font-size:14px;
-    border-radius:2px;
+    border-radius:3px;
     cursor:pointer;
     transition:all 0.3s linear;
     z-index:999999;
