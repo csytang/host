@@ -19,3 +19,38 @@ html {
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+.navbar-fixed-top + .content-container {
+	margin-top: 70px;
+}
+.content-container {
+	margin: 0 130px;
+}
+
+#backtop {
+    position: fixed;
+    left:auto;right: 20px;top:auto;bottom: 20px;
+    outline: none;
+    overflow:hidden;
+    color:#d3d3d3;
+    text-align:center;
+    background-color:#f2f2f2;
+    height:40px;
+    width:40px;
+    line-height:40px;
+    font-size:14px;
+    border-radius:2px;
+    cursor:pointer;
+    transition:all 0.3s linear;
+    z-index:999999;
+
+    opacity:1;
+    display:none;
+}
+#backtop:hover {
+    background-color:#d3d3d3;
+    color:#f2f2f2;
+}
+#backtop.mcOut {
+    opacity:0;
+}
