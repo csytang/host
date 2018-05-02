@@ -32,9 +32,8 @@ html {
     left:auto;right: 10px;top:auto;bottom: 10px;
     outline: none;
     overflow:hidden;
-    color:#d3d3d3;
     text-align:center;
-    background-color:#f2f2f2;
+    background-color:#eff2ec;
     height:40px;
     width:40px;
     line-height:40px;
@@ -48,8 +47,7 @@ html {
     display:none;
 }
 #backtop:hover {
-    background-color:#d3d3d3;
-    color:#f2f2f2;
+    background-color:#eff2ec;
 }
 #backtop.mcOut {
     opacity:0;
