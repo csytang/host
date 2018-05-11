@@ -142,8 +142,8 @@ itemDisplay: {
                 str+="<div class=\"authorNames\"><span class='header'></span> ";
 
                 for(var j=0; j<authors.length; j++){
-                    if(kshf.dt_id.Authors[authors[j]].data==null){
-                        break;
+                    if(kshf.dt_id.Authors[authors[j]]==null){
+                        continue;
                     }
                 	if(kshf.dt_id.Authors[authors[j]].data.Name.trim()=="Yutian Tang"){
                 		str+="<span style=\"color:blue;\">"+kshf.dt_id.Authors[authors[j]].data.Name+"</span>";
