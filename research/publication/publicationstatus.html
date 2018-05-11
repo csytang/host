@@ -142,16 +142,16 @@ itemDisplay: {
                 str+="<div class=\"authorNames\"><span class='header'></span> ";
 
                 for(var j=0; j<authors.length; j++){
-                	//if(kshf.dt_id.Authors[authors[j]].data.Name.trim()=="Yutian Tang"){
-                	//	str+="<span style=\"color:blue;\">"+kshf.dt_id.Authors[authors[j]].data.Name+"</span>";
-                	//}else{
+                	if(kshf.dt_id.Authors[authors[j]].data.Name.trim()=="Yutian Tang"){
+                		str+="<span style=\"color:blue;\">"+kshf.dt_id.Authors[authors[j]].data.Name+"</span>";
+                	}else{
                 		str+=kshf.dt_id.Authors[authors[j]].data.Name;
-                	//}
+                	}
                     
                         
                 	//str+=authData.Name;
                     
-                    if(j!==authors.length-1) {
+                    if(j!==authors.length) {
                         str+=', '; 
                     }
                 }
