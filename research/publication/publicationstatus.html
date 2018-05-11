@@ -142,11 +142,11 @@ itemDisplay: {
                 str+="<div class=\"authorNames\"><span class='header'></span> ";
 
                 for(var j=0; j<authors.length; j++){
-                	if(kshf.dt_id.Authors[authors[j]].data.Name.trim()=="Yutian Tang"){
-                		str+="<span style=\"color:blue;\">"+kshf.dt_id.Authors[authors[j]].data.Name+"</span>";
-                	}else{
+                	//if(kshf.dt_id.Authors[authors[j]].data.Name.trim()=="Yutian Tang"){
+                	//	str+="<span style=\"color:blue;\">"+kshf.dt_id.Authors[authors[j]].data.Name+"</span>";
+                	//}else{
                 		str+=kshf.dt_id.Authors[authors[j]].data.Name;
-                	}
+                	//}
                     
                         
                 	//str+=authData.Name;
@@ -194,13 +194,13 @@ itemDisplay: {
                 var authors = this.Authors;
                 
                  newAuthors = [];
-                for(i=0 ; i<authors.length ; i++){ 
+                 for(i=0 ; i<authors.length ; i++){ 
                     if(authors[i]!=226) 
                     {
                         newAuthors.push(authors[i]);
                     //  console.log(authors[i]);
                     }
-                }
+                  }
                 return newAuthors;
                   },
                 catTableName: "Authors",layout:"right",
