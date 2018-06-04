@@ -39,7 +39,7 @@ html {
 
 #backtop {
     position: fixed;
-    left:auto;right: 10px;top:auto;bottom: 10px;
+    left:auto;right: 10px;top:auto;bottom: 20px;
     outline: none;
     overflow:hidden;
     text-align:center;
