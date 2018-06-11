@@ -32,7 +32,9 @@ h1{
 
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
-
+a:hover{
+  color:#ff0000;
+}
 
 .navbar-fixed-top + .content-container {
 	margin-top: 70px;
