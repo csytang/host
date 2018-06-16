@@ -50,12 +50,11 @@ a:hover{
     cursor:pointer;
     transition:all 0.3s linear;
     z-index:999999;
-
     opacity:1;
     display:none;
 }
 #backtop:hover {
-    background-color:#eff2ec;
+     background-color:#ffffff;
 }
 #backtop.mcOut {
     opacity:0;
