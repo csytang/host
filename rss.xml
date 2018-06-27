@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Yutian Tang's News</title>
+		<link>https://www.chrisyttang.org/</link>
+		<description>Updated news from my work and research</description>
+		<language>en-us</language>
+		<copyright><![CDATA[ Yutian Tang ]]></copyright>
+		<image>
+			<url>https://www.chrisyttang.org/favicon.ico</url>
+			<title>Yutian Tang's News</title>
+			<link>https://www.chrisyttang.org/</link>
+		</image>
+		<item>
+			<title>Defended my Ph.D. thesis</title>
+			<link>https://www.chrisyttang.org/</link>
+			<pubDate>15 May 2018</pubDate>
+			<author>Yutian Tang</author>
+			<category>Research</category>
+			<description><![CDATA[ 
+			<h1>Defended my Ph.D. thesis</h1>
+			<p> I successfully defended my thesis today!</p>
+			]]></description>
+		</item>
+		<item>
+			<title>Paper Accepted to ICPC 2018</title>
+			<link>https://www.chrisyttang.org/</link>
+			<pubDate>2 March 2018</pubDate>
+			<author>Yutian Tang</author>
+			<category>Research</category>
+			<description><![CDATA[ 
+			<h1>Paper Accepted @ ICPC 2018</h1>
+			<p> One paper entitled "Cross Version Defect Prediction with Representative Data via Sparse Subset Selection" has been accepted to ICPC 2018!</p>
+			]]></description>
+		</item>
+		<item>
+			<title>Paper Accepted to ICPC 2017</title>
+			<link>https://www.chrisyttang.org/</link>
+			<pubDate>1 March 2017</pubDate>
+			<author>Yutian Tang</author>
+			<category>Research</category>
+			<description><![CDATA[ 
+			<h1>Paper Accepted @ ICPC 2017</h1>
+			<p> Our paper entitled "Constructing feature model by identifying variability-aware modules." has been accepted to ICPC 2017!</p>
+			]]></description>
+		</item>
+	</channel>
+</rss>
