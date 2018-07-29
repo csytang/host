@@ -1,5 +1,5 @@
 id,Type,Topic,Year,Title,Authors,URL,pdf,CCF,Venue,Details
-6,CO,4,2018,Cross Version Defect Prediction with Representative Data via Sparse Subset Selection,107 106 101 105 108 109 110,,paper/icpc2018-zhou.pdf,2,23,"26th IEEE/ACM International Conference on Program Comprehension (full paper accepted, 12 pages)"
+6,CO,4,2018,Cross Version Defect Prediction with Representative Data via Sparse Subset Selection,107 106 101 105 108 109 110,https://dl.acm.org/citation.cfm?id=3196331,paper/icpc2018-zhou.pdf,2,23,"26th IEEE/ACM International Conference on Program Comprehension, pp 132-143"
 5,TH,1,2017,The Pathway to Customized Product Solutions,101 103,,,4,0,"Ph.D., thesis"
 4,CO,1,2017,Constructing Feature Model by Identifying Variability-aware Modules,101 103,https://dl.acm.org/citation.cfm?id=3101446,paper/icpc2017.pdf,2,23,"25th IEEE/ACM International Conference on Program Comprehension, pp 263-274"
 3,CO,1,2017,StiCProb: A Novel Feature Mining Approach using Conditional Probability,101 103,http://ieeexplore.ieee.org/document/7884608/,paper/saner2017.pdf,2,16,"24th IEEE International Conference on Software Analysis, Evolution, and Reengineering, pp 44-55"
