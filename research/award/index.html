@@ -27,6 +27,7 @@
           <a class="dropdown-item" href="../publication/">Publication</a>
           <a class="dropdown-item" href="#">Academic Service</a>
           <a class="dropdown-item" href="../../project/">Code</a>
+          <a class="dropdown-item" href="#">Selected Award</a>
         </div>
 
        
@@ -60,10 +61,20 @@
     <div class="container">
       <h1>Selected Awards</h1>
       <ul>
-        <li>Best Industry Paper Award @ International Symposium on Software Reliability Engineering (ISSRE, 2018);</li>
+        <li><a data-toggle="modal" href="#issre-2018">Best Industry Paper Award</a> @ International Symposium on Software Reliability Engineering (ISSRE, 2018);</li>
       </ul>
+      <div id="issre-2018" class="modal fade" tabindex="-1" role="document" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                  <img src="../img/ISSRE-best-paper.jpg" height="560px" width="760px" class="img-responsive">
+                </div>
+            </div>
+          </div>
+        </div>
     </div>
     
+
 
 
     <div class="container">
@@ -86,6 +97,18 @@
         bg: '#55595c',
         fg: '#eceeef',
         text: 'Thumbnail'
+      });
+      function centerModal() {
+        $(this).css('display', 'block');
+        var $dialog = $(this).find(".modal-dialog");
+        var offset = ($(window).height() - $dialog.height())/2;
+        // Center modal vertically in window
+        $dialog.css("margin-top", offset);
+        }
+
+        $('.modal').on('show.bs.modal', centerModal);
+        $(window).on("resize", function () {
+            $('.modal:visible').each(centerModal);
       });
     </script>
   </body>
