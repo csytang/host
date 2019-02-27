@@ -2,18 +2,8 @@
   "relation": ["delegate_permission/common.handle_all_urls"],
   "target": {
     "namespace": "android_app",
-    "package_name": "helloinstantapp.instantapp.examples.chrisyttang.org",
+    "package_name": "a.chrisyttang.instantappurlauto",
     "sha256_cert_fingerprints":
-    ["9A:DB:3E:A6:36:60:45:38:C8:A1:F2:B2:F6:34:FA:1C:74:F9:FE:E3:DC:77:FD:DF:44:07:5F:53:21:39:45:GS"]
+    ["CE:23:C1:B7:43:3D:35:A1:34:40:31:5E:73:E7:E5:B8:A7:38:CA:45:B9:D3:87:DD:C0:78:BA:41:17:F3:EC:E6"]
   }
-},
- {
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "helloinstantapp.instantapp.examples.chrisyttang.org",
-    "sha256_cert_fingerprints":
-    ["9A:DB:3E:A6:36:60:45:38:C8:A1:F2:B2:F6:34:FA:1C:74:F9:FE:E3:DC:77:FD:DF:44:07:5F:53:21:39:45:FA"]
-  }
-}
-]
+}]
