@@ -1,13 +1,5 @@
 [{
   "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "abc.chrisyttang.org",
-    "sha256_cert_fingerprints":
-    ["86:D8:F7:93:72:58:2E:4A:B7:2C:C4:DF:8F:BD:BA:EA:1A:91:42:FE:2D:92:25:1A:C2:A6:2A:AE:72:4D:38:E4"]
-  }
-},{
-  "relation": ["delegate_permission/common.handle_all_urls"],
   "target" : { "namespace": "android_app", "package_name": "a.chrisyttang.instantappurlauto",
                "sha256_cert_fingerprints": ["D0:77:A2:4F:EE:BD:48:EF:6C:45:3B:C2:07:37:7C:D4:2B:15:73:A4:55:FB:E3:D7:75:F4:CA:36:8E:3F:E3:31"] }
 }]
