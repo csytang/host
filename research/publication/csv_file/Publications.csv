@@ -1,6 +1,6 @@
 id,Type,Topic,Year,Title,Authors,URL,pdf,CCF,Core,Venue,Details
 9,JO,4,2019,TSTSS: A Two-Stage Training Subset Selection Framework for Cross Version Defect Prediction ,107 106 105 109 108 101 110 118 120,,,2,2,2,Journal of System and Software
-8,CO,3,2019,A Comparative Study of Android Repackaged Apps Detection Techniques,119 108 101,,,2,2,16,"2019 IEEE International Conference on Software Analysis, Evolution, and Reengineering"
+8,CO,3,2019,A Comparative Study of Android Repackaged Apps Detection Techniques,119 108 101,,,2,3,16,"2019 IEEE International Conference on Software Analysis, Evolution, and Reengineering"
 7,JO,4,2018,Software Defect Prediction Based on Kernel PCA and Weighted Extreme Learning Machine ,107 109 105 116 117 118 101 108,https://www.sciencedirect.com/science/article/abs/pii/S0950584918302088,paper/ist2018-zhou.pdf,2,3,6,Information and Software Technology
 6,CO,6,2018,A Smart Context-aware Program Assistant based on Dynamic Programming Event Modeling,111 112 101 113 114 115,https://ieeexplore.ieee.org/document/8539158,,2,2,32,The 29th IEEE International Symposium on Software Reliability Engineering (best paper award)
 5,CO,4,2018,Cross Version Defect Prediction with Representative Data via Sparse Subset Selection,107 106 101 105 108 109 110,https://dl.acm.org/citation.cfm?id=3196331,paper/icpc2018-zhou.pdf,2,4,23,"26th IEEE/ACM International Conference on Program Comprehension, pp 132-143"
