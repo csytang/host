@@ -8,6 +8,9 @@ html {
 }
 
 
+::selection{
+  background: #f5d30a;
+}
 
 h1{
   text-shadow: 2px 2px 4px #d8d8d8;
