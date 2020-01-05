@@ -93,8 +93,8 @@
         </p>
 
         <h4>Travel</h4>
-        <div class="container" id="map" style="position: relative; width: 800px; height: 500px;">
-        </div>
+        <iframe class="container" src="https://www.google.co.uk/maps/d/embed?mid=1PZRhIOjWBf54ASjSu0ThE8grpJMRSrCm" width="800" height="600"></iframe>
+
         <div class="container">
           <p>I love traveling and I will visit more countries in the future! The diagram shows the countries that I have visited so far.</p>
         </div>
@@ -138,44 +138,5 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-    <script src="./js/datamaps.world.min.js"></script>
-    <script>
-          var map = new Datamap({
-          element: document.getElementById('map'),
-          fills:{
-              visited:'#3a7cff',
-              defaultFill:'#c3ff99'
-          },
-          data: {
-              CHN: {
-                  fillKey: 'visited'
-              },
-              HKG: {
-                  fillKey: 'visited'
-              },
-              MAC: {
-                  fillKey: 'visited'
-              },
-              ESP: {
-                  fillKey: 'visited'
-              },
-              AUT: {
-                  fillKey: 'visited'
-              },
-              ARG: {
-                  fillKey: 'visited'
-              },
-              USA:{
-              	  fillKey:'visited'
-              },
-              GBR:{
-                fillKey:'visited'
-              },
-
-           }
-
-
-          });
-    </script>
   </body>
 </html>
