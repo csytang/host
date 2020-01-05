@@ -6,7 +6,7 @@
     <meta name="description" content="Yutian Tang's Publications">
     <meta name="author" content="Yutian Tang Chris">
     <link rel="shortcut icon" href="../../favicon.ico" />
-    <title>Yutian Tang (Chris) | Service</title>
+    <title>Yutian Tang (Chris) | Professional & Licences</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -25,10 +25,10 @@
         <a class="p-2 text-dark dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">R&D</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="../publication/">Publication</a>
-          <a class="dropdown-item" href="#">Academic Service</a>
-          <a class="dropdown-item" href="../award/">Selected Award</a>
+          <a class="dropdown-item" href="../service">Academic Service</a>
+          <a class="dropdown-item" href="../award">Selected Award</a>
           <a class="dropdown-item" href="../../project/">Code</a>
-          <a class="dropdown-item" href="../proflice/">Prof. & License</a>
+          <a class="dropdown-item" href="#">Prof. & License</a>
         </div>
 
        
@@ -59,13 +59,11 @@
     </div>
 
     <div class="container">
-      <h1>Service</h1>
-      <ul>
-        <li>External Reviewer: IEEE Transactions on Services Computing (2018); IEEE Transactions on Biometrics, Behavior and Identity Science (2018); Journal of Computer Security (2018);</li>
-        <li>Reviewer: IEEE Access, Frontier of Computer Science;</li>
-      </ul>
+      <h1>Professional & Licences</h1>
+      
     </div>
     
+
 
 
     <div class="container">
@@ -88,6 +86,18 @@
         bg: '#55595c',
         fg: '#eceeef',
         text: 'Thumbnail'
+      });
+      function centerModal() {
+        $(this).css('display', 'block');
+        var $dialog = $(this).find(".modal-dialog");
+        var offset = ($(window).height() - $dialog.height())/2;
+        // Center modal vertically in window
+        $dialog.css("margin-top", offset);
+        }
+
+        $('.modal').on('show.bs.modal', centerModal);
+        $(window).on("resize", function () {
+            $('.modal:visible').each(centerModal);
       });
     </script>
   </body>
