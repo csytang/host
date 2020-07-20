@@ -9,7 +9,7 @@ html {
 
 
 ::selection{
-  background: #ffffcc;
+  background: #eff2ec;
 }
 
 h1{
@@ -48,7 +48,7 @@ a:hover{
     outline: none;
     overflow:hidden;
     text-align:center;
-    background-color:#ffffcc;
+    background-color:#eff2ec;
     height:40px;
     width:40px;
     line-height:40px;
