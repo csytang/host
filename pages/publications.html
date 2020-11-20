@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Publications - Systems Software and Security Lab</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <link rel="canonical" href="https://www.chrisyttang.org/pages/publications.html">
+
+    <meta name="author" content="Yutian Tang" />
+
+    <meta property="og:site_name" content="Yutian Tang" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Publications"/>
+    <meta property="og:url" content="https://www.chrisyttang.org/pages/publications.html"/>
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="../theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+    <link href="../assets/css/sslab.css?1605632505.64" rel="stylesheet">
+
+     
+
+    <script src="../theme/js/jquery.min.js"></script>
+
+    <style type="text/css">
+    selected
+        {
+          background-color:#ffffcc;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul id="logo" class="nav navbar-nav"></ul>
+            <ul class="nav navbar-nav">
+                         <li><a href="../index.html">
+                             Home
+                         </a></li>
+                         <li><a href="./projects.html">
+                             Projects
+                         </a></li>
+                         <li class="active"><a href="#">
+                             Publications
+                         </a></li>
+                         <li><a href="./teaching.html">
+                             Teaching
+                         </a></li>
+                         <li><a href="./services.html">
+                             Services
+                         </a></li>
+                         <li><a href="./grants.html">
+                             Grants
+                         </a></li>
+                         <li><a href="./visiting.html">
+                             Visiting
+                         </a></li>
+                         <li><a href="./about.html">
+                             About
+                         </a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+
+    <section id="content" class="body">
+        <h1 class="entry-title">Publications</h1>
+        
+        <div class="entry-content">
+        <link rel="stylesheet" type="text/css" href="../assets/fonts/iconfont.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/pubs.css" />
+        <link rel="stylesheet" type="text/css" href="../assets/css/quickfilter.css" />
+        <style type="text/css">
+    /* show scroll bar to prevent jumps when filtering */
+    /* html { overflow-y: scroll; } */
+    /* hide sidebar and title */
+    .entry-title { display: none; }
+    #sidebar { display: none; }
+  </style>
+    
+  <div class="col-sm-2" id="filter"><input class="filter-state" style="display:none" /></div>
+  <div class="col-sm-10">
+
+  <h2>2020</h2>
+
+    <div id="zhou:ase20" class="pub-id"></div>
+    <div class="pub" data-type="Conference paper" data-topic="Android" data-key="zhou:ase20">
+     <div class="pub-meta">
+      <div class="pub-links">
+        <a title="Homepage" href=" https://github.com/moonZHH/DiehardDetector" target="_blank"><i class="icon-www"></i></a>
+        <a title="Paper" href="../assets/papers/2020/ase-20.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[21] Demystifying Diehard Android Apps</span>
+      <a href="#zhou:ase20" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Hao Zhou, Haoyu Wang, Yajin Zhou, Xiapu Luo, <u>Yutian Tang</u>, Lei Xue, Ting Wang.</span>
+      <abbr class="pub-in" title="35th IEEE/ACM International Conference on Automated Software Engineering (ASE).">ASE'20 [CCF-A][Core-A]</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Smartphone vendors are using multiple methods to kill processes of Android apps to reduce the battery consumption. This motivates developers to find ways to extend the liveness time of their apps, hence the name diehard apps in this paper. Although there are blogs and articles illustrating methods to achieve this purpose, there is no systematic research about them. What’s more important, little is known about the prevalence of diehard apps in the wild.</p> 
+      <p>In this paper, we take a first step to systematically investigate diehard apps by answering the following research questions. First, why and how can they circumvent the resource-saving mechanisms of Android? Second, how prevalent are they in the wild? In particular, we conduct a semi-automated analysis to illustrate insights why existing methods to kill app processes could be evaded, and then systematically present 12 diehard methods. After that, we develop a system named DiehardDetector to detect diehard apps in a large scale. The experimental result of applying DiehardDetector to more than 80k Android apps downloaded from Google Play showed that around 21% of apps adopt various diehard methods. Moreover, our system can achieve high precision and recall.</p>
+      <pre>@INPROCEEDINGS{tang:ase19,
+            author={H. {Zhou} and H. {Wang} and Y. {Zhou} and X. {Luo} and Y. {Tang} and L. {Xue} and T. {Wang}},
+            booktitle={2020 35th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
+            title={Demystifying Diehard Android Apps}, 
+            year={2020},
+            volume={},
+            number={},}
+      </pre>
+      </div>
+    </div>
+
+
+
+    <div id="zhao:qrs20" class="pub-id"></div>
+    <div class="pub" data-type="Conference paper" data-topic="Android" data-key="zhao:qrs20">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Paper" href="#" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[20] Simplified Deep Forest Model based Just-In-Time Defect Prediction for Android Mobile Apps</span>
+      <a href="#zhao:qrs20" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Kunsong Zhao, Zhou Xu, Tao Zhang, <u>Yutian Tang</u></span>
+      <abbr class="pub-in" title="20th International Conference on Software Quality, Reliability, and Security (QRS) [CCF-C]">QRS'20 [CCF-C]</abbr>
+     </div>
+     <div class="pub-details">
+      <pre>@inproceedings{zhao:qrs20,
+        author = {Kunsong Zhao, Zhou Xu, Tao Zhang, and Yutian Tang},
+        title = {Simplified Deep Forest Model based Just-In-Time Defect Prediction for Android Mobile Apps},
+        year = {2020},
+        booktitle = {20th International Conference on Software Quality, Reliability, and Security (QRS)},
+        }
+      </pre>
+      </div>
+    </div>
+
+    <div id="tang:fse20" class="pub-id"></div>
+    <div class="pub" data-type="Conference paper" data-topic="Security" data-key="tang:fse20">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Homepage" href="https://sites.google.com/view/instant-app-attacks/" target="_blank"><i class="icon-www"></i></a>
+      <a title="Slides" href="../assets/papers/2020/instant-app-attack.pdf"  target="_blank"><i class="icon-slides"></i></a>
+      <a title="Paper" href="../assets/papers/2020/fse-20.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[19] All Your App Links are Belong to Us: Understanding the Threats of Instant Apps based Attacks </span>
+      <a href="#tang:fse20" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u>, Yulei Sui, Haoyu Wang, Xiapu Luo, Hao Zhou, Zhou Xu.</span>
+      <abbr class="pub-in" title="The ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE)">ESEC/FSE'20 [CCF-A][Core-A*]</abbr>
+      <br><span><font color="red">[Highlight]: The vulnerability reported is confirmed by Google Security Team.</font></span><br/>
+     </div>
+     <div class="pub-details">
+      <p>Android deep link is a URL that takes users to a specific page of a mobile app, enabling seamless user experience from a webpage to an app. Android app link, a new type of deep link introduced in Android 6.0, is claimed to offer more benefits, such as supporting instant apps and providing more secure verification to protect against hijacking attacks that previous deep links can not. However, we find that the app link is not as secure as claimed, because the verification process can be bypassed by exploiting instant apps.</p>
+      <p> In this paper, we explore the weakness of the existing app link mechanism and propose three feasible hijacking attacks. Our findings show that even popular apps are subject to these attacks, such as Twitter, Whatsapp, Facebook Message. Our observation is confirmed by Google. To measure the severity of these vulnerabilities, we develop an automatic tool to detect vulnerable apps, and perform a large-scale empirical study on 400,000 Android apps.</p>
+      <p> Experiment results suggest that app link hijacking vulnerabilities are prevalent in the ecosystem. Specifically, 27.1% apps are vulnerable to link hijacking with smart text selection (STS); 30.0% apps are vulnerable to link hijacking without STS, and all instant apps are vulnerable to instant app attack. We provide an in-depth understanding of the mechanisms behind these types of attacks. Furthermore, we propose the corresponding detection and defense methods that can successfully prevent the proposed hijackings for all the evaluated apps, thus raising the bar against the attacks on Android app links. Our insights and findings demonstrate the urgency to identify and prevent app link hijacking attacks.</p>
+      <pre>@inproceedings{tang:fse20,
+        author = {Tang, Yutian and Sui, Yulei and Wang, Haoyu and Luo, Xiapu and Zhou, Hao and Xu, Zhou},
+        title = {All Your App Links Are Belong to Us: Understanding the Threats of Instant Apps Based Attacks},
+        year = {2020},
+        booktitle = {Proceedings of the 28th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering},
+        pages = {914–926},
+        series = {ESEC/FSE 2020}
+        }
+      </pre>
+      </div>
+    </div>
+
+
+    <div id="cai:saner20" class="pub-id"></div>
+    <div class="pub" data-type="Conference paper" data-topic="Security" data-key="cai:saner20">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Homepage" href="https://mp.weixin.qq.com/s/50LpkrSzlbWhATbQkcKsIQ" target="_blank"><i class="icon-www"></i></a>
+      <a title="Paper" href="../assets/papers/2020/saner-20.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[18] Resource Race Attacks on Android</span>
+      <a href="#cai:saner20" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Yan Cai, <u>Yutian Tang</u>, Haicheng Li, Le Yu, Hao Zhou, Xiapu Luo, Liang He, Purui Su</span>
+      <abbr class="pub-in" title="27th IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER) ">SANER'20 [CCF-B][Core-B]</abbr>
+      <br><span><font color="red">[Highlight]: The vulnerability reported is confirmed by Google Security Team.</font></span><br/>
+     </div>
+     <div class="pub-details">
+      <p>Smartphones are frequently involved in accessing private user data. Although many studies have been done to prevent malicious apps from leaking private user data, only a few recent works examine how to remove the sensitive information from the data collected by smartphone hardware resources (e.g., camera). Unfortunately, none of them investigates whether a malicious app can obtain such sensitive information when (or right before/after) a legitimate app collects such data (e.g., taking photos). To fill in the gap, in this paper, we model such attacks as the Resource Race Attack (RRAttack) based on races between two apps during their requests to exclusive resources to access sensitive information. RRAttacks have three categories according to when a race on requesting resources occurs: Pre-Use, In-Use, and Post-Use attacks. We further conduct the first systematic study on the feasibility of launching the RRAttacks on two heavily used exclusive Android resources: camera and touchscreen. In details, we perform Proof-of-Concept (PoC) attacks to reveal that, (a) camera is highly vulnerable to both In-Use and Post-Use attacks; and (b) touchscreen is vulnerable to Pre-Use attacks. Particularly, we demonstrate successful RRAttacks on them to steal private information, to cause financial loss, and to steal user passwords from Android 6 to the latest Android Q. Moreover, our analyses on 1,000 apps indicate that most of them are vulnerable to one to three RRAttacks. Finally, we propose a set of defense strategies against RRAttacks for user apps, system apps, and Android system itself.</p>
+      <pre>@INPROCEEDINGS{cai:saner20,
+              author={Y. {Cai} and Y. {Tang} and H. {Li} and L. {Yu} and H. {Zhou} and X. {Luo} and L. {He} and P. {Su}},
+              booktitle={2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER)}, 
+              title={Resource Race Attacks on Android}, 
+              year={2020},
+              pages={47-58},}
+      </pre>
+      </div>
+    </div>
+
+
+
+
+
+    <div id="tang:arxiv20" class="pub-id"></div>
+    <div class="pub" data-type="Preprint" data-topic="Android" data-key="tang:arxiv20">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Homepage" href="https://sites.google.com/view/caide" target="_blank"><i class="icon-www"></i></a>
+      <a title="Paper" href="../assets/papers/2020/feature-location-benchmark.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[17] Feature Location Benchmark for Decomposing and Reusing Android Apps</span>
+      <a href="#tang:arxiv20" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u>, Hao Zhou, Zhou Xu, Xiapu Luo, Yan Cai, and Tao Zhang.</span>
+      <abbr class="pub-in" title="arxiv20">arXiv</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Software reuse enables developers to reuse archi- tecture, programs and other software artifacts. Realizing a systematical reuse in software brings a large amount of benefits for stakeholders, including lower maintenance efforts, lower development costs, and time to market. Unfortunately, currently implementing a framework for large-scale software reuse in Android apps is still a huge problem, regarding the complexity of the task and lacking of practical technical support from either tools or domain experts. Therefore, proposing a feature location benchmark for apps will help developers either optimize their feature location techniques or reuse the assets created in the benchmark for reusing. In this paper, we release a feature location benchmark, which can be used for those developers, who intend to compose software product lines (SPL) and release reuse in apps. The benchmark not only contributes to the research com- munity for reuse research, but also helps participants in industry for optimizing their architecture and enhancing modularity. In addition, we also develop an Android Studio plugin named caIDE for developers to view and operate on the benchmark.</p>
+      <pre>@article{tang:arxiv20,
+            title={Feature Location Benchmark for Decomposing and Reusing Android Apps},
+            author={Tang, Yutian and Zhou, Hao and Xu, Zhou and Luo, Xiapu and Cai, Yan and Zhang, Tao},
+            journal={arXiv preprint arXiv:2005.04008},
+            year={2020}
+          }
+      </pre>
+      </div>
+    </div>
+
+
+
+    <div id="xu:ist20" class="pub-id"></div>
+    <div class="pub" data-type="Journal article" data-topic="Defect Prediction" data-key="xu:ist20">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Paper" href="https://www.sciencedirect.com/science/article/pii/S0950584920302019" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[16] Feature Selection and Embedding Based Cross Project Framework for Identifying Crashing Fault Residence</span>
+      <a href="#xu:ist20" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Tao Zhang, Jacky Keung, Meng Yan, Xiapu Luo, Xiaohong Zhang, Ling Xu, <u>Yutian Tang</u></span>
+      <abbr class="pub-in" title="Information and Software Technology (IST)">IST 2020[CCF-B][JCR-Q1].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Context: The automatically produced crash reports are able to analyze the root of fault causing the crash (crashing fault for short) which is a critical activity for software quality assurance.</p>
+
+      <p>Objective: Correctly predicting the existence of crashing fault residence in stack traces of crash report can speed up program debugging process and optimize debugging efforts. Existing work focused on the collected label information from bug-fixing logs, and the extracted features of crash instances from stack traces and source code for Identification of Crashing Fault Residence (ICFR) of newly-submitted crashes. This work develops a novel cross project ICFR framework to address the data scarcity problem by using labeled crash data of other project for the ICFR task of the project at hand. This framework removes irrelevant features, reduces distribution differences, and eases the class imbalance issue of cross project data since these factors may negatively impact the ICFR performance.</p>
+
+      <p>Method: The proposed framework, called FSE, combines Feature Selection and feature Embedding techniques. The FSE framework first uses an information gain ratio based feature ranking method to select a relevant feature subset for cross project data, and then employs a state-of-the-art Weighted Balanced Distribution Adaptation (WBDA) method to map features of cross project data into a common space. WBDA considers both marginal and conditional distributions as well as their weights to reduce data distribution discrepancies. Besides, WBDA balances the class proportion of each project data to alleviate the class imbalance issue.</p>
+
+      <p>Results: We conduct experiments on 7 projects to evaluate the performance of our FSE framework. The results show that FSE outperforms 25 methods under comparison.</p>
+
+      <p>Conclusion: This work proposes a cross project learning framework for ICFR, which uses feature selection and embedding to remove irrelevant features and reduce distribution differences, respectively. The results illustrate the performance superiority of our FSE framework.</p>
+      <pre>@article{xu:ist20,
+            title = "Feature selection and embedding based cross project framework for identifying crashing fault residence",
+            journal = "Information and Software Technology",
+            volume = "131",
+            pages = "106452",
+            year = "2021",
+            author = "Zhou Xu and Tao Zhang and Jacky Keung and Meng Yan and Xiapu Luo and Xiaohong Zhang and Ling Xu and Yutian Tang",
+            }
+      </pre>
+      </div>
+    </div>
+
+
+ <h2>2019</h2>
+
+  <div id="tang:ase19" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Android" data-key="tang:ase19">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Homepage" href="https://sites.google.com/view/apm-empiricalstudy/" target="_blank"><i class="icon-www"></i></a>
+       <a title="Paper" href="../assets/papers/2019/ase-19.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[15] Demystifying Application Performance Management Libraries for Android</span>
+      <a href="#tang:ase19" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u>, Xian Zhan, Hao Zhou, Xiapu Luo, Zhou Xu, Yajin Zhou, Qiben Yan</span>
+      <abbr class="pub-in" title="The 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)">ASE 2019[CCF-A][Core-A].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Since the performance issues of apps can influence users' experience, developers leverage application performance management (APM) tools to locate the potential performance bottleneck of their apps. Unfortunately, most developers do not understand how APMs monitor their apps during the runtime and whether these APMs have any limitations. In this paper, we demystify APMs by inspecting 25 widely-used APMs that target on Android apps. We first report how these APMs implement 8 key functions as well as their limitations. Then, we conduct a large-scale empirical study on 500,000 Android apps from Google Play to explore the usage of APMs. This study has some interesting observations about existing APMs for Android, including 1) some APMs still use deprecated permissions and approaches so that they may not always work properly; 2) some app developers use APMs to collect users' privacy information.</p>
+      <pre>@INPROCEEDINGS{tang:ase19,
+            author={Y. {Tang} and X. {Zhan} and H. {Zhou} and X. {Luo} and Z. {Xu} and Y. {Zhou} and Q. {Yan}},
+            booktitle={2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
+            title={Demystifying Application Performance Management Libraries for Android}, 
+            year={2019},
+            volume={},
+            number={},
+            pages={682-685},
+            doi={10.1109/ASE.2019.00069}}
+     </pre>
+     </div>
+  </div>
+
+
+
+  <div id="xu:issre19" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Defect Prediction" data-key="xu:issre19">
+     <div class="pub-meta">
+      <div class="pub-links">
+      <a title="Homepage" href="https://sites.google.com/site/icfr" target="_blank"><i class="icon-www"></i></a>
+       <a title="Paper" href="https://ieeexplore.ieee.org/abstract/document/8987488" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[14] Identifying Crashing Fault Residence Based on Cross Project Model</span>
+      <a href="#xu:issre19" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Shuai Pang, Yifeng Zhang, <u>Yutian Tang</u>, Jin Liu, Xiapu Luo, Jacky Keung, Xiaohui Cui,</span>
+      <abbr class="pub-in" title="International Symposium on Software Reliability Engineering (ISSRE)">ISSRE 2019[CCF-B][Core-A].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Analyzing the crash reports recorded upon software crashes is a critical activity for software quality assurance. Predicting whether or not the fault causing the crash (crashing fault for short) resides in the stack traces of crash reports can speed-up the program debugging process and determine the priority of the debugging efforts. Previous work mostly collected label information from bug-fixing logs, and extracted crash features from stack traces and source code to train classification models for the Identification of Crashing Fault Residence (ICFR) of newly-submitted crashes. However, labeled data are not always fully available in real applications. Hence the classifier training is not always feasible. In this work, we make the first attempt to develop a cross project ICFR model to address the data scarcity problem. This is achieved by transferring the knowledge from external projects to the current project via utilizing a state-of-the-art Balanced Distribution Adaptation (BDA) based transfer learning method. BDA not only combines both marginal distribution and conditional distribution across projects but also assigns adaptive weights to the two distributions for better adjusting specific cross project pair. The experiments on 7 software projects show that BDA is superior to 9 baseline methods in terms of 6 indicators overall.</p>
+      <pre>@INPROCEEDINGS{xu:issre19,
+          author={Z. {Xu} and T. {Zhang} and Y. {Zhang} and Y. {Tang} and J. {Liu} and X. {Luo} and J. {Keung} and X. {Cui}},
+          booktitle={2019 IEEE 30th International Symposium on Software Reliability Engineering (ISSRE)}, 
+          title={Identifying Crashing Fault Residence Based on Cross Project Model}, 
+          year={2019},
+          volume={},
+          number={},
+          pages={183-194},
+          doi={10.1109/ISSRE.2019.00027}}
+     </pre>
+     </div>
+  </div>
+
+
+
+
+  <div id="xu:qrs19" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Defect Prediction" data-key="xu:qrs19">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Paper" href="https://ieeexplore.ieee.org/document/8854697" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[13] MVSE: Effort-Aware Heterogeneous Defect Prediction via Multiple-View Spectral Embedding</span>
+      <a href="#xu:qrs19" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Sizhe Ye, Tao Zhang, Zhen Xia, Shuai Pang, Yong Wang, <u>Yutian Tang</u></span>
+      <abbr class="pub-in" title="19th International Conference on Software Quality, Reliability, and Security (QRS)[CCF-C]">QRS 2019 [CCF-C].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Cross-Project Defect Prediction (CPDP) predicts defects in a target project using the defect information of the external project. Existing CPDP methods assume that the data of two projects share identical features. When cross-project data contain heterogeneous features, traditional CPDP methods become ineffective. In this paper, we propose a novel approach called Multiple-View Spectral Embedding (MVSE) to address the heterogeneous CPDP issue. MVSE treats the cross-project data as two different views and exploits the spectral embedding method to map the heterogeneous feature sets into a consistent space where the two mapped feature sets have maximal similarity. To evaluate MVSE in the realistic setting, we employ an effort-aware performance indicator that considers the cost of inspection in the context of heterogeneous CPDP scenario. We have conducted extensive experiments to compare MVSE with two state-of-the-art heterogeneous CPDP methods and within-project setting. The experiments on 94 cross project pairs show that MVSE achieves promising results.</p>
+      <pre>@INPROCEEDINGS{xu:qrs19,
+            author={Z. {Xu} and S. {Ye} and T. {Zhang} and Z. {Xia} and S. {Pang} and Y. {Wang} and Y. {Tang}},
+            booktitle={2019 IEEE 19th International Conference on Software Quality, Reliability and Security (QRS)}, 
+            title={MVSE: Effort-Aware Heterogeneous Defect Prediction via Multiple-View Spectral Embedding}, 
+            year={2019},
+            volume={},
+            number={},
+            pages={10-17}}
+     </pre>
+     </div>
+  </div>
+
+
+  <div id="xian:saner19" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Android" data-key="xian:saner19">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Paper" href="https://ieeexplore.ieee.org/abstract/document/8667975" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[12] A Comparative Study of Android Repackaged Apps Detection Techniques</span>
+      <a href="#xian:saner19" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Xian Zhan, Tao Zhang, <u>Yutian Tang</u></span>
+      <abbr class="pub-in" title="2019 IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER)">SANER 2019 [CCF-B][Core-B].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Apps repackaging has become a serious problem which not only violates the copyrights of the original developers but also destroys the health of the Android ecosystem. A recent study shows that repackaged apps share a significant proportion of malware samples. Therefore, it is imperative to detect repackaged apps in various app markets. Although many detection technologies have been proposed, there lacks a systematic comparison among them. One reason is that many detection tools are not publicly available, and therefore little is known about their robustness and effectiveness. In this paper, we fill this gap by 1) analyzing these repackaging detection technologies; 2) implementing these detection techniques; 3) comparing them in terms of various metrics using real repackaged apps. The analysis and the experimental results reveal new insights, which shed light on the research of repackaged apps detection.</p>
+      <pre>@INPROCEEDINGS{xian:saner19,
+            author={X. {Zhan} and T. {Zhang} and Y. {Tang}},
+            booktitle={2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER)}, 
+            title={A Comparative Study of Android Repackaged Apps Detection Techniques}, 
+            year={2019},
+            pages={321-331},}
+     </pre>
+     </div>
+  </div>
+
+
+
+  <div id="xu:jss19a" class="pub-id"></div>
+  <div class="pub" data-type="Journal article" data-topic="Defect Prediction" data-key="xu:jss19a">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Paper" href="https://www.sciencedirect.com/science/article/abs/pii/S0164121219301761" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[11] LDFR: Learning deep feature representation for software defect prediction</span>
+      <a href="#xu:jss19a" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Shuai Li, Jun Xu, Jin Liu, Xiapu Luo, Yifeng Zhang, Tao Zhang, Jacky Keung, <u>Yutian Tang</u></span>
+      <abbr class="pub-in" title="Journal of System and Software (JSS).">JSS 2019 [CCF-B][JCR-Q1].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Software Defect Prediction (SDP) aims to detect defective modules to enable the reasonable allocation of testing resources, which is an economically critical activity in software quality assurance. Learning effective feature representation and addressing class imbalance are two main challenges in SDP. Ideally, the more discriminative the features learned from the modules and the better the rescue performed on the imbalance issue, the more effective it should be in detecting defective modules. In this study, to solve these two challenges, we propose a novel framework named LDFR by Learning Deep Feature Representation from the defect data for SDP. Specifically, we use a deep neural network with a new hybrid loss function that consists of a triplet loss to learn a more discriminative feature representation of the defect data and a weighted cross-entropy loss to remedy the imbalance issue. To evaluate the effectiveness of the proposed LDFR framework, we conduct extensive experiments on a benchmark dataset with 27 defect data (each with three types of features), using three traditional and three effort-aware indicators. Overall, the experimental results demonstrate the superiority of our LDFR framework in detecting defective modules when compared with 27 baseline methods, except in terms of the indicator of Precision.</p>
+      <pre>@article{xu:jss19a,
+            title = "LDFR: Learning deep feature representation for software defect prediction",
+            journal = "Journal of Systems and Software",
+            volume = "158",
+            year = "2019",
+            author = "Zhou Xu, Shuai Li, Jun Xu, Jin Liu, Xiapu Luo, Yifeng Zhang, Tao Zhang, Jacky Keung, and Yutian Tang",
+          }
+     </pre>
+     </div>
+  </div>
+
+
+
+  <div id="xu:jcst19" class="pub-id"></div>
+  <div class="pub" data-type="Journal article" data-topic="Defect Prediction" data-key="xu:jcst19">
+   <div class="pub-meta">
+    <div class="pub-links">
+     <a title="Paper" href="../assets/papers/2019/jcst-19.pdf" target="_blank"><i class="icon-file"></i></a>
+    </div>
+    <span class="pub-title">[10] Cross Project Defect Prediction via Balanced Distribution Adaptation based Transfer Learning</span>
+    <a href="#xu:jcst19" class="pub-expand"><i class="icon-expand"></i></a>
+    <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+    <span class="pub-author">Zhou Xu, Shuai Pang, Tao Zhang, Xiapu Luo, Jin Liu, <u>Yutian Tang</u>, Xiao Yu, Lei Xue,</span>
+    <abbr class="pub-in" title="Journal of Computer Science and Technology(JCST) journal.">JCST Journal 2019 [CCF-B].</abbr>
+   </div>
+   <div class="pub-details">
+    <p>Defect prediction assists the rational allocation of testing resources by detecting the potentially defective software modules before releasing products. When a project has no historical labeled defect data, cross project defect prediction (CPDP) is an alternative technique for this scenario. CPDP utilizes labeled defect data of an external project to construct a classification model to predict the module labels of the current project. Transfer learning based CPDP methods are the current mainstream. In general, such methods aim to minimize the distribution differences between the data of the two projects. However, previous methods mainly focus on the marginal distribution difference but ignore the conditional distribution difference, which will lead to unsatisfactory performance. In this work, we use a novel balanced distribution adaptation (BDA) based transfer learning method to narrow this gap. BDA simultaneously considers the two kinds of distribution differences and adaptively assigns different weights to them. To evaluate the effectiveness of BDA for CPDP performance, we conduct experiments on 18 projects from 4 datasets using 6 indicators (i.e., F-measure, g-means, Balance, AUC, EARecall, and EAFmeasure). Compared with 12 baseline methods, BDA achieves average improvements of 23.8%, 12.5%, 11.5%, 4.7%, 34.2%, and 33.7% in terms of the 6 indicators respectively over 4 datasets</p>
+    <pre>@article{xu:jcst19,
+          title = "Cross Project Defect Prediction via Balanced Distribution Adaptation based Transfer Learning",
+          journal = "Journal of Computer Science and Technology",
+          volume = "24",
+          number="5",
+          pages = "1039--1062",
+          year = "2019",
+          author = "Zhou Xu, Shuai Pang, Tao Zhang, Xiapu Luo, Jin Liu, Yutian Tang, Xiao Yu, Lei Xue,",
+        }
+   </pre>
+   </div>
+  </div>
+
+
+  <div id="xu:jss19" class="pub-id"></div>
+  <div class="pub" data-type="Journal article" data-topic="Defect Prediction" data-key="xu:jss19">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Paper" href="https://www.sciencedirect.com/science/article/abs/pii/S0164121219300627" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[9] TSTSS: A Two-Stage Training Subset Selection Framework for Cross Version Defect Prediction</span>
+      <a href="#xu:jss19" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Shuai Li, Xiapu Luo, Jin Liu, Tao Zhang, <u>Yutian Tang</u>, Jun Xu, Peipei Yuan, Jacky Keung,</span>
+      <abbr class="pub-in" title="Journal of System and Software (JSS).">JSS 2019 [CCF-B][JCR-Q1].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Cross Version Defect Prediction (CVDP) is a practical scenario by training the classification model on the historical data of the prior version and then predicting the defect labels of modules in the current version. Unfortunately, the differences of data distribution across versions may hinder the effectiveness of the trained CVDP model. Thus, it is not trivial to select a suitable training subset from the prior version to promote the CVDP performance. In this paper, we propose a novel method, called Two-Stage Training Subset Selection (TSTSS), to address this challenging issue. In the first stage, TSTSS utilizes a sparse modeling representative selection method to select an initial module subset from the prior version which can well reconstruct the data of the prior version. In the second stage, TSTSS leverages a dissimilarity-based sparse subset selection method to further refine the selected module subset, which enables the selected modules to well represent the modules of the current version. Finally, we use a novel weighted extreme learning machine classifier to construct the CVDP model. We evaluate the CVDP performance of TSTSS on 50 cross-version pairs using 6 indicators. The experiments show that TSTSS can efficiently improve the CVDP performance compared with 11 baseline methods.</p>
+      <pre>@article{xu:jss19,
+            title = "TSTSS: A two-stage training subset selection framework for cross version defect prediction",
+            journal = "Journal of Systems and Software",
+            volume = "154",
+            pages = "59 - 78",
+            year = "2019",
+            author = "Zhou Xu and Shuai Li and Xiapu Luo and Jin Liu and Tao Zhang and Yutian Tang and Jun Xu and Peipei Yuan and Jacky Keung",
+          }
+     </pre>
+     </div>
+  </div>
+
+ <h2> On or Before 2018</h2>
+
+
+  <div id="tang:thesis" class="pub-id"></div>
+    <div class="pub" data-type="Ph.D. thesis" data-topic="Software Product Line" data-key="tang:thesis">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Paper" href="#"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[8] The Pathway to Customised Product Solutions</span>
+      <a href="#tang:thesis" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u></span>
+      <span class="pub-in">Ph.D. thesis, The Hong Kong Polytechnic University, 2018.</span>
+     </div>
+     <div class="pub-details">
+      <pre>@phdthesis{tang:thesis,
+      title        = {The Pathway to Customised Product Solutions},
+      author       = {Yutian Tang},
+      school       = {The Hong Kong Polytechnic University},
+      year         = 2018,
+    }</pre>
+     </div>
+    </div>
+
+  <div id="xu:ist18" class="pub-id"></div>
+  <div class="pub" data-type="Journal article" data-topic="Defect Prediction" data-key="xu:ist18">
+     <div class="pub-meta">
+      <div class="pub-links">
+        <a title="Homepage" href="https://sites.google.com/site/istkpwe" target="_blank"><i class="icon-www"></i></a>
+        <a title="Paper" href="../assets/papers/2018/ist-18.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[7] Software Defect Prediction Based on Kernel PCA and Weighted Extreme Learning Machine</span>
+      <a href="#xu:ist18" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Jin Liu, Xiapu Luo, Zijiang Yang, Yifeng Zhang, Peipei Yuan,<u> Yutian Tang</u>, Tao Zhang,</span>
+      <abbr class="pub-in" title="Information and Software Technology (IST)[CCF-B][JCR-Q1]">IST Journal [CCF-B][JCR-Q1].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Context: Software defect prediction strives to detect defect-prone software modules by mining the historical data. Effective prediction enables reasonable testing resource allocation, which eventually leads to a more reliable software.</p>
+      <p>Objective: The complex structures and the imbalanced class distribution in software defect data make it challenging to obtain suitable data features and learn an effective defect prediction model. In this paper, we propose a method to address these two challenges.</p>
+      <p> Method: We propose a defect prediction framework called KPWE that combines two techniques, i.e., Kernel Principal Component Analysis (KPCA) and Weighted Extreme Learning Machine (WELM). Our framework consists of two major stages. In the first stage, KPWE aims to extract representative data features. It leverages the KPCA technique to project the original data into a latent feature space by nonlinear mapping. In the second stage, KPWE aims to alleviate the class imbalance. It exploits the WELM technique to learn an effective defect prediction model with a weighting-based scheme.</p>
+      <p> Results: We have conducted extensive experiments on 34 projects from the PROMISE dataset and 10 projects from the NASA dataset. The experimental results show that KPWE achieves promising performance compared with 41 baseline methods, including seven basic classifiers with KPCA, five variants of KPWE, eight representative feature selection methods with WELM, 21 imbalanced learning methods.</p>
+      <p> Conclusion: In this paper, we propose KPWE, a new software defect prediction framework that considers the feature extraction and class imbalance issues. The empirical study on 44 software projects indicate that KPWE is superior to the baseline methods in most cases</p>
+      <pre>@article{xu:ist18,
+        title = "Software defect prediction based on kernel PCA and weighted extreme learning machine",
+        journal = "Information and Software Technology",
+        volume = "106",
+        pages = "182 - 200",
+        year = "2019",
+        author = "Zhou Xu and Jin Liu and Xiapu Luo and Zijiang Yang and Yifeng Zhang and Peipei Yuan and Yutian Tang and Tao Zhang",}</pre>
+     </div>
+  </div>
+
+
+
+
+  <div id="zhao:issre18" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Knowledge Graph" data-key="zhao:issre18">
+     <div class="pub-meta">
+      <div class="pub-links">
+        <a title="Homepage" href="https://youtu.be/X4Tkjhc6wfU" target="_blank"><i class="icon-www"></i></a>
+        <a title="Paper" href="../assets/papers/2018/issre-18.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[6] A Smart Context-aware Program Assistant based on Dynamic Programming Event Modeling</span>
+      <a href="#zhao:issre18" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Xuejiao Zhao, Hongwei Li, <u>Yutian Tang</u>, Dongjing Gao, Lingfeng Bao, Chinghung Lee</span>
+      <abbr class="pub-in" title="The 29th IEEE International Symposium on Software Reliability Engineering (ISSRE)[CCF-B][Core-A]">ISSRE 2018 [CCF-B][Core-A].</abbr>
+      <br><span><font color="red">🏅[Highlight]: Best Industry Paper Award.</font></span><br/>
+     </div>
+     <div class="pub-details">
+      <p>In software development, there is a great demand for online information and resources. The traditional way for the developers to access online resources is through formulating keywords and searching in the web browser. The search results are limited by the keywords and the web browser also ignores the developers’ working and search context. Tools that integrate information retrieval into the IDE are available, but they fail to perceive the developers’ dynamic working context and use in the process of online search. In this paper, we present a contextaware program assistant called amAssist. amAssist monitors the developers’ development events and models their working context dynamically, then integrates them with the entire online search process (e.g. keywords formulation, customized searching, search results annotation, etc.). We integrate amAssist into the Eclipse IDE. Our preliminary user study showed that by using our program assistant, developers can formulate keywords more accurately and acquire online information and resources more rapidly. Demo video: https://youtu.be/X4Tkjhc6wfU</p>
+      <pre>@INPROCEEDINGS{zhao:issre18,
+        author={X. {Zhao} and H. {Li} and Y. {Tang} and D. {Gao} and L. {Bao} and C. {Lee}},
+        booktitle={2018 IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)}, 
+        title={A Smart Context-Aware Program Assistant Based on Dynamic Programming Event Modeling}, 
+        year={2018},
+        pages={24-29},
+        }</pre>
+     </div>
+  </div>
+
+
+
+  <div id="xu:icpc18" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Defect Prediction" data-key="xu:icpc18">
+     <div class="pub-meta">
+      <div class="pub-links">
+        <a title="Homepage" href="https://icpc-ds3.github.io/icpc2018/" target="_blank"><i class="icon-www"></i></a>
+       <a title="Paper" href="../assets/papers/2018/icpc-18.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[5] Cross Version Defect Prediction with Representative Data via Sparse Subset Selection</span>
+      <a href="#xu:icpc18" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Zhou Xu, Shuai Li,<u>Yutian Tang</u>, Xiapu Luo, Tao Zhang, Jin Liu, and Jun Xu,</span>
+      <abbr class="pub-in" title="26th IEEE/ACM International Conference on Program Comprehension (ICPC)[CCF-B][Core-B]">ICPC 2018 [CCF-B][Core-B].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Software defect prediction aims at detecting the defect-prone software modules by mining historical development data from software repositories. If such modules are identified at the early stage of the development, it can save large amounts of resources. Cross Version Defect Prediction (CVDP) is a practical scenario by training the classification model on the historical data of the prior version and then predicting the defect labels of modules of the current version. However, software development is a constantly-evolving process which leads to the data distribution differences across versions within the same project. The distribution differences will degrade the performance of the classification model. In this paper, we approach this issue by leveraging a state-of-the-art Dissimilaritybased Sparse Subset Selection (DS3) method. This method selects a representative module subset from the prior version based on the pairwise dissimilarities between the modules of two versions and assigns each module of the current version to one of the representative modules. These selected modules can well represent the modules of the current version, thus mitigating the distribution differences. We evaluate the effectiveness of DS3 for CVDP performance on total 40 cross-version pairs from 56 versions of 15 projects with three traditional and two effort-aware indicators. The extensive experiments show that DS3 outperforms three baseline methods, especially in terms of two effort-aware indicators.</p>
+      <pre>@inproceedings{xu:icpc18,
+            author = {Xu, Zhou and Li, Shuai and Tang, Yutian and Luo, Xiapu and Zhang, Tao and Liu, Jin and Xu, Jun},
+            title = {Cross Version Defect Prediction with Representative Data via Sparse Subset Selection},
+            year = {2018},
+            booktitle = {Proceedings of the 26th Conference on Program Comprehension},
+            pages = {132–143}}</pre>
+     </div>
+  </div>
+
+
+
+  <div id="tang:icpc17" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Software Product Line" data-key="tang:icpc17">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Homepage" href="../project/loong_fmr/index.html" target="_blank"><i class="icon-www"></i></a>
+       <a title="Paper" href="../assets/papers/2018/icpc-17.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[4] Constructing Feature Model by Identifying Variability-aware Modules</span>
+      <a href="#tang:icpc17" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u>, and Hareton Leung.</span>
+      <abbr class="pub-in" title="25th IEEE/ACM International Conference on Program Comprehension (ICPC)[CCF-B][Core-B]">ICPC 2017 [CCF-B][Core-B].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Modeling variability, known as building feature models, should be an essential step in the whole process of product line development, maintenance and testing. The work on feature model recovery serves as a foundation and further contributes to product line development and variability-aware analysis. Different from the architecture recovery process even though they somewhat share the same process, the variability is not considered in all architecture recovery techniques. In this paper, we proposed a feature model recovery technique VMS, which gives a variability-aware analysis on the program and further constructs modules for feature model mining. With our work, we bring the variability information into architecture and build the feature model directly from the source base. Our experimental results suggest that our approach performs competitively and outperforms six other representative approaches for architecture recovery.</p>
+      <pre>@INPROCEEDINGS{tang:icpc17,
+            author={Y. {Tang} and H. {Leung}},
+            booktitle={2017 IEEE/ACM 25th International Conference on Program Comprehension (ICPC)}, 
+            title={Constructing Feature Model by Identifying Variability-Aware Modules}, 
+            year={2017},
+            pages={263-274},
+            doi={10.1109/ICPC.2017.21}}</pre>
+     </div>
+  </div>
+
+
+
+  <div id="tang:saner17" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Software Product Line" data-key="tang:saner17">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Homepage" href="../project/loong/index.html" target="_blank"><i class="icon-www"></i></a>
+       <a title="Slides" href="../assets/papers/2018/saner2017_StiCProb.pdf"  target="_blank"><i class="icon-slides"></i></a>
+       <a title="Paper" href="../assets/papers/2018/saner-17.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[3] StiCProb: A Novel Feature Mining Approach using Conditional Probability</span>
+      <a href="#tang:saner17" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u>, and Hareton Leung.</span>
+      <abbr class="pub-in" title="24th IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER)">SANER 2017 [CCF-B][Core-B].</abbr>
+     </div>
+     <div class="pub-details">
+      <p>Software Product Line Engineering is a key approach to construct applications with systematical reuse of architecture, documents and other relevant components. To migrate legacy software into a product line system, it is essential to identify the code segments that should be constructed as features from the source base. However, this could be an error-prone and complicated task, as it involves exploring a complex structure and extracting the relations between different components within a system. And normally, representing structural information of a program in a mathematical way should be a promising direction to investigate. We improve this situation by proposing a probability-based approach named StiCProb to capture source code fragments for feature concerned, which inherently provides a conditional probability to describe the closeness between two programming elements. In the case study, we conduct feature mining on several legacy systems, to compare our approach with other related approaches. As demonstrated in our experiment, our approach could support developers to locate features within legacy successfully with a better performance of 83% for precision and 41% for recall.</p>
+      <pre>@INPROCEEDINGS{tang:saner17,  
+         author={Y. {Tang} and H. {Leung}}, 
+         booktitle={2017 IEEE 24th International Conference on Software Analysis, Evolution and Reengineering (SANER)},   
+         title={StiCProb: A novel feature mining approach using conditional probability},   
+         year={2017},
+         pages={45-55},
+         doi={10.1109/SANER.2017.7884608}}</pre>
+     </div>
+  </div>
+
+
+
+  <div id="tang:softeng15" class="pub-id"></div>
+  <div class="pub" data-type="Conference paper" data-topic="Software Product Line" data-key="tang:softeng15">
+     <div class="pub-meta">
+      <span class="pub-title">[2] Feature Mining for Product Line Construction</span>
+      <a href="#tang:softeng15" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Yutian Tang, and Hareton Leung.</span>
+      <abbr class="pub-in" title="The First International Conference on Advances and Trends in Software Engineering (SOFTENG)">SOFTENG 2015.</abbr>
+     </div>
+     <div class="pub-details">
+      <pre>@inproceedings{tang:softeng15,
+      title        = {Feature Mining for Product Line Construction},
+      author       = {Yutian Tang and Hareton Leung},
+      booktitle    = {The First International Conference on Advances and Trends in Software Engineering (SOFTENG)},
+      year         = 2015,
+      address      = {Spain},
+    }</pre>
+     </div>
+  </div>
+
+
+
+
+
+  <div id="tang:iceis15" class="pub-id"></div>
+    <div class="pub" data-type="Conference paper" data-topic="Software Product Line" data-key="tang:iceis15">
+     <div class="pub-meta">
+      <div class="pub-links">
+       <a title="Paper" href="../assets/papers/2018/iceis-15.pdf" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[1] A Top-down Feature Mining Framework for Software Product Line</span>
+      <a href="#tang:iceis15" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author">Yutian Tang, Hareton Leung.</span>
+      <span class="pub-in">17th International Conference on Enterprise Information Systems (ICEIS), 2015</span>
+     </div>
+     <div class="pub-details">
+      <p>Software product line engineering is regarded as a promising approach to generate tailored software products by referencing shared software artefacts. However, converting software legacy into a product line is extremely difficult, given the complexity, risk of the task and insufficient tool support. To cope with this, in this paper, we proposed a top-down feature-mining framework to facilitate developers extracting code fragments for features concerned. Our work aims to fulfill the following targets: (1) identify features at a fine granularity, (2) locate code fragments for concerned feature hierarchically and consistently, and (3) combine program analysis techniques and feature location strategies to improve mining performance. From our preliminary case studies, the top-down framework can effectively locate features and performs as good as Christians approach and performs better than the topology feature location approach.</p>
+      <pre>@article{tang:iceis15,
+      title        = {A Top-down Feature Mining Framework for Software Product Line},
+      author       = {Yutian Tang and Harton Leung},
+      journal      = {17th International Conference on Enterprise Information Systems (ICEIS)},
+      year         = 2015,
+      }
+      </pre>
+     </div>
+  </div>
+
+
+    <div class="text-muted" style="display:none; text-align:center" id="no-matches">
+      No papers match your search.
+    </div>
+  </div>
+  <script src="../assets/js/pubs.js"></script>
+  <script src="../assets/js/quickfilter.js"></script>
+
+        </div>
+    </section>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">
+           <i class="fa fa-home fa-lg"></i>
+           <a href="http://sist.shanghaitech.edu.cn" target="_blank">School of Information Science and Technology</a>
+
+           &middot;
+           <a href="http://www.shanghaitech.edu.cn" target="_blank">ShanghaiTech University</a>   
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../theme/js/bootstrap.min.js"></script>
+
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+    <script src="../theme/js/respond.min.js"></script>
+
+    <!-- Email -->
+    <script src="../assets/js/email.js"></script>
+
+    <!-- Custom -->
+    <script src="../assets/js/custom.js"></script>
+
+
+    <script src="https://taesoo.kim/files/github.js"></script>
+    <script src="../assets/js/pages/publications.html.js"></script>
+</body>
+</html>
