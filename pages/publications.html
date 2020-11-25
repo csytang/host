@@ -110,8 +110,23 @@
   <div class="col-sm-2" id="filter"><input class="filter-state" style="display:none" /></div>
   <div class="col-sm-10">
 
+
   <h2>2021</h2>
-    
+    <div id="tang:tse21" class="pub-id"></div>
+    <div class="pub" data-type="Journal article" data-topic="Android" data-key="tang:tse21">
+     <div class="pub-meta">
+      <div class="pub-links">
+        <a title="Paper" href="#" target="_blank"><i class="icon-file"></i></a>
+      </div>
+      <span class="pub-title">[22] A Systematical Study on Application Performance Management Libraries for Apps</span>
+      <a href="#tang:tse21" class="pub-expand"><i class="icon-expand"></i></a>
+      <a href="#/" class="pub-collapse"><i class="icon-collapse"></i></a>
+      <span class="pub-author"><u>Yutian Tang</u>, Haoyu Wang, Xian Zhan, Xiapu Luo, Yajin Zhou, Hao Zhou, Qiben Yan, Yulei Sui, Jacky Keung, </span>
+      <abbr class="pub-in" title="IEEE Transactions on Software Engineering.">IEEE Transactions on Software Engineering (TSE) [CCF-A][JCR-Q1][IF=6.112] (in Major)</abbr>
+     </div>
+     <div class="pub-details">
+      </div>
+    </div>
 
   <h2>2020</h2>
 
@@ -129,8 +144,6 @@
       <abbr class="pub-in" title="35th IEEE/ACM International Conference on Automated Software Engineering (ASE).">ASE'20 [CCF-A][Core-A]</abbr>
      </div>
      <div class="pub-details">
-      <p>Smartphone vendors are using multiple methods to kill processes of Android apps to reduce the battery consumption. This motivates developers to find ways to extend the liveness time of their apps, hence the name diehard apps in this paper. Although there are blogs and articles illustrating methods to achieve this purpose, there is no systematic research about them. What’s more important, little is known about the prevalence of diehard apps in the wild.</p> 
-      <p>In this paper, we take a first step to systematically investigate diehard apps by answering the following research questions. First, why and how can they circumvent the resource-saving mechanisms of Android? Second, how prevalent are they in the wild? In particular, we conduct a semi-automated analysis to illustrate insights why existing methods to kill app processes could be evaded, and then systematically present 12 diehard methods. After that, we develop a system named DiehardDetector to detect diehard apps in a large scale. The experimental result of applying DiehardDetector to more than 80k Android apps downloaded from Google Play showed that around 21% of apps adopt various diehard methods. Moreover, our system can achieve high precision and recall.</p>
       <pre>@INPROCEEDINGS{zhou:ase20,
             author={H. {Zhou} and H. {Wang} and Y. {Zhou} and X. {Luo} and Y. {Tang} and L. {Xue} and T. {Wang}},
             booktitle={2020 35th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
@@ -183,9 +196,6 @@
       <br><span><font color="red">[Highlight]: The vulnerability reported is confirmed by Google Security Team.</font></span><br/>
      </div>
      <div class="pub-details">
-      <p>Android deep link is a URL that takes users to a specific page of a mobile app, enabling seamless user experience from a webpage to an app. Android app link, a new type of deep link introduced in Android 6.0, is claimed to offer more benefits, such as supporting instant apps and providing more secure verification to protect against hijacking attacks that previous deep links can not. However, we find that the app link is not as secure as claimed, because the verification process can be bypassed by exploiting instant apps.</p>
-      <p> In this paper, we explore the weakness of the existing app link mechanism and propose three feasible hijacking attacks. Our findings show that even popular apps are subject to these attacks, such as Twitter, Whatsapp, Facebook Message. Our observation is confirmed by Google. To measure the severity of these vulnerabilities, we develop an automatic tool to detect vulnerable apps, and perform a large-scale empirical study on 400,000 Android apps.</p>
-      <p> Experiment results suggest that app link hijacking vulnerabilities are prevalent in the ecosystem. Specifically, 27.1% apps are vulnerable to link hijacking with smart text selection (STS); 30.0% apps are vulnerable to link hijacking without STS, and all instant apps are vulnerable to instant app attack. We provide an in-depth understanding of the mechanisms behind these types of attacks. Furthermore, we propose the corresponding detection and defense methods that can successfully prevent the proposed hijackings for all the evaluated apps, thus raising the bar against the attacks on Android app links. Our insights and findings demonstrate the urgency to identify and prevent app link hijacking attacks.</p>
       <pre>@inproceedings{tang:fse20,
         author = {Tang, Yutian and Sui, Yulei and Wang, Haoyu and Luo, Xiapu and Zhou, Hao and Xu, Zhou},
         title = {All Your App Links Are Belong to Us: Understanding the Threats of Instant Apps Based Attacks},
@@ -214,7 +224,6 @@
       <br><span><font color="red">[Highlight]: The vulnerability reported is confirmed by Google Security Team.</font></span><br/>
      </div>
      <div class="pub-details">
-      <p>Smartphones are frequently involved in accessing private user data. Although many studies have been done to prevent malicious apps from leaking private user data, only a few recent works examine how to remove the sensitive information from the data collected by smartphone hardware resources (e.g., camera). Unfortunately, none of them investigates whether a malicious app can obtain such sensitive information when (or right before/after) a legitimate app collects such data (e.g., taking photos). To fill in the gap, in this paper, we model such attacks as the Resource Race Attack (RRAttack) based on races between two apps during their requests to exclusive resources to access sensitive information. RRAttacks have three categories according to when a race on requesting resources occurs: Pre-Use, In-Use, and Post-Use attacks. We further conduct the first systematic study on the feasibility of launching the RRAttacks on two heavily used exclusive Android resources: camera and touchscreen. In details, we perform Proof-of-Concept (PoC) attacks to reveal that, (a) camera is highly vulnerable to both In-Use and Post-Use attacks; and (b) touchscreen is vulnerable to Pre-Use attacks. Particularly, we demonstrate successful RRAttacks on them to steal private information, to cause financial loss, and to steal user passwords from Android 6 to the latest Android Q. Moreover, our analyses on 1,000 apps indicate that most of them are vulnerable to one to three RRAttacks. Finally, we propose a set of defense strategies against RRAttacks for user apps, system apps, and Android system itself.</p>
       <pre>@INPROCEEDINGS{cai:saner20,
               author={Y. {Cai} and Y. {Tang} and H. {Li} and L. {Yu} and H. {Zhou} and X. {Luo} and L. {He} and P. {Su}},
               booktitle={2020 IEEE 27th International Conference on Software Analysis, Evolution and Reengineering (SANER)}, 
@@ -243,7 +252,6 @@
       <abbr class="pub-in" title="arxiv20">arXiv</abbr>
      </div>
      <div class="pub-details">
-      <p>Software reuse enables developers to reuse archi- tecture, programs and other software artifacts. Realizing a systematical reuse in software brings a large amount of benefits for stakeholders, including lower maintenance efforts, lower development costs, and time to market. Unfortunately, currently implementing a framework for large-scale software reuse in Android apps is still a huge problem, regarding the complexity of the task and lacking of practical technical support from either tools or domain experts. Therefore, proposing a feature location benchmark for apps will help developers either optimize their feature location techniques or reuse the assets created in the benchmark for reusing. In this paper, we release a feature location benchmark, which can be used for those developers, who intend to compose software product lines (SPL) and release reuse in apps. The benchmark not only contributes to the research com- munity for reuse research, but also helps participants in industry for optimizing their architecture and enhancing modularity. In addition, we also develop an Android Studio plugin named caIDE for developers to view and operate on the benchmark.</p>
       <pre>@article{tang:arxiv20,
             title={Feature Location Benchmark for Decomposing and Reusing Android Apps},
             author={Tang, Yutian and Zhou, Hao and Xu, Zhou and Luo, Xiapu and Cai, Yan and Zhang, Tao},
@@ -269,15 +277,6 @@
       <abbr class="pub-in" title="Information and Software Technology (IST)">IST 2020[CCF-B][JCR-Q1].</abbr>
      </div>
      <div class="pub-details">
-      <p>Context: The automatically produced crash reports are able to analyze the root of fault causing the crash (crashing fault for short) which is a critical activity for software quality assurance.</p>
-
-      <p>Objective: Correctly predicting the existence of crashing fault residence in stack traces of crash report can speed up program debugging process and optimize debugging efforts. Existing work focused on the collected label information from bug-fixing logs, and the extracted features of crash instances from stack traces and source code for Identification of Crashing Fault Residence (ICFR) of newly-submitted crashes. This work develops a novel cross project ICFR framework to address the data scarcity problem by using labeled crash data of other project for the ICFR task of the project at hand. This framework removes irrelevant features, reduces distribution differences, and eases the class imbalance issue of cross project data since these factors may negatively impact the ICFR performance.</p>
-
-      <p>Method: The proposed framework, called FSE, combines Feature Selection and feature Embedding techniques. The FSE framework first uses an information gain ratio based feature ranking method to select a relevant feature subset for cross project data, and then employs a state-of-the-art Weighted Balanced Distribution Adaptation (WBDA) method to map features of cross project data into a common space. WBDA considers both marginal and conditional distributions as well as their weights to reduce data distribution discrepancies. Besides, WBDA balances the class proportion of each project data to alleviate the class imbalance issue.</p>
-
-      <p>Results: We conduct experiments on 7 projects to evaluate the performance of our FSE framework. The results show that FSE outperforms 25 methods under comparison.</p>
-
-      <p>Conclusion: This work proposes a cross project learning framework for ICFR, which uses feature selection and embedding to remove irrelevant features and reduce distribution differences, respectively. The results illustrate the performance superiority of our FSE framework.</p>
       <pre>@article{xu:ist20,
             title = "Feature selection and embedding based cross project framework for identifying crashing fault residence",
             journal = "Information and Software Technology",
@@ -307,7 +306,6 @@
       <abbr class="pub-in" title="The 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)">ASE 2019[CCF-A][Core-A].</abbr>
      </div>
      <div class="pub-details">
-      <p>Since the performance issues of apps can influence users' experience, developers leverage application performance management (APM) tools to locate the potential performance bottleneck of their apps. Unfortunately, most developers do not understand how APMs monitor their apps during the runtime and whether these APMs have any limitations. In this paper, we demystify APMs by inspecting 25 widely-used APMs that target on Android apps. We first report how these APMs implement 8 key functions as well as their limitations. Then, we conduct a large-scale empirical study on 500,000 Android apps from Google Play to explore the usage of APMs. This study has some interesting observations about existing APMs for Android, including 1) some APMs still use deprecated permissions and approaches so that they may not always work properly; 2) some app developers use APMs to collect users' privacy information.</p>
       <pre>@INPROCEEDINGS{tang:ase19,
             author={Y. {Tang} and X. {Zhan} and H. {Zhou} and X. {Luo} and Z. {Xu} and Y. {Zhou} and Q. {Yan}},
             booktitle={2019 34th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
@@ -337,7 +335,6 @@
       <abbr class="pub-in" title="International Symposium on Software Reliability Engineering (ISSRE)">ISSRE 2019[CCF-B][Core-A].</abbr>
      </div>
      <div class="pub-details">
-      <p>Analyzing the crash reports recorded upon software crashes is a critical activity for software quality assurance. Predicting whether or not the fault causing the crash (crashing fault for short) resides in the stack traces of crash reports can speed-up the program debugging process and determine the priority of the debugging efforts. Previous work mostly collected label information from bug-fixing logs, and extracted crash features from stack traces and source code to train classification models for the Identification of Crashing Fault Residence (ICFR) of newly-submitted crashes. However, labeled data are not always fully available in real applications. Hence the classifier training is not always feasible. In this work, we make the first attempt to develop a cross project ICFR model to address the data scarcity problem. This is achieved by transferring the knowledge from external projects to the current project via utilizing a state-of-the-art Balanced Distribution Adaptation (BDA) based transfer learning method. BDA not only combines both marginal distribution and conditional distribution across projects but also assigns adaptive weights to the two distributions for better adjusting specific cross project pair. The experiments on 7 software projects show that BDA is superior to 9 baseline methods in terms of 6 indicators overall.</p>
       <pre>@INPROCEEDINGS{xu:issre19,
           author={Z. {Xu} and T. {Zhang} and Y. {Zhang} and Y. {Tang} and J. {Liu} and X. {Luo} and J. {Keung} and X. {Cui}},
           booktitle={2019 IEEE 30th International Symposium on Software Reliability Engineering (ISSRE)}, 
@@ -367,7 +364,6 @@
       <abbr class="pub-in" title="19th International Conference on Software Quality, Reliability, and Security (QRS)[CCF-C]">QRS 2019 [CCF-C].</abbr>
      </div>
      <div class="pub-details">
-      <p>Cross-Project Defect Prediction (CPDP) predicts defects in a target project using the defect information of the external project. Existing CPDP methods assume that the data of two projects share identical features. When cross-project data contain heterogeneous features, traditional CPDP methods become ineffective. In this paper, we propose a novel approach called Multiple-View Spectral Embedding (MVSE) to address the heterogeneous CPDP issue. MVSE treats the cross-project data as two different views and exploits the spectral embedding method to map the heterogeneous feature sets into a consistent space where the two mapped feature sets have maximal similarity. To evaluate MVSE in the realistic setting, we employ an effort-aware performance indicator that considers the cost of inspection in the context of heterogeneous CPDP scenario. We have conducted extensive experiments to compare MVSE with two state-of-the-art heterogeneous CPDP methods and within-project setting. The experiments on 94 cross project pairs show that MVSE achieves promising results.</p>
       <pre>@INPROCEEDINGS{xu:qrs19,
             author={Z. {Xu} and S. {Ye} and T. {Zhang} and Z. {Xia} and S. {Pang} and Y. {Wang} and Y. {Tang}},
             booktitle={2019 IEEE 19th International Conference on Software Quality, Reliability and Security (QRS)}, 
@@ -394,7 +390,6 @@
       <abbr class="pub-in" title="2019 IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER)">SANER 2019 [CCF-B][Core-B].</abbr>
      </div>
      <div class="pub-details">
-      <p>Apps repackaging has become a serious problem which not only violates the copyrights of the original developers but also destroys the health of the Android ecosystem. A recent study shows that repackaged apps share a significant proportion of malware samples. Therefore, it is imperative to detect repackaged apps in various app markets. Although many detection technologies have been proposed, there lacks a systematic comparison among them. One reason is that many detection tools are not publicly available, and therefore little is known about their robustness and effectiveness. In this paper, we fill this gap by 1) analyzing these repackaging detection technologies; 2) implementing these detection techniques; 3) comparing them in terms of various metrics using real repackaged apps. The analysis and the experimental results reveal new insights, which shed light on the research of repackaged apps detection.</p>
       <pre>@INPROCEEDINGS{xian:saner19,
             author={X. {Zhan} and T. {Zhang} and Y. {Tang}},
             booktitle={2019 IEEE 26th International Conference on Software Analysis, Evolution and Reengineering (SANER)}, 
@@ -420,7 +415,6 @@
       <abbr class="pub-in" title="Journal of System and Software (JSS).">JSS 2019 [CCF-B][JCR-Q1].</abbr>
      </div>
      <div class="pub-details">
-      <p>Software Defect Prediction (SDP) aims to detect defective modules to enable the reasonable allocation of testing resources, which is an economically critical activity in software quality assurance. Learning effective feature representation and addressing class imbalance are two main challenges in SDP. Ideally, the more discriminative the features learned from the modules and the better the rescue performed on the imbalance issue, the more effective it should be in detecting defective modules. In this study, to solve these two challenges, we propose a novel framework named LDFR by Learning Deep Feature Representation from the defect data for SDP. Specifically, we use a deep neural network with a new hybrid loss function that consists of a triplet loss to learn a more discriminative feature representation of the defect data and a weighted cross-entropy loss to remedy the imbalance issue. To evaluate the effectiveness of the proposed LDFR framework, we conduct extensive experiments on a benchmark dataset with 27 defect data (each with three types of features), using three traditional and three effort-aware indicators. Overall, the experimental results demonstrate the superiority of our LDFR framework in detecting defective modules when compared with 27 baseline methods, except in terms of the indicator of Precision.</p>
       <pre>@article{xu:jss19a,
             title = "LDFR: Learning deep feature representation for software defect prediction",
             journal = "Journal of Systems and Software",
@@ -447,7 +441,6 @@
     <abbr class="pub-in" title="Journal of Computer Science and Technology(JCST) journal.">JCST Journal 2019 [CCF-B].</abbr>
    </div>
    <div class="pub-details">
-    <p>Defect prediction assists the rational allocation of testing resources by detecting the potentially defective software modules before releasing products. When a project has no historical labeled defect data, cross project defect prediction (CPDP) is an alternative technique for this scenario. CPDP utilizes labeled defect data of an external project to construct a classification model to predict the module labels of the current project. Transfer learning based CPDP methods are the current mainstream. In general, such methods aim to minimize the distribution differences between the data of the two projects. However, previous methods mainly focus on the marginal distribution difference but ignore the conditional distribution difference, which will lead to unsatisfactory performance. In this work, we use a novel balanced distribution adaptation (BDA) based transfer learning method to narrow this gap. BDA simultaneously considers the two kinds of distribution differences and adaptively assigns different weights to them. To evaluate the effectiveness of BDA for CPDP performance, we conduct experiments on 18 projects from 4 datasets using 6 indicators (i.e., F-measure, g-means, Balance, AUC, EARecall, and EAFmeasure). Compared with 12 baseline methods, BDA achieves average improvements of 23.8%, 12.5%, 11.5%, 4.7%, 34.2%, and 33.7% in terms of the 6 indicators respectively over 4 datasets</p>
     <pre>@article{xu:jcst19,
           title = "Cross Project Defect Prediction via Balanced Distribution Adaptation based Transfer Learning",
           journal = "Journal of Computer Science and Technology",
@@ -475,7 +468,6 @@
       <abbr class="pub-in" title="Journal of System and Software (JSS).">JSS 2019 [CCF-B][JCR-Q1].</abbr>
      </div>
      <div class="pub-details">
-      <p>Cross Version Defect Prediction (CVDP) is a practical scenario by training the classification model on the historical data of the prior version and then predicting the defect labels of modules in the current version. Unfortunately, the differences of data distribution across versions may hinder the effectiveness of the trained CVDP model. Thus, it is not trivial to select a suitable training subset from the prior version to promote the CVDP performance. In this paper, we propose a novel method, called Two-Stage Training Subset Selection (TSTSS), to address this challenging issue. In the first stage, TSTSS utilizes a sparse modeling representative selection method to select an initial module subset from the prior version which can well reconstruct the data of the prior version. In the second stage, TSTSS leverages a dissimilarity-based sparse subset selection method to further refine the selected module subset, which enables the selected modules to well represent the modules of the current version. Finally, we use a novel weighted extreme learning machine classifier to construct the CVDP model. We evaluate the CVDP performance of TSTSS on 50 cross-version pairs using 6 indicators. The experiments show that TSTSS can efficiently improve the CVDP performance compared with 11 baseline methods.</p>
       <pre>@article{xu:jss19,
             title = "TSTSS: A two-stage training subset selection framework for cross version defect prediction",
             journal = "Journal of Systems and Software",
@@ -527,11 +519,6 @@
       <abbr class="pub-in" title="Information and Software Technology (IST)[CCF-B][JCR-Q1]">IST Journal [CCF-B][JCR-Q1].</abbr>
      </div>
      <div class="pub-details">
-      <p>Context: Software defect prediction strives to detect defect-prone software modules by mining the historical data. Effective prediction enables reasonable testing resource allocation, which eventually leads to a more reliable software.</p>
-      <p>Objective: The complex structures and the imbalanced class distribution in software defect data make it challenging to obtain suitable data features and learn an effective defect prediction model. In this paper, we propose a method to address these two challenges.</p>
-      <p> Method: We propose a defect prediction framework called KPWE that combines two techniques, i.e., Kernel Principal Component Analysis (KPCA) and Weighted Extreme Learning Machine (WELM). Our framework consists of two major stages. In the first stage, KPWE aims to extract representative data features. It leverages the KPCA technique to project the original data into a latent feature space by nonlinear mapping. In the second stage, KPWE aims to alleviate the class imbalance. It exploits the WELM technique to learn an effective defect prediction model with a weighting-based scheme.</p>
-      <p> Results: We have conducted extensive experiments on 34 projects from the PROMISE dataset and 10 projects from the NASA dataset. The experimental results show that KPWE achieves promising performance compared with 41 baseline methods, including seven basic classifiers with KPCA, five variants of KPWE, eight representative feature selection methods with WELM, 21 imbalanced learning methods.</p>
-      <p> Conclusion: In this paper, we propose KPWE, a new software defect prediction framework that considers the feature extraction and class imbalance issues. The empirical study on 44 software projects indicate that KPWE is superior to the baseline methods in most cases</p>
       <pre>@article{xu:ist18,
         title = "Software defect prediction based on kernel PCA and weighted extreme learning machine",
         journal = "Information and Software Technology",
@@ -560,7 +547,6 @@
       <br><span><font color="red">🏅[Highlight]: Best Industry Paper Award.</font></span><br/>
      </div>
      <div class="pub-details">
-      <p>In software development, there is a great demand for online information and resources. The traditional way for the developers to access online resources is through formulating keywords and searching in the web browser. The search results are limited by the keywords and the web browser also ignores the developers’ working and search context. Tools that integrate information retrieval into the IDE are available, but they fail to perceive the developers’ dynamic working context and use in the process of online search. In this paper, we present a contextaware program assistant called amAssist. amAssist monitors the developers’ development events and models their working context dynamically, then integrates them with the entire online search process (e.g. keywords formulation, customized searching, search results annotation, etc.). We integrate amAssist into the Eclipse IDE. Our preliminary user study showed that by using our program assistant, developers can formulate keywords more accurately and acquire online information and resources more rapidly. Demo video: https://youtu.be/X4Tkjhc6wfU</p>
       <pre>@INPROCEEDINGS{zhao:issre18,
         author={X. {Zhao} and H. {Li} and Y. {Tang} and D. {Gao} and L. {Bao} and C. {Lee}},
         booktitle={2018 IEEE International Symposium on Software Reliability Engineering Workshops (ISSREW)}, 
@@ -587,7 +573,6 @@
       <abbr class="pub-in" title="26th IEEE/ACM International Conference on Program Comprehension (ICPC)[CCF-B][Core-B]">ICPC 2018 [CCF-B][Core-B].</abbr>
      </div>
      <div class="pub-details">
-      <p>Software defect prediction aims at detecting the defect-prone software modules by mining historical development data from software repositories. If such modules are identified at the early stage of the development, it can save large amounts of resources. Cross Version Defect Prediction (CVDP) is a practical scenario by training the classification model on the historical data of the prior version and then predicting the defect labels of modules of the current version. However, software development is a constantly-evolving process which leads to the data distribution differences across versions within the same project. The distribution differences will degrade the performance of the classification model. In this paper, we approach this issue by leveraging a state-of-the-art Dissimilaritybased Sparse Subset Selection (DS3) method. This method selects a representative module subset from the prior version based on the pairwise dissimilarities between the modules of two versions and assigns each module of the current version to one of the representative modules. These selected modules can well represent the modules of the current version, thus mitigating the distribution differences. We evaluate the effectiveness of DS3 for CVDP performance on total 40 cross-version pairs from 56 versions of 15 projects with three traditional and two effort-aware indicators. The extensive experiments show that DS3 outperforms three baseline methods, especially in terms of two effort-aware indicators.</p>
       <pre>@inproceedings{xu:icpc18,
             author = {Xu, Zhou and Li, Shuai and Tang, Yutian and Luo, Xiapu and Zhang, Tao and Liu, Jin and Xu, Jun},
             title = {Cross Version Defect Prediction with Representative Data via Sparse Subset Selection},
@@ -613,7 +598,6 @@
       <abbr class="pub-in" title="25th IEEE/ACM International Conference on Program Comprehension (ICPC)[CCF-B][Core-B]">ICPC 2017 [CCF-B][Core-B].</abbr>
      </div>
      <div class="pub-details">
-      <p>Modeling variability, known as building feature models, should be an essential step in the whole process of product line development, maintenance and testing. The work on feature model recovery serves as a foundation and further contributes to product line development and variability-aware analysis. Different from the architecture recovery process even though they somewhat share the same process, the variability is not considered in all architecture recovery techniques. In this paper, we proposed a feature model recovery technique VMS, which gives a variability-aware analysis on the program and further constructs modules for feature model mining. With our work, we bring the variability information into architecture and build the feature model directly from the source base. Our experimental results suggest that our approach performs competitively and outperforms six other representative approaches for architecture recovery.</p>
       <pre>@INPROCEEDINGS{tang:icpc17,
             author={Y. {Tang} and H. {Leung}},
             booktitle={2017 IEEE/ACM 25th International Conference on Program Comprehension (ICPC)}, 
@@ -641,7 +625,6 @@
       <abbr class="pub-in" title="24th IEEE International Conference on Software Analysis, Evolution, and Reengineering (SANER)">SANER 2017 [CCF-B][Core-B].</abbr>
      </div>
      <div class="pub-details">
-      <p>Software Product Line Engineering is a key approach to construct applications with systematical reuse of architecture, documents and other relevant components. To migrate legacy software into a product line system, it is essential to identify the code segments that should be constructed as features from the source base. However, this could be an error-prone and complicated task, as it involves exploring a complex structure and extracting the relations between different components within a system. And normally, representing structural information of a program in a mathematical way should be a promising direction to investigate. We improve this situation by proposing a probability-based approach named StiCProb to capture source code fragments for feature concerned, which inherently provides a conditional probability to describe the closeness between two programming elements. In the case study, we conduct feature mining on several legacy systems, to compare our approach with other related approaches. As demonstrated in our experiment, our approach could support developers to locate features within legacy successfully with a better performance of 83% for precision and 41% for recall.</p>
       <pre>@INPROCEEDINGS{tang:saner17,  
          author={Y. {Tang} and H. {Leung}}, 
          booktitle={2017 IEEE 24th International Conference on Software Analysis, Evolution and Reengineering (SANER)},   
@@ -691,7 +674,6 @@
       <span class="pub-in">17th International Conference on Enterprise Information Systems (ICEIS), 2015</span>
      </div>
      <div class="pub-details">
-      <p>Software product line engineering is regarded as a promising approach to generate tailored software products by referencing shared software artefacts. However, converting software legacy into a product line is extremely difficult, given the complexity, risk of the task and insufficient tool support. To cope with this, in this paper, we proposed a top-down feature-mining framework to facilitate developers extracting code fragments for features concerned. Our work aims to fulfill the following targets: (1) identify features at a fine granularity, (2) locate code fragments for concerned feature hierarchically and consistently, and (3) combine program analysis techniques and feature location strategies to improve mining performance. From our preliminary case studies, the top-down framework can effectively locate features and performs as good as Christians approach and performs better than the topology feature location approach.</p>
       <pre>@article{tang:iceis15,
       title        = {A Top-down Feature Mining Framework for Software Product Line},
       author       = {Yutian Tang and Harton Leung},
