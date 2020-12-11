@@ -80,12 +80,12 @@ a, a:hover {
 
 .entry-content a {
     text-decoration: none;
-    color: #224b8d;
     border-bottom: 1px dotted;
 }
 
 .entry-content a:hover {
     text-decoration: none;
+    color:#CC2900;
     border-bottom: 1px solid;
 }
 
