@@ -2,6 +2,10 @@ body {
     padding-top: 70px;
 }
 
+::selection {
+  background: yellow;
+}
+
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
