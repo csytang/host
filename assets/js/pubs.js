@@ -149,6 +149,7 @@ $(document).ready(function() {
                                    autofocus: true}),
          new Quickfilter.Categorical('Topic', 'data-topic'),
          new Quickfilter.Categorical('Type', 'data-type'),
-         new Quickfilter.Categorical('CCF-Rankings', 'data-ccf')],
+         new Quickfilter.Categorical('CCF-Rankings', 'data-ccf'),
+         new Quickfilter.Categorical('CORE-Rankings', 'data-core')],
         onFilterChange);
 });
