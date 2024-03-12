@@ -78,6 +78,7 @@ div#group-leaders, div#phd-students, div#master-s-students {
   display: block;
 }
 
+
 div.member {
   display: inline-block;
   width: 205px;
@@ -360,4 +361,19 @@ span.tag-right-arm {
     width: 28px;
     height: 28px;
     padding: 0;
+}
+
+
+.ad-container {
+    border: 2px solid #000; /* Adjust the color and size of the border as needed */
+    width: 300px; /* Adjust the width as needed */
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+.ad-text {
+    margin-top: 10px;
+    font-size: 0.8em; /* Adjust the size of the font as needed */
+    color: #666; /* Adjust the color of the font as needed */
 }
