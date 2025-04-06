@@ -101,68 +101,31 @@
                               </tr>
                           </thead>
                             
-                            <tbody>
+
+
+                             <tbody>
                               <tr>
-                                <td>1</td>
-                                <td>2011</td>
-                                <td>Third Prize</td>
-                                <td>Undergraduate Scholarships, Jilin University</td>
+                                <td></td>
+                                <td>2024</td>
+                                <td>Google Cloud Credit Award</td>
+                                <td>Google</td>
                               </tr>
                             </tbody>
 
 
                             <tbody>
                               <tr>
-                                <td>2</td>
-                                <td>2012</td>
-                                <td>Second Prize</td>
-                                <td>Undergraduate Scholarships, Jilin University</td>
+                                <td></td>
+                                <td>2024</td>
+                                <td>Researcher Access Program</td>
+                                <td>OpenAI</td>
                               </tr>
                             </tbody>
 
 
                             <tbody>
                               <tr>
-                                <td>3</td>
-                                <td>2012</td>
-                                <td>First Prize</td>
-                                <td>Undergraduate Research Award,Jilin University</td>
-                              </tr>
-                            </tbody>
-
-
-                            <tbody>
-                              <tr>
-                                <td>4</td>
-                                <td>2013-2017</td>
-                                <td>Ph.D. Scholarships</td>
-                                <td>The Hong Kong Polytechnic University</td>
-                              </tr>
-                            </tbody>
-
-
-                            <tbody>
-                              <tr>
-                                <td>5</td>
-                                <td>2018</td>
-                                <td>Best Industry Paper Award</td>
-                                <td>The 29th IEEE International Symposium on Software Reliability Engineering (ISSRE 2018) (CCF-B)</td>
-                              </tr>
-                            </tbody>
-
-                            <tbody>
-                              <tr>
-                                <td>6</td>
-                                <td>2021</td>
-                                <td>Shanghai Pujiang Talent Program</td>
-                                <td>Shanghai Municipal Committee of Science and Technology, Shanghai Gov.</td>
-                              </tr>
-                            </tbody>
-
-                            
-                            <tbody>
-                              <tr>
-                                <td>7</td>
+                                <td></td>
                                 <td>2023</td>
                                 <td>Best Reviewer Award</td>
                                 <td>Program Committee of Asia-Pacific Software Engineering Conference (APSEC) 2023.</td>
@@ -172,19 +135,58 @@
 
                             <tbody>
                               <tr>
-                                <td>8</td>
-                                <td>2024</td>
-                                <td>Researcher Access Program</td>
-                                <td>OpenAI</td>
+                                <td></td>
+                                <td>2021</td>
+                                <td>Shanghai Pujiang Talent Program</td>
+                                <td>Shanghai Municipal Committee of Science and Technology, Shanghai Gov.</td>
                               </tr>
                             </tbody>
 
-                             <tbody>
+                            <tbody>
                               <tr>
-                                <td>9</td>
-                                <td>2024</td>
-                                <td>Google Cloud Credit Award</td>
-                                <td>Google</td>
+                                <td></td>
+                                <td>2018</td>
+                                <td>Best Industry Paper Award</td>
+                                <td>The 29th IEEE International Symposium on Software Reliability Engineering (ISSRE 2018) (CCF-B)</td>
+                              </tr>
+                            </tbody>
+                         
+
+                            <tbody>
+                              <tr>
+                                <td></td>
+                                <td>2013-2017</td>
+                                <td>Ph.D. Scholarships</td>
+                                <td>The Hong Kong Polytechnic University</td>
+                              </tr>
+                            </tbody>
+
+
+                            <tbody>
+                              <tr>
+                                <td></td>
+                                <td>2012</td>
+                                <td>Second Prize</td>
+                                <td>Undergraduate Scholarships, Jilin University</td>
+                              </tr>
+                            </tbody>
+
+
+                            <tbody>
+                              <tr>
+                                <td></td>
+                                <td>2012</td>
+                                <td>First Prize</td>
+                                <td>Undergraduate Research Award,Jilin University</td>
+                              </tr>
+                            </tbody>
+
+                            <tbody>
+                              <tr>
+                                <td></td>
+                                <td>2011</td>
+                                <td>Third Prize</td>
+                                <td>Undergraduate Scholarships, Jilin University</td>
                               </tr>
                             </tbody>
 
@@ -211,7 +213,7 @@
                             
                             <tbody>
                               <tr>
-                                <td>1</td>
+                                <td></td>
                                 <td>2023</td>
                                 <td>Yutian Tang; Zhijie Liu</td>
                                 <td><a href="../assets/doc/copyright/android-malware-detection.pdf" target="_blank">Big Data-Based Mobile Application Malicious Component Detection System V1.0 (No. 2023SR0897296)</a></td>
@@ -255,8 +257,31 @@
 
     <!-- Custom -->
     <script src="../assets/js/custom.js"></script>
+    <script>
+        function generateRawIndex() {
+            const tables = document.querySelectorAll("table#cve");
 
+            tables.forEach(table => {
+                const rows = table.querySelectorAll("tbody tr");
+                const counters = {};
+                
+                rows.forEach(row => {
+                    const category = row.getAttribute("data-category");
 
+                    if (!counters[category]) {
+                        counters[category] = 1;
+                    } else {
+                        counters[category]++;
+                    }
+
+                    row.cells[0].innerText = counters[category];
+                });
+            });
+        }
+
+        // 页面加载时自动生成
+        window.onload = generateRawIndex;
+    </script>
     <script src="https://taesoo.kim/files/github.js"></script>
     <script src="../assets/js/pages/visiting.html.js"></script>
 </body>
