@@ -30,6 +30,29 @@
 
     <script src="./theme/js/jquery.min.js"></script>
    
+    <style>
+    .custom-order-button {
+        display: inline-block;
+        padding: 12px 28px;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff !important;
+        background: linear-gradient(to right, #4CAF50, #2E8B57);
+        border: none;
+        border-radius: 50px;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+    }
+
+    .custom-order-button:hover {
+        background: linear-gradient(to right, #2E8B57, #4CAF50);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        text-decoration: none;
+    }
+    </style>
 
 </head>
 <body>
@@ -97,6 +120,12 @@
         <div class="entry-content">
 
             <div class="section" id="systems-software-security-lab">
+
+            <div class="alert alert-warning" role="alert"> Who desires all men to be saved and to come to the full knowledge of the truth. 1 Timothy 2:4
+                <br>
+                他願萬人得救，並且充分認識真理。 提摩太前書2:4
+            </div>
+
             <h1>Short Bio </h1> 
 
       			<p>Dr. Yutian Tang is an Assistant Professor (UK Lecturer) ([<a href="CV.pdf" target="_blank">CV</a>] [<a href="https://www.gla.ac.uk/schools/computing/staff/yutiantang" target="_blank">University Profile</a>]) at the School of Computing Science, University of Glasgow, United Kingdom (PI, Ph.D. Supervisor). He received his Ph.D. degree from the Department of Computing, The Hong Kong Polytechnic University, under the supervision of <a href="https://www4.comp.polyu.edu.hk/~csxluo/" target="_blank"> Prof. Xiapu Luo</a> and Dr. Hareton Leung (Emeritus). His research interests include AI+SE (Large-language Model+SE), program analysis, empirical software engineering, privacy protection, and software testing. He is a senior member of IEEE, a member of ACM, CCF, European Alliance for Innovation (EAI), and EuroSys. He is also a member of <a href="https://www.ukri.org/councils/epsrc/">EPSRC Peer Review College</a>, a technical committee member of the IEEE Technical Committee on Software Engineering, a member of Trustworthy Digital Identity Interest Group and Interpretation, Verification and Modelling Interest Group, The Alan Turing Institute. He also contributes to the IEEE Standards Association P1633 Working Group (IEEE Recommended Practice on Software Reliability).
@@ -210,8 +239,18 @@
 
                <br>
 
-               <a class="twitter-timeline" data-lang="en" data-height="800" href="https://twitter.com/csytang?ref_src=twsrc%5Etfw">Tweets by csytang</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            
+               <section class="text-center">
+                <img src="./assets/img/bible.png" height="335" alt="Bible image">
+                <br><br>
+                <a href="https://www.biblesforeurope.org/"
+                   class="btn custom-order-button"
+                   role="button"
+                   aria-label="Order a free Bible"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    📖 Order for Free
+                </a>
+                </section>
             
                 
         </aside>
