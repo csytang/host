@@ -2,115 +2,146 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>权重股长期趋势看板</title>
+    <title>权重股趋势深度看板</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .range-bar { height: 6px; background: #f1f5f9; border-radius: 3px; position: relative; width: 120px; }
-        .range-dot { width: 4px; height: 10px; background: #6366f1; position: absolute; top: -2px; border-radius: 1px; }
+        .range-bar { height: 6px; background: #f1f5f9; border-radius: 3px; position: relative; width: 100px; }
+        .range-dot { width: 4px; height: 10px; background: #4f46e5; position: absolute; top: -2px; border-radius: 1px; }
     </style>
 </head>
-<body class="bg-gray-50 p-6 font-sans">
-    <div class="max-w-5xl mx-auto">
-        <header class="flex justify-between items-end mb-8">
+<body class="bg-slate-50 p-4 md:p-8 font-sans text-slate-900">
+    <div class="max-w-6xl mx-auto">
+        <header class="flex justify-between items-center mb-8">
             <div>
-                <h1 class="text-2xl font-bold text-gray-800">美股权重长期趋势 (MarketStack)</h1>
-                <p class="text-gray-500 text-sm">计算 3个月涨跌幅 及 52周价格区间</p>
+                <h1 class="text-2xl font-black text-slate-800 tracking-tight">美股权重核心看板</h1>
+                <p id="status" class="text-slate-500 text-sm italic">等待同步所有节点...</p>
             </div>
-            <button onclick="fetchMarketData()" id="btn" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 shadow-lg transition-all">
-                分析趋势
+            <button onclick="runSync()" id="btn" class="bg-indigo-600 text-white px-8 py-2.5 rounded-xl font-bold hover:bg-indigo-700 shadow-xl shadow-indigo-200 transition-all active:scale-95">
+                同步全量数据
             </button>
         </header>
 
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <table class="w-full text-left border-collapse">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+            <table class="w-full text-left">
                 <thead>
-                    <tr class="bg-gray-50 border-b border-gray-200 text-gray-400 text-[11px] uppercase font-bold tracking-widest">
-                        <th class="px-6 py-4">代码</th>
-                        <th class="px-6 py-4">最新价格</th>
+                    <tr class="bg-slate-50 border-b border-slate-200 text-slate-400 text-[11px] uppercase font-bold tracking-widest">
+                        <th class="px-6 py-4">公司名称 / 代码</th>
+                        <th class="px-6 py-4 text-right">现价</th>
                         <th class="px-6 py-4 text-center">52周高低区间</th>
-                        <th class="px-6 py-4 text-right">3月涨跌</th>
+                        <th class="px-6 py-4 text-right">3月趋势</th>
                     </tr>
                 </thead>
-                <tbody id="table-body" class="divide-y divide-gray-100">
-                    <tr><td colspan="4" class="p-10 text-center text-gray-400">点击按钮开始分析 (可能需要几秒钟)</td></tr>
+                <tbody id="table-body" class="divide-y divide-slate-100">
+                    <tr><td colspan="4" class="p-20 text-center text-slate-300">点击按钮同步 44 个核心节点数据</td></tr>
                 </tbody>
             </table>
         </div>
-        <p id="info" class="mt-4 text-center text-[10px] text-gray-400 uppercase tracking-tighter"></p>
     </div>
 
     <script>
         const ACCESS_KEY = 'b35f804f646baddc5b1d5cfa001af179';
-        // 建议首批测试 15-20 个，以节省额度
-        const tickers = ['NVDA','AAPL','MSFT','AMZN','GOOGL','META','TSLA','PLTR','AVGO','NFLX','AMD','COST','ORCL','WMT','JPM'];
 
-        async function fetchMarketData() {
+        // 核心映射表：代码 -> 友好名称
+        const stockMap = {
+            'NVDA': '英伟达 (NVIDIA)', 'AAPL': '苹果 (Apple)', 'MSFT': '微软 (Microsoft)', 'AMZN': '亚马逊 (Amazon)',
+            'GOOGL': '谷歌 (Google)', 'META': 'Meta (Facebook)', 'AVGO': '博通 (Broadcom)', 'TSLA': '特斯拉 (Tesla)',
+            'PLTR': 'Palantir', 'BRK.B': '波克夏 (Berkshire)', 'LLY': '礼来 (Eli Lilly)', 'JPM': '摩根大通 (JPM)',
+            'WMT': '沃尔玛 (Walmart)', 'V': 'Visa', 'ORCL': '甲骨文 (Oracle)', 'MA': '万事达 (MasterCard)',
+            'XOM': '埃克森美孚', 'JNJ': '强生 (J&J)', 'BAC': '美国银行', 'ABBV': '艾伯维',
+            'NFLX': '奈飞 (Netflix)', 'COST': '开市客 (Costco)', 'AMD': '超微半导体', 'HD': '家得宝 (Home Depot)',
+            'PG': '宝洁 (P&G)', 'GE': '通用电气', 'MU': '美光 (Micron)', 'CSCO': '思科 (Cisco)',
+            'CVX': '雪佛龙', 'ASML': '阿斯麦', 'AZN': '阿斯利康', 'APP': 'AppLovin',
+            'TMUS': 'T-Mobile', 'SHOP': 'Shopify', 'LRCX': '泛林集团', 'AMAT': '应用材料',
+            'ISRG': '直觉外科', 'LIN': '林德', 'PEP': '百事可乐', 'INTU': 'Intuit',
+            'QCOM': '高通 (Qualcomm)', 'AMGN': '安进', 'BKNG': 'Booking', 'INTC': '英特尔 (Intel)'
+        };
+
+        const tickers = Object.keys(stockMap);
+
+        async function runSync() {
             const btn = document.getElementById('btn');
+            const status = document.getElementById('status');
             const tbody = document.getElementById('table-body');
+            
             btn.disabled = true;
-            btn.innerText = "正在拉取历史数据...";
             tbody.innerHTML = '';
 
-            try {
-                for (let symbol of tickers) {
-                    // 获取过去一年的日终数据 (约252个交易日)
-                    const url = `https://api.marketstack.com/v1/eod?access_key=${ACCESS_KEY}&symbols=${symbol}&limit=252`;
+            // 分两批请求，每批约 22 个，防止 URL 过长被 MarketStack 拦截
+            const mid = Math.ceil(tickers.length / 2);
+            const groups = [tickers.slice(0, mid), tickers.slice(mid)];
+
+            for (let i = 0; i < groups.length; i++) {
+                status.innerText = `正在加载第 ${i+1}/${groups.length} 批数据...`;
+                const symbols = groups[i].join(',');
+                
+                try {
+                    // limit=1000 确保每个 symbol 都能分到足够的历史天数
+                    const url = `https://api.marketstack.com/v1/eod?access_key=${ACCESS_KEY}&symbols=${symbols}&limit=1000`;
                     const res = await fetch(url);
-                    const result = await res.json();
+                    const json = await res.json();
 
-                    if (!result.data || result.data.length === 0) continue;
+                    if (!json.data) throw new Error("API限流或Key无效");
 
-                    const data = result.data;
-                    const latestPrice = data[0].close;
-                    
-                    // 1. 计算 52周最高/最低
-                    const allPrices = data.map(item => item.close);
-                    const yearHigh = Math.max(...allPrices);
-                    const yearLow = Math.min(...allPrices);
+                    const grouped = {};
+                    json.data.forEach(item => {
+                        if (!grouped[item.symbol]) grouped[item.symbol] = [];
+                        grouped[item.symbol].push(item);
+                    });
 
-                    // 2. 计算 3个月 (约63个交易日) 涨跌幅
-                    // 如果数据不足63条，则取最后一条
-                    const index3m = Math.min(data.length - 1, 63);
-                    const price3mAgo = data[index3m].close;
-                    const change3m = ((latestPrice - price3mAgo) / price3mAgo * 100).toFixed(2);
-
-                    // 3. 计算 52周位置百分比
-                    const pos = ((latestPrice - yearLow) / (yearHigh - yearLow) * 100).toFixed(0);
-
-                    appendRow(symbol, latestPrice, yearLow, yearHigh, pos, change3m);
+                    groups[i].forEach(symbol => {
+                        const history = grouped[symbol];
+                        if (history && history.length > 0) {
+                            renderRow(symbol, history);
+                        }
+                    });
+                } catch (err) {
+                    console.error(err);
+                    status.innerText = "部分加载失败，MarketStack 额度可能不足";
                 }
-            } catch (err) {
-                console.error(err);
-                document.getElementById('info').innerText = "提示：API额度可能受限或网络波动";
-            } finally {
-                btn.disabled = false;
-                btn.innerText = "分析趋势";
-                document.getElementById('info').innerText = `最后分析时间: ${new Date().toLocaleString()}`;
             }
+            status.innerText = `✅ 已成功同步 ${document.querySelectorAll('tbody tr').length} 个节点`;
+            btn.disabled = false;
         }
 
-        function appendRow(symbol, price, low, high, pos, change) {
+        function renderRow(symbol, history) {
             const tbody = document.getElementById('table-body');
+            const latest = history[0].close;
+            
+            // 计算区间
+            const prices = history.map(h => h.close);
+            const high = Math.max(...prices);
+            const low = Math.min(...prices);
+            
+            // 计算 3M 涨跌 (取约 63 个交易日前)
+            const oldIdx = Math.min(history.length - 1, 63);
+            const oldPrice = history[oldIdx].close;
+            const change = ((latest - oldPrice) / oldPrice * 100).toFixed(2);
+            
+            const pos = (((latest - low) / (high - low)) * 100).toFixed(0);
             const color = change >= 0 ? 'text-emerald-600' : 'text-rose-600';
-            const posClamped = Math.max(0, Math.min(100, pos));
 
             tbody.innerHTML += `
-                <tr class="hover:bg-gray-50 transition-colors">
-                    <td class="px-6 py-4 font-bold text-gray-700">${symbol}</td>
-                    <td class="px-6 py-4 font-mono">$${price.toFixed(2)}</td>
+                <tr class="hover:bg-slate-50 transition-colors">
+                    <td class="px-6 py-4 whitespace-nowrap">
+                        <div class="text-sm font-bold text-slate-800">${stockMap[symbol]}</div>
+                        <div class="text-[10px] text-slate-400 font-mono tracking-wider">${symbol}</div>
+                    </td>
+                    <td class="px-6 py-4 text-right font-mono font-bold text-slate-600">$${latest.toFixed(2)}</td>
                     <td class="px-6 py-4">
                         <div class="flex flex-col items-center">
                             <div class="range-bar">
-                                <div class="range-dot" style="left: ${posClamped}%"></div>
+                                <div class="range-dot" style="left: ${Math.max(0, Math.min(100, pos))}%"></div>
                             </div>
-                            <div class="flex justify-between w-[120px] text-[9px] text-gray-400 mt-1 font-mono">
+                            <div class="flex justify-between w-[100px] text-[8px] text-slate-400 mt-1 font-mono">
                                 <span>${low.toFixed(0)}</span>
                                 <span>${high.toFixed(0)}</span>
                             </div>
                         </div>
                     </td>
-                    <td class="px-6 py-4 text-right font-bold ${color}">
-                        ${change > 0 ? '▲' : '▼'} ${change}%
+                    <td class="px-6 py-4 text-right">
+                        <span class="inline-block px-3 py-1 rounded-full text-xs font-black ${color} bg-opacity-10">
+                            ${change > 0 ? '+' : ''}${change}%
+                        </span>
                     </td>
                 </tr>
             `;
