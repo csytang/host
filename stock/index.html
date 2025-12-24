@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>权重股长期趋势看板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .range-bar { height: 6px; background: #f1f5f9; border-radius: 3px; position: relative; width: 120px; }
+        .range-dot { width: 4px; height: 10px; background: #6366f1; position: absolute; top: -2px; border-radius: 1px; }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 font-sans">
+    <div class="max-w-5xl mx-auto">
+        <header class="flex justify-between items-end mb-8">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-800">美股权重长期趋势 (MarketStack)</h1>
+                <p class="text-gray-500 text-sm">计算 3个月涨跌幅 及 52周价格区间</p>
+            </div>
+            <button onclick="fetchMarketData()" id="btn" class="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 shadow-lg transition-all">
+                分析趋势
+            </button>
+        </header>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-gray-50 border-b border-gray-200 text-gray-400 text-[11px] uppercase font-bold tracking-widest">
+                        <th class="px-6 py-4">代码</th>
+                        <th class="px-6 py-4">最新价格</th>
+                        <th class="px-6 py-4 text-center">52周高低区间</th>
+                        <th class="px-6 py-4 text-right">3月涨跌</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body" class="divide-y divide-gray-100">
+                    <tr><td colspan="4" class="p-10 text-center text-gray-400">点击按钮开始分析 (可能需要几秒钟)</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <p id="info" class="mt-4 text-center text-[10px] text-gray-400 uppercase tracking-tighter"></p>
+    </div>
+
+    <script>
+        const ACCESS_KEY = 'b35f804f646baddc5b1d5cfa001af179';
+        // 建议首批测试 15-20 个，以节省额度
+        const tickers = ['NVDA','AAPL','MSFT','AMZN','GOOGL','META','TSLA','PLTR','AVGO','NFLX','AMD','COST','ORCL','WMT','JPM'];
+
+        async function fetchMarketData() {
+            const btn = document.getElementById('btn');
+            const tbody = document.getElementById('table-body');
+            btn.disabled = true;
+            btn.innerText = "正在拉取历史数据...";
+            tbody.innerHTML = '';
+
+            try {
+                for (let symbol of tickers) {
+                    // 获取过去一年的日终数据 (约252个交易日)
+                    const url = `https://api.marketstack.com/v1/eod?access_key=${ACCESS_KEY}&symbols=${symbol}&limit=252`;
+                    const res = await fetch(url);
+                    const result = await res.json();
+
+                    if (!result.data || result.data.length === 0) continue;
+
+                    const data = result.data;
+                    const latestPrice = data[0].close;
+                    
+                    // 1. 计算 52周最高/最低
+                    const allPrices = data.map(item => item.close);
+                    const yearHigh = Math.max(...allPrices);
+                    const yearLow = Math.min(...allPrices);
+
+                    // 2. 计算 3个月 (约63个交易日) 涨跌幅
+                    // 如果数据不足63条，则取最后一条
+                    const index3m = Math.min(data.length - 1, 63);
+                    const price3mAgo = data[index3m].close;
+                    const change3m = ((latestPrice - price3mAgo) / price3mAgo * 100).toFixed(2);
+
+                    // 3. 计算 52周位置百分比
+                    const pos = ((latestPrice - yearLow) / (yearHigh - yearLow) * 100).toFixed(0);
+
+                    appendRow(symbol, latestPrice, yearLow, yearHigh, pos, change3m);
+                }
+            } catch (err) {
+                console.error(err);
+                document.getElementById('info').innerText = "提示：API额度可能受限或网络波动";
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "分析趋势";
+                document.getElementById('info').innerText = `最后分析时间: ${new Date().toLocaleString()}`;
+            }
+        }
+
+        function appendRow(symbol, price, low, high, pos, change) {
+            const tbody = document.getElementById('table-body');
+            const color = change >= 0 ? 'text-emerald-600' : 'text-rose-600';
+            const posClamped = Math.max(0, Math.min(100, pos));
+
+            tbody.innerHTML += `
+                <tr class="hover:bg-gray-50 transition-colors">
+                    <td class="px-6 py-4 font-bold text-gray-700">${symbol}</td>
+                    <td class="px-6 py-4 font-mono">$${price.toFixed(2)}</td>
+                    <td class="px-6 py-4">
+                        <div class="flex flex-col items-center">
+                            <div class="range-bar">
+                                <div class="range-dot" style="left: ${posClamped}%"></div>
+                            </div>
+                            <div class="flex justify-between w-[120px] text-[9px] text-gray-400 mt-1 font-mono">
+                                <span>${low.toFixed(0)}</span>
+                                <span>${high.toFixed(0)}</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="px-6 py-4 text-right font-bold ${color}">
+                        ${change > 0 ? '▲' : '▼'} ${change}%
+                    </td>
+                </tr>
+            `;
+        }
+    </script>
+</body>
+</html>
