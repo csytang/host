@@ -29,6 +29,7 @@
     <link href="../assets/css/sslab.css" rel="stylesheet">
 
     <script src="../theme/js/jquery.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
 
    
 </head>
@@ -53,9 +54,15 @@
                          <li><a href="./projects.html">
                              Projects
                          </a></li>
-                         <li class="active"><a href="#">
-                             Publications
-                         </a></li>
+                         <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Research <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="./research.html">Overview</a></li>
+                                <li><a href="#">Publications</a></li>
+                            </ul>
+                        </li>
                          <li><a href="./teaching.html">
                              Teaching
                          </a></li>
@@ -171,7 +178,7 @@
 
     <li>
     <div id="icse26" class="pub-id"></div>
-    <div class="pub" data-type="Conference paper" data-topic="Android" data-ccf="CCF-A" data-core="CORE-A*" data-key="icse26">
+    <div class="pub" data-type="Conference paper" data-topic="Android|Empirical Software Engineering" data-ccf="CCF-A" data-core="CORE-A*" data-key="icse26">
      <div class="pub-meta hl">
       <div class="pub-links">
         <a title="Paper" target="_blank"><i class="icon-file"></i></a>
@@ -194,7 +201,7 @@
 
     <li>
     <div id="jss25" class="pub-id"></div>
-    <div class="pub" data-type="Journal article" data-topic="LLM"  data-key="jss25" data-ccf="CCF-B" data-core="JCR-Q1">
+    <div class="pub" data-type="Journal article" data-topic="LLM|Empirical Software Engineering"  data-key="jss25" data-ccf="CCF-B" data-core="JCR-Q1">
      <div class="pub-meta">
       <div class="pub-links">
         <a title="Paper" href="https://www.sciencedirect.com/science/article/abs/pii/S0164121225003966" target="_blank"><i class="icon-file"></i></a>
@@ -278,7 +285,7 @@ month = may
 
     <li>
     <div id="tse25b" class="pub-id"></div>
-    <div class="pub" data-type="Journal article" data-topic="Android" data-ccf="CCF-A" data-core="JCR-Q1" data-key="tse25b">
+    <div class="pub" data-type="Journal article" data-topic="Android|Empirical Software Engineering" data-ccf="CCF-A" data-core="JCR-Q1" data-key="tse25b">
      <div class="pub-meta hl">
       <div class="pub-links">
         <a title="Homepage" href="https://sites.google.com/view/app-bundle-empirical" target="_blank"><i class="icon-www"></i></a>
@@ -684,7 +691,7 @@ series = {ASE '23}
 
     <li>
     <div id="jsep:23" class="pub-id"></div>
-    <div class="pub" data-type="Journal article" data-topic="AI+SE|Android|Security" data-ccf="CCF-B"  data-key="jsep:23">
+    <div class="pub" data-type="Journal article" data-topic="AI+SE|Android|Security|Empirical Software Engineering" data-ccf="CCF-B"  data-key="jsep:23">
      <div class="pub-meta hl">
       <div class="pub-links">
         <a title="Paper" href="https://onlinelibrary.wiley.com/doi/full/10.1002/smr.2528" target="_blank"><i class="icon-file"></i></a>
@@ -968,7 +975,7 @@ author = {Zhen Yang and Jacky Keung and Md Alamgir Kabir and Xiao Yu and Yutian 
 
     <li>
     <div id="tang:tse21" class="pub-id"></div>
-    <div class="pub" data-type="Journal article" data-topic="Android" data-ccf="CCF-A" data-core="JCR-Q1" data-key="tang:tse21">
+    <div class="pub" data-type="Journal article" data-topic="Android|Empirical Software Engineering" data-ccf="CCF-A" data-core="JCR-Q1" data-key="tang:tse21">
      <div class="pub-meta hl">
       <div class="pub-links">
         <a title="Homepage" href="https://sites.google.com/view/systematical-apm-study" target="_blank"><i class="icon-www"></i></a>
@@ -999,7 +1006,7 @@ author = {Zhen Yang and Jacky Keung and Md Alamgir Kabir and Xiao Yu and Yutian 
 <h3>2020</h3>
     <li>
     <div id="zhou:ase20" class="pub-id"></div>
-    <div class="pub" data-type="Conference paper" data-topic="Android" data-ccf="CCF-A" data-core="CORE-A*" data-key="zhou:ase20">
+    <div class="pub" data-type="Conference paper" data-topic="Android|Empirical Software Engineering" data-ccf="CCF-A" data-core="CORE-A*" data-key="zhou:ase20">
      <div class="pub-meta hl">
       <div class="pub-links">
         <a title="Homepage" href=" https://github.com/moonZHH/DiehardDetector" target="_blank"><i class="icon-www"></i></a>
@@ -1052,7 +1059,7 @@ author = {Zhen Yang and Jacky Keung and Md Alamgir Kabir and Xiao Yu and Yutian 
 
     <li>
     <div id="tang:fse20" class="pub-id"></div>
-    <div class="pub" data-type="Conference paper" data-topic="Security|Android" data-ccf="CCF-A" data-core="CORE-A*" data-key="tang:fse20">
+    <div class="pub" data-type="Conference paper" data-topic="Security|Android|Empirical Software Engineering" data-ccf="CCF-A" data-core="CORE-A*" data-key="tang:fse20">
      <div class="pub-meta hl">
       <div class="pub-links">
       <a title="Homepage" href="https://sites.google.com/view/instant-app-attacks/" target="_blank"><i class="icon-www"></i></a>
@@ -1534,6 +1541,7 @@ doi = {https://doi.org/10.1016/j.jss.2019.110402}
   <script src="../assets/js/pubs.js"></script>
   <script src="../assets/js/quickfilter.js"></script>
 
+
         </div>  
 
     </section> 
@@ -1571,6 +1579,7 @@ doi = {https://doi.org/10.1016/j.jss.2019.110402}
     <!-- Custom -->
     <script src="../assets/js/custom.js"></script>
 
+    
 
 </body>
 </html>
