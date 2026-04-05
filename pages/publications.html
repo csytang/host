@@ -1576,7 +1576,16 @@ doi = {https://doi.org/10.1016/j.jss.2019.110402}
 
     <!-- Custom -->
     <script src="../assets/js/custom.js"></script>
-
+    <script>
+        $('.dropdown').hover(
+            function () {
+                $(this).addClass('open');
+            },
+            function () {
+                $(this).removeClass('open');
+            }
+        );
+    </script>
     
 
 </body>
