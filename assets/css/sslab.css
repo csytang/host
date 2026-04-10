@@ -6,8 +6,20 @@ html {
 
 body {
   font-family: "Georgia", "Times New Roman", serif;
-  color: #003366;
+  color: #222;
   line-height: 1.6;
+}
+
+h1, h2 {
+  color: #003366;   /* 深蓝 */
+}
+
+h3, h4 {
+  color: #2d3e50;   /* 稍浅一点 */
+}
+
+nav {
+  font-family: Arial, sans-serif;
 }
 
 .sponsor {
@@ -366,4 +378,18 @@ span.tag-right-arm {
     margin-top: 10px;
     font-size: 0.8em; /* Adjust the size of the font as needed */
     color: #666; /* Adjust the color of the font as needed */
+}
+
+
+.research-section {
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+}
+
+.research-subsection {
+  border-left: 2px solid #e0e6ed;
+  padding-left: 8px;
+  margin-left: 18px;
+  margin-top: 16px;
 }
