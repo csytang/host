@@ -2,11 +2,6 @@ body {
     padding-top: 70px;
 }
 
-::selection {
-  background: #e6f4ea;   /* 很浅的绿色 */
-  color: #000;
-}
-
 #sidebar .list-group, #sidebar .list-group-item {
     background-color: transparent;
 }
