@@ -3,7 +3,7 @@ body {
 }
 
 ::selection {
-  background: yellow;
+  background: #2d3e50;
 }
 
 #sidebar .list-group, #sidebar .list-group-item {
