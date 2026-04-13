@@ -1,0 +1,63 @@
+.pub {
+    /* We use padding instead of margin so there's no gap when hovering */
+    padding-bottom: 10px;
+}
+
+.pub-title {
+    display: block;
+    font-weight: bold;
+}
+
+.pub-author, .pub-in {
+    font-size: 85%;
+}
+
+.pub-links a, .pub-expand a {
+  text-decoration: none;
+}
+
+.pub-links,
+.pub-expand,
+.pub-collapse {
+    float: right;
+    margin-left: 10px;
+    /* In Firefox, these somehow get an extra pixel, causing the floats to
+       ram into each other.  Prevent that. */
+    height: 1px;
+}
+
+.pub-links-combined {
+    /* Combined links are initially invisible; JS will change this. */
+    display: none;
+}
+
+.pub-expand {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pub:hover .pub-expand {
+    opacity: 1;
+    transition: none;
+}
+
+.pub-id:target + .pub .pub-expand {
+    display: none;
+}
+
+.pub-collapse {
+    display: none;
+}
+
+.pub-id:target + .pub .pub-collapse {
+    display: inline;
+}
+
+.pub-details {
+    margin: 10px 2em;
+    display: none;
+}
+
+.pub-id:target + .pub .pub-details {
+    display: block;
+}

@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "a.chrisyttang.instantappurlauto",
+               "sha256_cert_fingerprints": ["D0:77:A2:4F:EE:BD:48:EF:6C:45:3B:C2:07:37:7C:D4:2B:15:73:A4:55:FB:E3:D7:75:F4:CA:36:8E:3F:E3:31"] }
+}]
