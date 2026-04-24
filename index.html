@@ -23,6 +23,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./theme/css/bootstrap.min.css" type="text/css"/>
     <link href="./theme/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="./theme/css/pygments/native.css" rel="stylesheet">
     <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
@@ -53,6 +54,66 @@
         text-decoration: none;
     }
 
+    .at-a-glance {
+        background: #ffffff;
+        border: 1px solid #d7d7d7;
+        border-radius: 4px;
+        padding: 18px 18px 8px 18px;
+        margin-top: 8px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    }
+
+    .at-a-glance h3 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        color: #003865;
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .glance-item {
+        display: table;
+        width: 100%;
+        padding: 12px 0;
+        border-top: 1px solid #eeeeee;
+    }
+
+    .glance-item:first-of-type {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .glance-icon {
+        display: table-cell;
+        width: 42px;
+        vertical-align: top;
+        color: #003865;
+        font-size: 24px;
+        text-align: center;
+        padding-top: 2px;
+    }
+
+    .glance-text {
+        display: table-cell;
+        vertical-align: top;
+        padding-left: 12px;
+        font-size: 15px;
+        line-height: 1.45;
+        color: #222222;
+    }
+
+    .glance-text strong {
+        color: #111111;
+    }
+
+    @media (max-width: 767px) {
+        .at-a-glance {
+            margin-bottom: 20px;
+        }
+        .at-a-glance h3 {
+            font-size: 24px;
+        }
+    }
     
     </style>
 
@@ -252,7 +313,39 @@
                 
                <br> 
                
-               
+                <section class="at-a-glance">
+                    <h3>At-a-Glance</h3>
+
+                    <div class="glance-item">
+                        <div class="glance-icon"><i class="fa fa-graduation-cap"></i></div>
+                        <div class="glance-text"><strong>50+ top-tier papers</strong><br>ICSE, ESEC/FSE, OOPSLA, CCS, WWW, ASE, ISSTA, TSE, TOSEM</div>
+                    </div>
+
+                    <div class="glance-item">
+                        <div class="glance-icon"><i class="fa fa-trophy"></i></div>
+                        <div class="glance-text"><strong>Best Industry Paper Award</strong> at ISSRE'18<br><strong>ACM SIGSOFT Distinguished Paper Award</strong> at ICSE'26</div>
+                    </div>
+
+                    <div class="glance-item">
+                        <div class="glance-icon"><i class="fa fa-users"></i></div>
+                        <div class="glance-text"><strong>Senior Member of IEEE</strong><br>Member of ACM, CCF, EAI, and EuroSys</div>
+                    </div>
+
+                    <div class="glance-item">
+                        <div class="glance-icon"><i class="fa fa-university"></i></div>
+                        <div class="glance-text"><strong>Funding program reviewer:</strong><br>UK, China, EU</div>
+                    </div>
+
+                    <div class="glance-item">
+                        <div class="glance-icon"><i class="fa fa-calendar-check-o"></i></div>
+                        <div class="glance-text"><strong>PC Member for 20+ conferences</strong><br>40+ total service instances</div>
+                    </div>
+
+                    <div class="glance-item">
+                        <div class="glance-icon"><i class="fa fa-line-chart"></i></div>
+                        <div class="glance-text"><strong>Research supported by</strong><br>NSFC, Shanghai STCSM, Lund Uni., OpenAI, Google</div>
+                    </div>
+               </section>
 
                               
         </aside>
