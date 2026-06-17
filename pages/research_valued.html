@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>Research - Yutian Tang</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="canonical" href="https://www.chrisyttang.org/pages/publications.html">
+
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/UoG.svg" />
+
+    <meta name="author" content="Yutian Tang" />
+    <meta property="og:site_name" content="Yutian Tang" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Research"/>
+    <meta property="og:url" content="https://www.chrisyttang.org/pages/publications.html"/>
+
+
+    <!-- Bootstrap -->
+    
+    <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css"/>
+    
+    <link href="../theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css"/>
+    <link href="../assets/css/sslab.css" rel="stylesheet">
+
+    
+    <script src="../theme/js/jquery.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
+
+   
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul id="logo" class="nav navbar-nav"></ul>
+            <ul class="nav navbar-nav">
+                         <li><a href="../index.html">
+                             Home
+                         </a></li>
+                         <li class="dropdown active">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Research <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="active"><a href="#">Overview</a></li>
+                                <li><a href="./publications.html">Publications</a></li>
+                                <li><a href="./projects.html">Projects</a></li>  
+                            </ul>
+                        </li>
+                         <li><a href="./teaching.html">
+                             Teaching
+                         </a></li>
+                         <li><a href="./join-our-group.html">
+                             Join us/Supervision
+                         </a></li>
+                         <li><a href="./service.html">
+                             Service
+                         </a></li>
+                         <li><a href="./grants.html">
+                             Grants
+                         </a></li>
+                         <li><a href="./award.html">
+                             Awards/Patents/Copyright</a>
+                         </li>
+                         <li><a href="./misc.html">Resources</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+            <section id="content" class="body">
+                <h1 class="entry-title">Research Overview</h1>
+                
+                <div class="entry-content">
+                  <p class="text">
+                    My group studies how AI assisted software systems can be made secure,
+                    reliable, measurable, and deployable. We combine program analysis, empirical
+                    software engineering, software security, mobile ecosystem analysis, and LLM based
+                    automation to build practical methods, benchmarks, and tools for trustworthy
+                    software systems.
+                  </p>
+                  <p>
+                    For the full list of publications, please see <a href="publications.html">here</a>.
+                  </p>
+                    
+                    <!-- ================= THEME 1 ================= -->
+                    <div class="research-section">
+
+                      <h3>Theme 1: Secure, Reliable, and Measurable AI Assisted Software Systems</h3>
+
+                      <p class="text-muted">
+                        This research theme investigates how AI assisted software systems can be made secure, reliable, measurable, and deployable. The core focus remains computer science, particularly software engineering, program analysis, software security, empirical software engineering, and AI assisted software development. As large language models and agentic AI systems are increasingly used to generate, test, repair, debug, and operate software, software engineering needs new methods for semantic reasoning, reliability assessment, security analysis, benchmark design, workflow validation, and cost aware deployment. This work treats AI assistance as part of real software ecosystems rather than isolated text generation.
+                      </p>
+
+                      <div class="research-subsection">
+                        <img src="../assets/img/theme1.png" alt="Theme 1: Secure, Reliable, and Measurable AI Assisted Software Systems" class="theme-image">
+
+                        <h4>Program Reasoning and Semantic Analysis</h4>
+			            <p class="text-muted">
+                        Developing techniques for understanding and validating software behavior at the semantic level. This direction combines program analysis, static analysis, dynamic analysis, taint analysis, configuration analysis, and LLM assisted reasoning to detect defects, security risks, compatibility issues, and behavioral inconsistencies in software systems.
+                        </p>
+
+                        <ul>
+                          <h5>Core capability:</h5>
+			              <li>Program analysis reasoning</li>
+			              <li>Cross representation and cross layer semantic reasoning</li>
+			              <li>Semantic validation of AI generated code and patches</li>
+
+			              <h5>Representative papers and assets:</h5>
+                          <li>Artemis: LLM Assisted inter procedural path sensitive taint analysis (<strong>OOPSLA 2025</strong>, <strong>CCS 2023</strong>) <span class="label label-primary">Top</span></li>
+                          <li>LLM CompDroid: Repairing configuration compatibility bugs (<em>TOSEM 2025</em>)</li>
+                          <li>KEENHash: Large scale binary code similarity analysis (<strong>ISSTA 2025</strong>) <span class="label label-primary">Top</span></li>
+
+                          <h5>Valuable asset to add:</h5>
+                          <li>Semantic validation of AI generated software artifacts in computational workflows, such as notebooks, scripts, and data processing pipelines.</li>
+                        </ul>
+                      </div>
+
+                      <div class="research-subsection">
+                        <h4>AI Assisted Software Generation, Testing, Debugging, and Repair</h4>
+			            <p class="text-muted">
+                        Studying how AI systems support core software engineering activities, including code generation, test generation, automated debugging, program repair, and low code software development. This direction asks when AI assistance improves software quality, when it introduces hidden defects, and how generated artifacts can be systematically evaluated and improved.
+                        </p>
+                        <ul>
+			              <h5>Core capability:</h5>
+			              <li>Quality assessment of AI generated code</li>
+			              <li>Reliable test generation and validation</li>
+			              <li>Automated debugging and program repair</li>
+                          <li>Provenance and attribution of AI generated code</li>
+
+			              <h5>Representative papers and assets:</h5>
+                          <li>Test augmentation (<strong>OOPSLA 2026</strong>) <span class="label label-primary">Top</span></li>
+                          <li>Coverage goal selection (<em>TSE 2024</em>)</li>
+                          <li>Low Code Programming using traditional versus LLM support (JSS 2025)</li>
+                          <li>ChatGPT versus search based software testing (<em>TSE 2024</em>)</li>
+                          <li>Unearthing Gas Wasting Code Smells in Smart Contracts (<em>TSE 2024</em>)</li>
+                          <li>Assessing the Quality of Code Generation by ChatGPT (<em>TSE 2024</em>)</li>
+
+                          <h5>Valuable asset to add:</h5>
+                          <li>A unified AI assisted software construction pipeline that links generation, testing, static analysis, security review, repair validation, and human oversight.</li>
+                        </ul>
+                      </div>
+
+		              <div class="research-subsection">
+			            <h4>Benchmarking and Measurement of AI Assisted Software Systems</h4>
+			            <p class="text-muted">
+                        Developing benchmarks and metrics for evaluating AI assisted software systems. The focus is not only whether an AI system produces a correct answer, but whether the generated software artifact is reliable, secure, reproducible, maintainable, cost efficient, and suitable for deployment.
+                        </p>
+			            <ul>
+			              <h5>Core capability:</h5>
+			              <li>Benchmark design and evaluation metrics</li>
+			              <li>Software correctness, security exposure, reproducibility, and traceability</li>
+			              <li>Cost aware inference and carbon footprint measurement</li>
+
+			              <h5>Representative papers and assets:</h5>
+                          <li>SecBenchLLM, ongoing benchmark project</li>
+                          <li>LLM EcoBench Lite, ongoing benchmark project</li>
+                          <li>Cost aware inference studies and carbon footprint evaluation</li>
+
+                          <h5>Valuable asset to add:</h5>
+                          <li>A benchmark framework that reports test pass rate, incorrect patch risk, newly introduced vulnerabilities, inference cost, review effort, and carbon footprint in the same evaluation table.</li>
+			            </ul>
+ 		              </div>
+
+                      <div class="research-subsection">
+			            <h4>Security of AI Assisted and Agentic Software Ecosystems</h4>
+			            <p class="text-muted">
+                        Studying the security risks introduced when AI systems interact with software tools, repositories, package managers, files, command line environments, APIs, and external services. This direction treats tool using AI systems as part of real software ecosystems and focuses on sandboxing, runtime monitoring, permission control, auditability, and supply chain security.
+                        </p>
+			            <ul>
+			              <h5>Core capability:</h5>
+			              <li>Tool using coding agents and software automation agents</li>
+			              <li>Sandboxing, permission control, runtime monitoring, and audit logging</li>
+			              <li>Prompt injection defense, malicious dependency detection, and data leakage prevention</li>
+
+			              <h5>Representative papers and assets:</h5>
+                          <li>MCP SandboxScan: WASM based secure execution and runtime analysis for MCP tools (CoRR 2026)</li>
+                          <li>Android app bundle analysis (<em>TSE 2025</em>)</li>
+                          <li>Third party library and dependency analysis (<em>ASE 2019</em>, <em>TSE 2021</em>)</li>
+                          <li>Repackaged Apps Detection (SANER 2019)</li>
+                          <li>App Debloat (<em>TSE 2022</em>)</li>
+
+                          <h5>Valuable asset to add:</h5>
+                          <li>A security benchmark for tool using coding agents, covering unsafe execution, prompt injection, dependency attacks, and unintended data exposure.</li>
+			            </ul>
+ 		              </div>
+
+                      <div class="research-subsection">
+			            <h4>Reliability of Computational and Developer Workflows</h4>
+			            <p class="text-muted">
+                        Studying the reliability of software workflows that involve scripts, notebooks, automation tools, data pipelines, and AI agents. This direction focuses on concrete computational and developer workflows, including whether they contain exception handling, output validation, logging, permission boundaries, and failure recovery mechanisms.
+                        </p>
+			            <ul>
+			              <h5>Core capability:</h5>
+			              <li>Reliability analysis of notebooks, scripts, automation pipelines, and developer workflows</li>
+			              <li>Output validation, logging, exception handling, and failure recovery</li>
+			              <li>Permission boundaries and safety checks in AI assisted workflows</li>
+
+			              <h5>Representative papers and assets:</h5>
+                          <li>Bug characterization in Jupyter systems (EASE 2025)</li>
+                          <li>Public workflow reliability study, ongoing empirical project</li>
+
+                          <h5>Valuable asset to add:</h5>
+                          <li>A workflow reliability benchmark for AI generated or AI assisted computational workflows, such as notebooks, scripts, and automation pipelines.</li>
+			            </ul>
+ 		              </div>
+
+                      <div class="research-subsection">
+			            <h4>Sustainable and Cost Aware Deployment of AI Assisted Software Systems</h4>
+			            <p class="text-muted">
+                        Studying the deployment cost, energy use, and carbon footprint of AI assisted software engineering systems. The goal is to make AI assisted software development not only technically effective, but also economically and environmentally sustainable.
+                        </p>
+			            <ul>
+			              <h5>Core capability:</h5>
+			              <li>Correctness per unit cost</li>
+			              <li>Reliability improvement per carbon footprint</li>
+			              <li>Deployable and scalable model choices for software engineering tasks</li>
+
+			              <h5>Representative papers and assets:</h5>
+                          <li>LLM EcoBench Lite, ongoing benchmark project</li>
+                          <li>Cost aware inference studies, ongoing research direction</li>
+                          <li>Carbon footprint evaluation for AI assisted software engineering, ongoing research direction</li>
+
+                          <h5>Valuable asset to add:</h5>
+                          <li>A measurement study comparing small and large models across bug repair, code generation, testing, and workflow generation under accuracy, cost, and carbon constraints.</li>
+			            </ul>
+ 		              </div>
+
+                    </div>
+
+
+                    <!-- ================= THEME 2 ================= -->
+                    <div class="research-section">
+
+                      <h3>Theme 2: Mobile Security and Android Ecosystem Analysis</h3>
+
+                      <p class="text-muted">
+                        Understanding security, privacy risks, and malicious behaviors in large-scale mobile ecosystems through systematic analysis of applications, system mechanisms, and software supply chains.
+                      </p>
+
+                      <div class="research-subsection">
+                        <img src="../assets/img/theme2.png" alt="Theme 2: Mobile Security and Android Ecosystem Analysis" class="theme-image">
+                        <h4>Apps & Android OS Security</h4>
+                        <ul>
+			  <h5>Representative papers:</h5>
+                          <li>Unauthorized encrypted private data transmission (<strong>ICSE 2026</strong>) <span class="label label-primary">Top</span></li>
+                          <li>Mobile Sharing Service Abuse (<strong>WWW 2022</strong>) <span class="label label-primary">Top</span></li>
+                          <li>App Link Attack (<strong>FSE 2020</strong>) <span class="label label-primary">Top</span></li>
+                          <li>Resource Race Attack (SANER 2020)</li>
+                          <li>Diehard Android Apps (<strong>ASE 2020</strong>) <span class="label label-primary">Top</span></li>
+                        </ul>
+                      </div>
+
+                      <div class="research-subsection">
+                        <h4>Malware Detection and Adversarial Analysis</h4>
+
+                        <ul>
+			  <h5>Representative papers:</h5>
+                          <li>Fine-grained malicious component detection (<strong>ASE 2023</strong>) <span class="label label-primary">Top</span></li>
+                          <li>Adversarial attacks on deep learning apps (JSEP 2023)</li>
+                        </ul>
+                      </div>
+
+                      <div class="research-subsection">
+                        <h4>App Ecosystem and Supply Chain Security</h4>
+                        <ul>
+			  <h5>Representative papers:</h5>
+                          <li>Android app bundle analysis (<em>TSE 2025</em>)</li>
+                          <li>Third-party library and dependency analysis (<em>ASE 2019</em>,<em>TSE 2021</em>)</li>
+                          <li>Repackaged Apps Detection (SANER 2019)</li>
+                          <li>App Debloat (<em>TSE 2022</em>)</li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+
+                    <!-- ================= THEME 3 ================= -->
+                    <div class="research-section">
+
+                      <h3>Theme 3: Empirical Software Engineering and User-Centric Analysis</h3>
+
+                      <p class="text-muted">
+                        Conducting large-scale empirical studies to understand software quality, developer behavior, and user feedback.
+                      </p>
+
+                      <div class="research-subsection">
+                        <img src="../assets/img/theme3.png" alt="Theme 3: Empirical Software Engineering and User-Centric Analysis" class="theme-image">
+                        <h4>Bug Analysis and Software Quality</h4>
+                        <ul>
+			  <h5>Representative papers:</h5>
+                          <li>Bug characterization in Jupyter systems (EASE 2025)</li>
+                          <li>Defect prediction and software quality studies (SCP 2025, IJSEKE 2023, ICPADS 2021, WCMC 2021, TReli 2021, SAC 2021, QRS 2020, IST 2020, QRS 2019, ISSRE 2019, JCST 2019, JSS 2019a, JSS 2019b, IST 2018, ICPC 2018)</li>
+                        </ul>
+                      </div>
+
+                      <div class="research-subsection">
+                        <h4>User Review and Feedback Mining</h4>
+                        <ul>
+			  <h5>Representative papers:</h5>
+                          <li>User-review-based bug localization (<em>TSE 2022</em>)</li>
+                          <li>Feedback Analysis in SPL Forked Developments (SPLC 2025)</li>
+                        </ul>
+                      </div>
+
+                      
+
+                    </div>
+
+
+            </section>
+        </div>
+        
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">Last Updated: June, 2026
+          
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--
+    <script src="../theme/js/bootstrap.min.js"></script>
+-->
+    <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+
+    <!-- Email -->
+
+    <!-- Custom -->
+    <script src="../assets/js/custom.js"></script>
+    <script>
+        $('.dropdown').hover(
+            function () {
+                $(this).addClass('open');
+            },
+            function () {
+                $(this).removeClass('open');
+            }
+        );
+    </script>
+
+    <style>
+      .theme-image {
+        width: 800px;
+        height: auto;
+        display: block;
+        border-radius: 12px;
+      }
+    </style>
+
+    
+
+</body>
+</html>
