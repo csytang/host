@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Trustworthy AI for Software and Agentic Systems research architecture</title>
+  <desc id="desc">A layered research architecture. Secure and Verifiable Agentic Software Engineering contains three research directions. Supporting methods and validation environments lead to five outcomes. A causal flow across the bottom moves from user intent and software context to trust, constraint, or rejection.</desc>
+  <defs>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#17355f} .white{fill:#fff}.navy{fill:#073b88}.teal{fill:#0b7f83}.soft{fill:#f4f7fb}.line{stroke:#90a7c6;stroke-width:2;fill:none}.label{font-size:15px;font-weight:700}.small{font-size:13px}.title{font-size:26px;font-weight:700}.programme{font-size:19px;font-weight:700}.pillar{font-size:17px;font-weight:700}.outcome{font-size:14px;font-weight:700}
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#51759d"/></marker>
+  </defs>
+  <rect width="1200" height="820" rx="18" class="white"/>
+  <rect x="35" y="28" width="1130" height="66" rx="10" class="navy"/>
+  <text x="600" y="69" text-anchor="middle" class="white title">Trustworthy AI for Software and Agentic Systems</text>
+  <path d="M600 94v22" class="line" marker-end="url(#arrow)"/>
+  <rect x="230" y="120" width="740" height="62" rx="10" fill="#e9f3f3" stroke="#0b7f83" stroke-width="2"/>
+  <text x="600" y="158" text-anchor="middle" class="programme">Secure and Verifiable Agentic Software Engineering</text>
+
+  <path d="M600 182v24M198 206h804M198 206v22M600 206v22M1002 206v22" class="line"/>
+  <rect x="35" y="228" width="326" height="104" rx="10" fill="#f0f8f8" stroke="#0b7f83" stroke-width="2"/>
+  <circle cx="69" cy="260" r="18" class="teal"/><text x="69" y="266" text-anchor="middle" class="white label">1</text>
+  <text x="198" y="262" text-anchor="middle" class="pillar"><tspan x="198">Agent Permission and</tspan><tspan x="198" dy="23">Intent Semantics</tspan></text>
+  <text x="198" y="316" text-anchor="middle" class="small">Is the action authorised?</text>
+  <rect x="437" y="228" width="326" height="104" rx="10" class="soft" stroke="#2f66a6" stroke-width="2"/>
+  <circle cx="471" cy="260" r="18" class="navy"/><text x="471" y="266" text-anchor="middle" class="white label">2</text>
+  <text x="600" y="262" text-anchor="middle" class="pillar"><tspan x="600">Semantic Validation of</tspan><tspan x="600" dy="23">AI-Generated Software</tspan></text>
+  <text x="600" y="316" text-anchor="middle" class="small">Is the software verifiable?</text>
+  <rect x="839" y="228" width="326" height="104" rx="10" class="soft" stroke="#2f66a6" stroke-width="2"/>
+  <circle cx="873" cy="260" r="18" class="navy"/><text x="873" y="266" text-anchor="middle" class="white label">3</text>
+  <text x="1002" y="250" text-anchor="middle" class="pillar"><tspan x="1002">Runtime Evidence and</tspan><tspan x="1002" dy="22">Accountability for</tspan><tspan x="1002" dy="22">Agentic Workflows</tspan></text>
+  <text x="1002" y="316" text-anchor="middle" class="small">Is the execution accountable?</text>
+
+  <path d="M600 332v24" class="line" marker-end="url(#arrow)"/>
+  <rect x="35" y="360" width="1130" height="86" rx="10" fill="#f7f9fc" stroke="#90a7c6" stroke-width="2" stroke-dasharray="6 5"/>
+  <text x="72" y="383" class="small" font-weight="700">SUPPORTING METHODS</text>
+  <g class="label"><text x="150" y="421" text-anchor="middle">Program Analysis</text><text x="372" y="421" text-anchor="middle">Software Security</text><text x="600" y="421" text-anchor="middle">Runtime Monitoring</text><text x="824" y="421" text-anchor="middle">Empirical Evaluation</text><text x="1050" y="421" text-anchor="middle">Benchmark Design</text></g>
+
+  <path d="M600 446v24" class="line" marker-end="url(#arrow)"/>
+  <rect x="35" y="474" width="550" height="74" rx="10" fill="#eef5fb" stroke="#6687af" stroke-width="2"/>
+  <rect x="615" y="474" width="550" height="74" rx="10" fill="#eef5fb" stroke="#6687af" stroke-width="2"/>
+  <text x="310" y="505" text-anchor="middle" class="small" font-weight="700">APPLICATION AND VALIDATION</text>
+  <text x="310" y="530" text-anchor="middle" class="label">Mobile and Software Ecosystem Security</text>
+  <text x="890" y="505" text-anchor="middle" class="small" font-weight="700">APPLICATION AND VALIDATION</text>
+  <text x="890" y="530" text-anchor="middle" class="label">Computational and Developer Workflows</text>
+
+  <path d="M600 548v24" class="line" marker-end="url(#arrow)"/>
+  <rect x="35" y="576" width="1130" height="72" rx="10" fill="#eaf5f3" stroke="#0b7f83" stroke-width="2"/>
+  <text x="68" y="598" class="small" font-weight="700">OUTCOMES</text>
+  <g class="outcome"><text x="142" y="627" text-anchor="middle">Secure Systems</text><text x="368" y="627" text-anchor="middle">Verifiable Software</text><text x="600" y="627" text-anchor="middle">Accountable Agents</text><text x="824" y="627" text-anchor="middle">Trusted Deployment</text><text x="1050" y="617" text-anchor="middle"><tspan x="1050">Reduced Public Fear</tspan><tspan x="1050" dy="17">and Uncertainty</tspan></text></g>
+
+  <text x="35" y="691" class="small" font-weight="700">CAUSAL ASSURANCE FLOW</text>
+  <g class="small" font-weight="700">
+    <rect x="35" y="706" width="176" height="65" rx="8" class="soft" stroke="#6687af"/><text x="123" y="734" text-anchor="middle"><tspan x="123">User Intent and</tspan><tspan x="123" dy="18">Software Context</tspan></text>
+    <path d="M211 738h22" class="line" marker-end="url(#arrow)"/>
+    <rect x="239" y="706" width="176" height="65" rx="8" class="soft" stroke="#6687af"/><text x="327" y="734" text-anchor="middle"><tspan x="327">Permission and</tspan><tspan x="327" dy="18">Semantic Reasoning</tspan></text>
+    <path d="M415 738h22" class="line" marker-end="url(#arrow)"/>
+    <rect x="443" y="706" width="146" height="65" rx="8" class="soft" stroke="#6687af"/><text x="516" y="743" text-anchor="middle">Controlled Execution</text>
+    <path d="M589 738h22" class="line" marker-end="url(#arrow)"/>
+    <rect x="617" y="706" width="146" height="65" rx="8" class="soft" stroke="#6687af"/><text x="690" y="743" text-anchor="middle">Runtime Evidence</text>
+    <path d="M763 738h22" class="line" marker-end="url(#arrow)"/>
+    <rect x="791" y="706" width="166" height="65" rx="8" class="soft" stroke="#6687af"/><text x="874" y="734" text-anchor="middle"><tspan x="874">Evaluation and</tspan><tspan x="874" dy="18">Validation</tspan></text>
+    <path d="M957 738h22" class="line" marker-end="url(#arrow)"/>
+    <rect x="985" y="706" width="180" height="65" rx="8" fill="#e9f3f3" stroke="#0b7f83" stroke-width="2"/><text x="1075" y="734" text-anchor="middle"><tspan x="1075">Trust, Constraint,</tspan><tspan x="1075" dy="18">or Rejection</tspan></text>
+  </g>
+</svg>
