@@ -56,7 +56,7 @@
 
         .research-hero h1 {
             color: var(--research-accent);
-            font-size: clamp(3.2rem, 5vw, 5.4rem);
+            font-size: 36px;
             font-weight: 600;
             letter-spacing: -0.025em;
             line-height: 1.08;
@@ -497,6 +497,313 @@
                 padding-top: 20px;
             }
         }
+
+        /* Match the established typography and layout of research.html. */
+        .research-page {
+            color: #222;
+            padding-bottom: 0;
+        }
+
+        .research-page .entry-content {
+            max-width: none;
+        }
+
+        .research-page .entry-content p {
+            margin-left: 24px;
+        }
+
+        .research-page .entry-content h2 {
+            margin-left: 6px;
+        }
+
+        .research-page .entry-content h3 {
+            margin-left: 12px;
+        }
+
+        .research-page .entry-content h4 {
+            margin-left: 18px;
+        }
+
+        .research-hero {
+            border-bottom: 0;
+            padding: 0 0 15px;
+        }
+
+        .research-hero h1 {
+            color: #003366;
+            font-size: 36px;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 1.1;
+            margin: 20px 0 10px;
+            max-width: none;
+        }
+
+        .research-hero .agenda-summary,
+        .section-intro,
+        .question-detail p,
+        .question-detail ul,
+        .foundation p,
+        .programme p,
+        .environment p,
+        .public-purpose p,
+        .collaboration-copy,
+        .architecture-description {
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            max-width: none;
+        }
+
+        .core-question {
+            background: transparent;
+            border-left: 2px solid #e0e6ed;
+            color: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            margin: 16px 0 16px 18px !important;
+            padding: 4px 0 4px 8px;
+        }
+
+        .hero-links {
+            display: block;
+            font-family: inherit;
+            font-size: inherit;
+            margin: 0 0 10px 24px;
+        }
+
+        .hero-links a {
+            font-weight: normal;
+            margin-right: 16px;
+            text-decoration: none;
+        }
+
+        .hero-links a,
+        .research-page .text-link {
+            border-bottom: 1px dotted;
+            color: inherit;
+        }
+
+        .research-section-block {
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 25px;
+            padding: 0 0 15px;
+        }
+
+        .research-section-block + .research-section-block {
+            border-top: 0;
+        }
+
+        .research-page h2 {
+            color: #003366;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1.1;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+
+        .section-intro {
+            color: #777;
+            margin: 0 0 16px 24px !important;
+        }
+
+        .question-list,
+        .panel-grid,
+        .environment-grid {
+            display: grid;
+            gap: 0;
+            grid-template-columns: 1fr;
+        }
+
+        .research-question,
+        .foundation,
+        .programme,
+        .environment {
+            background: transparent;
+            border: 0;
+            border-left: 2px solid #e0e6ed;
+            margin: 16px 0 0 18px;
+            padding: 0 0 4px 8px;
+        }
+
+        .question-number,
+        .programme-label {
+            color: #777;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+            letter-spacing: normal;
+            margin: 0 0 2px !important;
+            text-transform: none;
+        }
+
+        .research-question > h3,
+        .foundation h3,
+        .programme h3,
+        .environment h3 {
+            color: #2d3e50;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.1;
+            margin: 0 0 10px;
+        }
+
+        .question-detail {
+            display: block;
+        }
+
+        .question-detail h4,
+        .programme h4 {
+            color: #2d3e50;
+            font-family: inherit;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: normal;
+            line-height: 1.1;
+            margin: 16px 0 8px 18px;
+            text-transform: none;
+        }
+
+        .question-detail p,
+        .foundation p,
+        .programme p,
+        .environment p,
+        .public-purpose p,
+        .collaboration-copy {
+            margin-bottom: 10px;
+        }
+
+        .evidence-list {
+            list-style: disc;
+            margin: 0 0 10px;
+            padding-left: 40px;
+        }
+
+        .evidence-list li {
+            border-top: 0;
+            padding: 0;
+        }
+
+        .evidence-list a,
+        .collaboration-links a {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: normal;
+        }
+
+        .example-list,
+        .method-list,
+        .collaboration-list {
+            margin: 8px 0 10px;
+            padding-left: 40px;
+        }
+
+        .example-list li,
+        .method-list li,
+        .collaboration-list li {
+            font-size: inherit;
+            line-height: inherit;
+            margin-bottom: 2px;
+        }
+
+        .architecture-wrap {
+            background: transparent;
+            border: 0;
+            border-left: 2px solid #e0e6ed;
+            margin: 16px 0 0 18px;
+            padding: 4px 0 4px 8px;
+        }
+
+        .architecture-flow {
+            counter-reset: none;
+            display: grid;
+            gap: 4px;
+            grid-template-columns: 1fr;
+            list-style: decimal;
+            margin: 0 0 10px;
+            padding-left: 32px;
+        }
+
+        .architecture-flow li {
+            background: transparent;
+            border: 0;
+            color: inherit;
+            display: list-item;
+            font-size: inherit;
+            line-height: inherit;
+            min-height: 0;
+            overflow-wrap: normal;
+            padding: 0;
+        }
+
+        .architecture-flow li::before,
+        .architecture-flow li::after {
+            content: none !important;
+        }
+
+        .architecture-description {
+            color: #777;
+            margin: 10px 0 0 24px !important;
+        }
+
+        .frontier {
+            border-top: 0;
+            color: #777;
+            margin-top: 8px !important;
+            padding-top: 0;
+        }
+
+        .public-purpose {
+            border-left: 2px solid #e0e6ed;
+            margin: 16px 0 0 18px;
+            max-width: none;
+            padding-left: 8px;
+        }
+
+        .collaboration-layout {
+            display: block;
+        }
+
+        .collaboration-links {
+            border: 0;
+            display: block;
+            margin: 8px 0 0 24px;
+            padding: 0;
+        }
+
+        .collaboration-links a {
+            border-bottom: 1px dotted;
+            display: inline;
+            margin-right: 16px;
+            padding: 0;
+            text-decoration: none;
+        }
+
+        @media (max-width: 767px) {
+            .research-hero h1 {
+                font-size: 36px;
+                overflow-wrap: normal;
+            }
+
+            .research-section-block {
+                padding: 0 0 15px;
+            }
+
+            .research-page h2 {
+                font-size: 30px;
+            }
+
+            .research-question,
+            .foundation,
+            .programme,
+            .environment,
+            .architecture-wrap,
+            .public-purpose {
+                margin-left: 8px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -536,11 +843,11 @@
 
 <main class="container research-page" id="main-content">
     <div class="row">
-        <div class="col-sm-12">
+        <div class="col-sm-9">
             <article id="content" class="body">
                 <div class="entry-content">
                     <header class="research-hero" id="research-agenda">
-                        <h1>Secure and Verifiable Agentic Software Engineering</h1>
+                        <h1 class="entry-title">Secure and Verifiable Agentic Software Engineering</h1>
                         <p class="agenda-summary">Artificial intelligence systems increasingly generate, modify, test, repair, and operate software. The central challenge is no longer whether an AI system can produce code, but whether its outputs and actions can be trusted in real software environments. Our group combines program analysis, software security, empirical software engineering, mobile ecosystem analysis, and large language model (LLM)-based automation to make software behaviour testable, agent actions governable, and deployment decisions evidence based.</p>
                         <p class="core-question"><strong>Core question:</strong> When should AI generated software be trusted, when must it be tested, and when should it be rejected?</p>
                         <div class="hero-links" aria-label="Research resources">
