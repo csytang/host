@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Secure and Verifiable Agentic Software Engineering - Yutian Tang</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yutian Tang’s research agenda in secure and verifiable agentic software engineering, spanning semantic validation, runtime governance, software ecosystem security, and empirical evaluation.">
+    <meta name="author" content="Yutian Tang">
+
+    <link rel="canonical" href="https://www.chrisyttang.org/pages/research2.html">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/UoG.svg">
+
+    <meta property="og:site_name" content="Yutian Tang">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Secure and Verifiable Agentic Software Engineering">
+    <meta property="og:description" content="A research agenda for making AI generated software and tool using agents trustworthy through semantic validation, runtime governance, and empirical evidence.">
+    <meta property="og:url" content="https://www.chrisyttang.org/pages/research2.html">
+
+    <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../theme/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/sslab.css">
+
+    <script src="../theme/js/jquery.min.js"></script>
+    <script src="../theme/js/bootstrap.min.js"></script>
+
+    <style>
+        .research-page {
+            --research-accent: #003366;
+            --research-accent-soft: #edf3f8;
+            --research-text: #222222;
+            --research-muted: #586675;
+            --research-border: #ccd6df;
+            --research-surface: #f7f9fb;
+            --research-white: #ffffff;
+            color: var(--research-text);
+            padding-bottom: 24px;
+        }
+
+        .research-page .entry-content {
+            max-width: 1120px;
+        }
+
+        .research-page .entry-content p,
+        .research-page .entry-content h2,
+        .research-page .entry-content h3,
+        .research-page .entry-content h4 {
+            margin-left: 0;
+        }
+
+        .research-hero {
+            border-bottom: 1px solid var(--research-border);
+            padding: 28px 0 36px;
+        }
+
+        .research-hero h1 {
+            color: var(--research-accent);
+            font-size: clamp(3.2rem, 5vw, 5.4rem);
+            font-weight: 600;
+            letter-spacing: -0.025em;
+            line-height: 1.08;
+            margin: 0 0 22px;
+            max-width: 950px;
+        }
+
+        .research-hero .agenda-summary {
+            color: var(--research-text);
+            font-size: 2rem;
+            line-height: 1.65;
+            margin: 0;
+            max-width: 940px;
+        }
+
+        .core-question {
+            background: var(--research-accent-soft);
+            border-left: 5px solid var(--research-accent);
+            color: var(--research-accent);
+            font-size: 1.8rem;
+            line-height: 1.5;
+            margin: 28px 0 0;
+            padding: 18px 22px;
+        }
+
+        .hero-links {
+            display: flex;
+            flex-wrap: wrap;
+            font-family: Arial, sans-serif;
+            font-size: 1.4rem;
+            gap: 10px 22px;
+            margin-top: 24px;
+        }
+
+        .hero-links a,
+        .research-page .text-link {
+            color: var(--research-accent);
+            font-weight: 600;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        .research-page a:focus-visible,
+        .research-page button:focus-visible {
+            outline: 3px solid #1f6aa5;
+            outline-offset: 3px;
+        }
+
+        .research-section-block {
+            padding: 56px 0;
+        }
+
+        .research-section-block + .research-section-block {
+            border-top: 1px solid var(--research-border);
+        }
+
+        .section-intro {
+            color: var(--research-muted);
+            font-size: 1.75rem;
+            line-height: 1.65;
+            margin: 0 0 30px;
+            max-width: 820px;
+        }
+
+        .research-page h2 {
+            color: var(--research-accent);
+            font-size: 3rem;
+            font-weight: 600;
+            line-height: 1.25;
+            margin: 0 0 14px;
+        }
+
+        .question-list {
+            display: grid;
+            gap: 26px;
+        }
+
+        .research-question {
+            background: var(--research-white);
+            border: 1px solid var(--research-border);
+            border-left: 6px solid var(--research-accent);
+            padding: 32px 34px 28px;
+        }
+
+        .question-number {
+            color: var(--research-accent);
+            font-family: Arial, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            margin: 0 0 8px !important;
+        }
+
+        .research-question > h3 {
+            color: var(--research-accent);
+            font-size: 2.55rem;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 0 0 24px;
+        }
+
+        .question-detail {
+            display: grid;
+            gap: 8px 28px;
+            grid-template-columns: 170px minmax(0, 1fr);
+        }
+
+        .question-detail h4 {
+            color: #2d3e50;
+            font-family: Arial, sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            line-height: 1.45;
+            margin: 3px 0 14px;
+            text-transform: uppercase;
+        }
+
+        .question-detail p,
+        .question-detail ul {
+            font-size: 1.7rem;
+            line-height: 1.68;
+            margin: 0 0 14px;
+        }
+
+        .evidence-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .evidence-list li {
+            border-top: 1px solid #e2e7ec;
+            padding: 9px 0;
+        }
+
+        .evidence-list li:first-child {
+            border-top: 0;
+            padding-top: 0;
+        }
+
+        .evidence-list a {
+            color: var(--research-accent);
+            font-weight: 600;
+        }
+
+        .panel-grid {
+            display: grid;
+            gap: 22px;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .foundation,
+        .programme {
+            border-top: 4px solid var(--research-accent);
+            padding: 22px 4px 0;
+        }
+
+        .foundation h3,
+        .programme h3,
+        .environment h3 {
+            color: #2d3e50;
+            font-size: 2.05rem;
+            font-weight: 600;
+            line-height: 1.35;
+            margin: 0 0 14px;
+        }
+
+        .foundation p,
+        .programme p,
+        .environment p,
+        .public-purpose p,
+        .collaboration-copy {
+            font-size: 1.65rem;
+            line-height: 1.68;
+            margin: 0;
+        }
+
+        .environment-grid {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .environment {
+            background: var(--research-surface);
+            border: 1px solid var(--research-border);
+            padding: 26px 28px;
+        }
+
+        .example-list,
+        .method-list,
+        .collaboration-list {
+            margin: 18px 0 0;
+            padding-left: 20px;
+        }
+
+        .example-list li,
+        .method-list li,
+        .collaboration-list li {
+            font-size: 1.55rem;
+            line-height: 1.55;
+            margin-bottom: 7px;
+        }
+
+        .architecture-wrap {
+            background: var(--research-surface);
+            border: 1px solid var(--research-border);
+            padding: 28px;
+        }
+
+        .architecture-flow {
+            counter-reset: architecture-step;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .architecture-flow li {
+            background: var(--research-white);
+            border: 1px solid var(--research-border);
+            color: #2d3e50;
+            counter-increment: architecture-step;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.45rem;
+            justify-content: flex-start;
+            line-height: 1.45;
+            min-height: 150px;
+            overflow-wrap: anywhere;
+            padding: 18px 16px;
+            position: relative;
+        }
+
+        .architecture-flow li::before {
+            color: var(--research-accent);
+            content: "0" counter(architecture-step);
+            font-family: Arial, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+        }
+
+        .architecture-flow li:not(:last-child)::after {
+            border-bottom: 2px solid var(--research-accent);
+            border-right: 2px solid var(--research-accent);
+            content: "";
+            height: 10px;
+            position: absolute;
+            right: -21px;
+            top: 50%;
+            transform: rotate(-45deg) translateY(-50%);
+            width: 10px;
+            z-index: 2;
+        }
+
+        .architecture-description {
+            color: var(--research-muted);
+            font-size: 1.6rem;
+            line-height: 1.65;
+            margin: 24px 0 0 !important;
+            max-width: 900px;
+        }
+
+        .programme {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .programme-label {
+            color: var(--research-muted);
+            font-family: Arial, sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            margin: 0 0 7px !important;
+            text-transform: uppercase;
+        }
+
+        .programme h4 {
+            color: #2d3e50;
+            font-family: Arial, sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.025em;
+            margin: 20px 0 7px;
+            text-transform: uppercase;
+        }
+
+        .programme .method-list {
+            margin-top: 0;
+        }
+
+        .frontier {
+            border-top: 1px solid var(--research-border);
+            color: var(--research-muted);
+            font-style: italic;
+            margin-top: 20px !important;
+            padding-top: 15px;
+        }
+
+        .public-purpose {
+            border-left: 5px solid var(--research-accent);
+            max-width: 940px;
+            padding-left: 24px;
+        }
+
+        .public-purpose p + p {
+            margin-top: 14px;
+        }
+
+        .collaboration-layout {
+            align-items: start;
+            display: grid;
+            gap: 36px;
+            grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+        }
+
+        .collaboration-links {
+            border-left: 1px solid var(--research-border);
+            display: grid;
+            gap: 10px;
+            padding-left: 28px;
+        }
+
+        .collaboration-links a {
+            color: var(--research-accent);
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 6px 0;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        @media (max-width: 991px) {
+            .panel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .foundation,
+            .programme {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .architecture-flow {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                row-gap: 30px;
+            }
+
+            .architecture-flow li:nth-child(3)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .research-page {
+                overflow-x: hidden;
+            }
+
+            .research-hero {
+                padding-top: 16px;
+            }
+
+            .research-hero h1 {
+                font-size: 3.45rem;
+                overflow-wrap: anywhere;
+            }
+
+            .research-hero .agenda-summary {
+                font-size: 1.75rem;
+            }
+
+            .research-section-block {
+                padding: 42px 0;
+            }
+
+            .research-page h2 {
+                font-size: 2.65rem;
+            }
+
+            .research-question {
+                padding: 25px 20px 20px;
+            }
+
+            .research-question > h3 {
+                font-size: 2.2rem;
+            }
+
+            .question-detail {
+                display: block;
+            }
+
+            .question-detail h4 {
+                margin-bottom: 5px;
+                margin-top: 20px;
+            }
+
+            .environment-grid,
+            .collaboration-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-wrap {
+                padding: 22px 18px;
+            }
+
+            .architecture-flow {
+                gap: 22px;
+                grid-template-columns: 1fr;
+            }
+
+            .architecture-flow li {
+                min-height: 0;
+            }
+
+            .architecture-flow li:not(:last-child)::after,
+            .architecture-flow li:nth-child(3)::after {
+                border-bottom: 2px solid var(--research-accent);
+                border-right: 2px solid var(--research-accent);
+                bottom: -16px;
+                display: block;
+                left: 50%;
+                right: auto;
+                top: auto;
+                transform: rotate(45deg) translateX(-50%);
+            }
+
+            .collaboration-links {
+                border-left: 0;
+                border-top: 1px solid var(--research-border);
+                padding-left: 0;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" aria-label="Primary navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul id="logo" class="nav navbar-nav" aria-hidden="true"></ul>
+            <ul class="nav navbar-nav">
+                <li><a href="../index.html">Home</a></li>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">Research <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="active"><a href="research2.html" aria-current="page">Overview</a></li>
+                        <li><a href="publications.html">Publications</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="join-our-group.html">Join us/Supervision</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="grants.html">Grants</a></li>
+                <li><a href="award.html">Awards/Patents/Copyright</a></li>
+                <li><a href="misc.html">Misc</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="container research-page" id="main-content">
+    <div class="row">
+        <div class="col-sm-12">
+            <article id="content" class="body">
+                <div class="entry-content">
+                    <header class="research-hero" id="research-agenda">
+                        <h1>Secure and Verifiable Agentic Software Engineering</h1>
+                        <p class="agenda-summary">Artificial intelligence systems increasingly generate, modify, test, repair, and operate software. The central challenge is no longer whether an AI system can produce code, but whether its outputs and actions can be trusted in real software environments. Our group combines program analysis, software security, empirical software engineering, mobile ecosystem analysis, and large language model (LLM)-based automation to make software behaviour testable, agent actions governable, and deployment decisions evidence based.</p>
+                        <p class="core-question"><strong>Core question:</strong> When should AI generated software be trusted, when must it be tested, and when should it be rejected?</p>
+                        <div class="hero-links" aria-label="Research resources">
+                            <a href="publications.html">View the full publications record</a>
+                            <a href="projects.html">Explore research projects and artefacts</a>
+                        </div>
+                    </header>
+
+                    <section class="research-section-block" id="research-questions" aria-labelledby="questions-heading">
+                        <h2 id="questions-heading">Three Core Research Questions</h2>
+                        <p class="section-intro">The agenda is organised around three decisions that trustworthy AI-assisted software systems must support: whether an artefact is valid, whether an action is authorised, and whether the available evidence is sufficient for accountability.</p>
+
+                        <div class="question-list">
+                            <article class="research-question" aria-labelledby="question-1-title">
+                                <p class="question-number" aria-hidden="true">01</p>
+                                <h3 id="question-1-title">When should AI generated software be trusted?</h3>
+                                <div class="question-detail">
+                                    <h4>Research problem</h4>
+                                    <p>Syntactically correct code can still contain behavioural defects, compatibility failures, security vulnerabilities, weak tests, or incorrect assumptions about its operating environment. Trust therefore requires evidence about what generated code and patches actually do, not only whether they compile or pass a narrow test.</p>
+
+                                    <h4>Technical approach</h4>
+                                    <p>We develop semantic analysis and verification methods that combine static analysis, dynamic analysis, taint analysis, software testing, configuration analysis, and LLM-assisted reasoning. These methods examine program paths, environmental constraints, test adequacy, and patch behaviour before an artefact is accepted.</p>
+
+                                    <h4>Selected evidence</h4>
+                                    <ul class="evidence-list">
+                                        <li><a href="https://zenodo.org/records/13353039">Artemis</a> — LLM-assisted inter-procedural, path-sensitive taint analysis (OOPSLA 2025)</li>
+                                        <li><a href="https://zenodo.org/records/10618818">LLM-CompDroid</a> — repairing configuration compatibility bugs in Android applications (TOSEM 2025)</li>
+                                        <li><a href="https://dl.acm.org/doi/10.1145/3798251">Beyond Coverage</a> — automatic test suite augmentation for enhanced effectiveness (OOPSLA 2026)</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="research-question" aria-labelledby="question-2-title">
+                                <p class="question-number" aria-hidden="true">02</p>
+                                <h3 id="question-2-title">Whose intent should control an AI agent’s permissions?</h3>
+                                <div class="question-detail">
+                                    <h4>Research problem</h4>
+                                    <p>Authenticating a user or agent is not sufficient. A system must determine which source of intent caused a tool call, whether the action matches the user’s request, whether its scope is authorised, and whether its consequences require confirmation. This becomes critical when coding agents use repositories, package managers, files, command-line environments, application programming interfaces, and external services.</p>
+
+                                    <h4>Technical approach</h4>
+                                    <p>We study permission semantics, intent origin, action scope, consequence awareness, sandboxing, audit logging, and runtime governance. For tool-using agents and Model Context Protocol (MCP) tools, the aim is to constrain execution, trace data flows, detect malicious dependencies or leakage, and preserve evidence of what authority was exercised.</p>
+
+                                    <h4>Selected evidence</h4>
+                                    <ul class="evidence-list">
+                                        <li><a href="https://arxiv.org/abs/2601.01241">MCP-SandboxScan</a> — WebAssembly-based secure execution and runtime analysis for MCP tools (CoRR 2026)</li>
+                                        <li><a href="https://arxiv.org/abs/2606.15811">FuseChain</a> — runtime evidence reconstruction for software supply-chain attacks (CoRR 2026)</li>
+                                        <li><a href="https://sites.google.com/view/apm-empiricalstudy/">Third-party library and dependency analysis</a> — Android software ecosystem evidence (ASE 2019; TSE 2021)</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="research-question" aria-labelledby="question-3-title">
+                                <p class="question-number" aria-hidden="true">03</p>
+                                <h3 id="question-3-title">What evidence is required to hold AI assisted software systems accountable?</h3>
+                                <div class="question-detail">
+                                    <h4>Research problem</h4>
+                                    <p>A successful output alone does not demonstrate reliability. Evaluation must also consider correctness, introduced vulnerabilities, reproducibility, provenance, runtime behaviour, human review effort, inference cost, and environmental cost. Without this evidence, failures cannot be diagnosed consistently and deployment decisions remain difficult to justify.</p>
+
+                                    <h4>Technical approach</h4>
+                                    <p>We study benchmark construction, execution traces, workflow reliability, human oversight, and runtime evidence reconstruction. Evaluation connects observable behaviour to failure taxonomies and cost-aware measures so that claims about an agentic workflow can be reproduced, compared, and reviewed.</p>
+
+                                    <h4>Selected evidence</h4>
+                                    <ul class="evidence-list">
+                                        <li>SecBenchLLM — an ongoing benchmark project for security evaluation of LLM-assisted software systems</li>
+                                        <li>LLM EcoBench Lite — an ongoing benchmark project for cost- and carbon-aware evaluation</li>
+                                        <li><a href="https://arxiv.org/abs/2606.29116">Characterizing Large Language Model Agentic Workflows: A Study on N8n Ecosystem</a> (arXiv 2026)</li>
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="research-section-block" id="foundations" aria-labelledby="foundations-heading">
+                        <h2 id="foundations-heading">Research Foundations</h2>
+                        <p class="section-intro">Three technical foundations support the agenda and connect questions about code, permissions, and evidence.</p>
+                        <div class="panel-grid">
+                            <article class="foundation">
+                                <h3>Program Analysis and Semantic Validation</h3>
+                                <p>Static analysis, dynamic analysis, taint analysis, configuration analysis, software testing, semantic reasoning, and patch validation establish whether software behaviour matches its stated intent. Together, these methods move assessment beyond syntax and surface-level test success towards program paths, environmental assumptions, compatibility constraints, and observable outcomes.</p>
+                            </article>
+                            <article class="foundation">
+                                <h3>Runtime Governance and Software Ecosystem Security</h3>
+                                <p>Sandboxing, permission control, provenance, supply-chain security, runtime monitoring, and evidence reconstruction govern how agents interact with tools and environments. This foundation also addresses data leakage prevention, malicious dependency detection, capability boundaries, and the audit records needed to explain actions after execution.</p>
+                            </article>
+                            <article class="foundation">
+                                <h3>Empirical Measurement and Benchmark Design</h3>
+                                <p>Large-scale empirical studies, benchmark construction, reliability measurement, cost-aware evaluation, reproducibility, human oversight, and failure taxonomy construction provide a disciplined basis for comparison. They reveal where systems fail, what review effort is required, and whether observed gains persist across tasks, environments, and repeated executions.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="research-section-block" id="environments" aria-labelledby="environments-heading">
+                        <h2 id="environments-heading">Application and Validation Environments</h2>
+                        <p class="section-intro">We develop general mechanisms and validate them in software environments where permissions, dependencies, failures, and human decisions can be observed under realistic constraints.</p>
+                        <div class="environment-grid">
+                            <article class="environment">
+                                <h3>Mobile and Android Ecosystems</h3>
+                                <p>Mobile ecosystems provide realistic environments for studying permission boundaries, private data transmission, third-party dependencies, application repackaging, compatibility failures, malicious components, and software supply-chain risks. Their layered platforms and distributed stakeholders make hidden assumptions and consequences particularly visible.</p>
+                                <ul class="example-list" aria-label="Selected mobile and Android examples">
+                                    <li>WhisperCatcher — unauthorised and encrypted private data transmission (ICSE 2026)</li>
+                                    <li><a href="https://dl.acm.org/doi/10.1145/3485447.3512151">Mobile Sharing Service Abuse</a> (WWW 2022)</li>
+                                    <li><a href="https://sites.google.com/view/instant-app-attacks/">App Link Attack</a> (ESEC/FSE 2020)</li>
+                                    <li><a href="https://sites.google.com/view/app-bundle-empirical">Android app bundle analysis</a> (TSE 2025)</li>
+                                </ul>
+                            </article>
+                            <article class="environment">
+                                <h3>Computational and Developer Workflows</h3>
+                                <p>Notebooks, scripts, automation pipelines, low-code platforms, agentic workflows, and developer tools provide realistic environments for studying validation, logging, exception handling, recovery, permission boundaries, and human oversight. They expose how locally plausible steps combine into reliable or fragile end-to-end behaviour.</p>
+                                <ul class="example-list" aria-label="Selected computational and developer workflow examples">
+                                    <li><a href="https://dl.acm.org/doi/10.1145/3756681.3756932">Characterising Bugs in Jupyter Platform</a> (EASE 2025)</li>
+                                    <li><a href="https://arxiv.org/abs/2606.29116">N8n agentic workflow study</a> (arXiv 2026)</li>
+                                    <li><a href="https://www.sciencedirect.com/science/article/abs/pii/S0164121225003966">Low-code programming with traditional and large language model support</a> (JSS)</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="research-section-block" id="architecture" aria-labelledby="architecture-heading">
+                        <h2 id="architecture-heading">Research Architecture</h2>
+                        <p class="section-intro">Trust is not assumed from a plausible output. It is produced through a sequence of analysis, constrained action, evidence, and evaluation.</p>
+                        <figure class="architecture-wrap" aria-labelledby="architecture-heading architecture-caption">
+                            <ol class="architecture-flow" aria-label="Research architecture from intent to public confidence">
+                                <li><strong>User Intent and Software Context</strong></li>
+                                <li><strong>Semantic Analysis and Permission Reasoning</strong></li>
+                                <li><strong>Controlled Execution and Runtime Monitoring</strong></li>
+                                <li><strong>Evidence Collection and Empirical Evaluation</strong></li>
+                                <li><strong>Trusted Deployment or Explicit Rejection</strong></li>
+                                <li><strong>Public Confidence and Reduced Fear</strong></li>
+                            </ol>
+                            <figcaption class="architecture-description" id="architecture-caption">Accessible description: a user request is interpreted within its software context; semantic and permission reasoning then determine what may proceed. Execution is controlled and monitored, evidence is collected and evaluated, and the result is either deployed with justified confidence or explicitly rejected. Public confidence follows from this traceable process rather than from trust being assumed.</figcaption>
+                        </figure>
+                    </section>
+
+                    <section class="research-section-block" id="programmes" aria-labelledby="programmes-heading">
+                        <h2 id="programmes-heading">Selected Research Programmes</h2>
+                        <p class="section-intro">The agenda is pursued through three connected programmes, each linking a decision problem to concrete methods and research assets.</p>
+                        <div class="panel-grid">
+                            <article class="programme">
+                                <p class="programme-label">Programme 01</p>
+                                <h3>Semantic Validation for AI Generated Software</h3>
+                                <p><strong>Objective:</strong> determine whether generated, repaired, or tested software behaves correctly under realistic program and environment constraints.</p>
+                                <h4>Technical methods</h4>
+                                <ul class="method-list">
+                                    <li>Static and dynamic program analysis</li>
+                                    <li>Test generation and augmentation</li>
+                                    <li>Configuration and patch validation</li>
+                                </ul>
+                                <h4>Selected assets</h4>
+                                <ul class="method-list">
+                                    <li>ChatGPT versus search-based software testing (TSE 2024)</li>
+                                    <li>Assessing the quality of code generation by ChatGPT (TSE 2024)</li>
+                                    <li>Coverage goal selection (TSE 2024)</li>
+                                </ul>
+                                <p class="frontier">The next research frontier is an end-to-end validation chain that preserves evidence across generation, testing, security review, repair, and human approval.</p>
+                            </article>
+
+                            <article class="programme">
+                                <p class="programme-label">Programme 02</p>
+                                <h3>Runtime Governance for Tool Using Agents</h3>
+                                <p><strong>Objective:</strong> ensure that tool calls reflect authorised intent, remain within an explicit scope, and leave evidence sufficient for audit and recovery.</p>
+                                <h4>Technical methods</h4>
+                                <ul class="method-list">
+                                    <li>Permission and intent semantics</li>
+                                    <li>Sandboxed execution and runtime monitoring</li>
+                                    <li>Provenance and supply-chain analysis</li>
+                                </ul>
+                                <h4>Selected assets</h4>
+                                <ul class="method-list">
+                                    <li>Fine-grained malicious component detection (ASE 2023)</li>
+                                    <li>Repackaged Apps Detection (SANER 2019)</li>
+                                    <li>XDebloat: feature-oriented application debloating (TSE 2022)</li>
+                                </ul>
+                                <p class="frontier">The next research frontier is consequence-aware governance that connects user intent, delegated authority, runtime behaviour, and confirmation requirements.</p>
+                            </article>
+
+                            <article class="programme">
+                                <p class="programme-label">Programme 03</p>
+                                <h3>Evidence Based Evaluation of Agentic Workflows</h3>
+                                <p><strong>Objective:</strong> support deployment decisions with reproducible evidence about correctness, security, cost, environmental impact, and human oversight.</p>
+                                <h4>Technical methods</h4>
+                                <ul class="method-list">
+                                    <li>Benchmark and failure taxonomy design</li>
+                                    <li>Runtime traces and workflow reconstruction</li>
+                                    <li>Cost-, carbon-, and review-aware measurement</li>
+                                </ul>
+                                <h4>Selected assets</h4>
+                                <ul class="method-list">
+                                    <li>Characterising Bugs in Jupyter Platform (EASE 2025)</li>
+                                    <li>Low-code programming empirical study (JSS)</li>
+                                    <li>Human-in-the-loop defect prediction study (SCP 2025)</li>
+                                </ul>
+                                <p class="frontier">The next research frontier is a shared evaluation record that connects output quality with runtime evidence, review effort, inference cost, and deployment risk.</p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="research-section-block" id="public-confidence" aria-labelledby="confidence-heading">
+                        <h2 id="confidence-heading">Public Confidence and Reduced Fear</h2>
+                        <div class="public-purpose">
+                            <p>AI generated software increasingly influences services, devices, workplaces, and digital infrastructure. People experience fear and uncertainty when they cannot determine what an AI system changed, why an agent performed an action, whether private information was exposed, or who is responsible for a failure.</p>
+                            <p>This research addresses that uncertainty through a concrete causal mechanism: software behaviour becomes testable, agent actions become auditable, permissions become explicit, runtime evidence becomes reconstructable, and unsafe outputs can be rejected. These controls support digital trust, safer participation, accountability, and protection from hidden harms without overstating outcomes that still require validation in practice.</p>
+                        </div>
+                    </section>
+
+                    <section class="research-section-block" id="collaboration" aria-labelledby="collaboration-heading">
+                        <h2 id="collaboration-heading">Collaboration</h2>
+                        <div class="collaboration-layout">
+                            <div>
+                                <p class="collaboration-copy">Yutian Tang welcomes selected collaborations with researchers, students, funders, public-sector partners, responsible technology organisations, and industry teams in:</p>
+                                <ul class="collaboration-list">
+                                    <li>Secure and verifiable agentic software engineering</li>
+                                    <li>Agent permission semantics and runtime governance</li>
+                                    <li>Program analysis and semantic validation</li>
+                                    <li>Software supply-chain and mobile ecosystem security</li>
+                                    <li>Benchmark and empirical study design</li>
+                                </ul>
+                            </div>
+                            <nav class="collaboration-links" aria-label="Collaboration links">
+                                <a href="projects.html">Review projects and research artefacts</a>
+                                <a href="publications.html">Read the full publications record</a>
+                                <a href="join-our-group.html">Explore supervision and group opportunities</a>
+                                <a href="mailto:Yutian.Tang@glasgow.ac.uk">Contact Yutian Tang by email</a>
+                            </nav>
+                        </div>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-xs-10">Last Updated: July, 2026</div>
+            <div class="col-xs-2"><p class="pull-right"><a href="#main-content">Back to top</a></p></div>
+        </div>
+    </div>
+</footer>
+
+<script src="../assets/js/custom.js"></script>
+<script>
+    $('.dropdown').hover(
+        function () { $(this).addClass('open'); },
+        function () { $(this).removeClass('open'); }
+    );
+</script>
+
+</body>
+</html>
