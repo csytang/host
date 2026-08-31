@@ -38,6 +38,52 @@
             width: 10px;
             height: 10px;
             margin-right: 4px;}
+        .reading-status {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 2px 7px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+            line-height: 1.4;
+            vertical-align: middle;
+        }
+        .status-read {
+            color: #2e7d32;
+            background: #e8f5e9;
+            border: 1px solid #a5d6a7;
+        }
+        .status-reading {
+            color: #1565c0;
+            background: #e3f2fd;
+            border: 1px solid #90caf9;
+        }
+        .status-toread {
+            color: #ef6c00;
+            background: #fff3e0;
+            border: 1px solid #ffcc80;
+        }
+        .reading-legend {
+            margin: 12px 0 24px 0;
+        }
+        .reading-legend .status-count {
+            display: inline-block;
+            min-width: 18px;
+            margin-left: 4px;
+            padding: 0 5px;
+            border-radius: 9px;
+            background: rgba(255, 255, 255, 0.72);
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+        }
+        .mental-model {
+            margin-top: 26px;
+        }
+        .mental-model-desc {
+            color: #666;
+            margin: -4px 0 10px 0;
+            font-size: 13px;
+        }
     </style>
 
 </head>
@@ -108,63 +154,161 @@
                 <div class="entry-content">
 
                         <h4>Welcome to my reading list</h4>
-                        <p>Here, I share some books I’ve read since 2024, am currently reading, or plan to read.</p>
+                        <p>This reading list is organised around a small set of reusable mental models rather than by reading status.</p>
+                        <p class="reading-legend">
+                          <span class="reading-status status-read">Have Read <span class="status-count" id="count-read">5</span></span>
+                          <span class="reading-status status-reading">Reading <span class="status-count" id="count-reading">7</span></span>
+                          <span class="reading-status status-toread">To Read <span class="status-count" id="count-toread">61</span></span>
+                        </p>
 
-                        <h4>Have Read</h4>
-                        <ul>
-                          <li><em>纳瓦尔宝典：财富与幸福指南 (The Almanack of Naval Ravikant: A Guide to Wealth and Happiness)</em> by 埃里克·乔根森 (Eric Jorgenson)</li>
-                          <li><em>The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness</em> by Morgan Housel</li>
-                          <li><em>A Random Walk Down Wall Street: The Best Investment Guide That Money Can Buy</em> by Burton G. Malkiel</li>
-                          <li><em>Just Keep Buying: Proven Ways to Save Money and Build Your Wealth</em> by Nick Maggiulli</li>
-                          <li><em>大道：段永平投资问答录</em> — 段永平 (Duan Yongping); selected by 赵理亚 and compiled by 芒格书院</li>
-                        </ul>
+                        <div class="mental-model">
+                          <h4>1. Wealth, Compounding &amp; Capital Allocation</h4>
+                          <p class="mental-model-desc">How capital grows, how assets are allocated, and how long-term wealth is built.</p>
+                          <ul>
+                            <li><em>纳瓦尔宝典：财富与幸福指南 (The Almanack of Naval Ravikant: A Guide to Wealth and Happiness)</em> by 埃里克·乔根森 (Eric Jorgenson) <span class="reading-status status-read">Have Read</span></li>
+                            <li><em>The Psychology of Money: Timeless Lessons on Wealth, Greed, and Happiness</em> by Morgan Housel <span class="reading-status status-read">Have Read</span></li>
+                            <li><em>A Random Walk Down Wall Street: The Best Investment Guide That Money Can Buy</em> by Burton G. Malkiel <span class="reading-status status-read">Have Read</span></li>
+                            <li><em>Just Keep Buying: Proven Ways to Save Money and Build Your Wealth</em> by Nick Maggiulli <span class="reading-status status-read">Have Read</span></li>
+                            <li><em>大道：段永平投资问答录</em> — 段永平 (Duan Yongping); selected by 赵理亚 and compiled by 芒格书院 <span class="reading-status status-read">Have Read</span></li>
+                            <li><em>The Wealth Ladder: Proven Strategies for Every Step of Your Financial Life</em> by Nick Maggiulli <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Seven Stages of Money Maturity: Understanding the Spirit and Value of Money in Your Life</em> by George Kinder <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Little Book of Bitcoin: What You Need to Know That Wall Street Has Already Figured Out</em> by Anthony Scaramucci <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Science of Getting Rich</em> by Wallace D. Wattles <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Little Book of Common Sense Investing: The Only Way to Guarantee Your Fair Share of Stock Market Returns</em> by John C. Bogle <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Secrets of the Millionaire Mind</em> by T. Harv Eker <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>I Will Teach You to Be Rich</em> by Ramit Sethi <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Warren Buffett Portfolio: Mastering the Power of the Focus Investment Strategy</em> by Robert G. Hagstrom <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Intelligent Investor</em> by Benjamin Graham <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Essays of Warren Buffett: Lessons for Corporate America</em> by Warren E. Buffett, selected and arranged by Lawrence A. Cunningham <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Capital Returns: Investing Through the Capital Cycle</em> edited by Edward Chancellor <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
 
-                        <h4>Reading</h4>
-                        <ul>
-                          <li><em>Scarcity: The True Cost of Not Having Enough</em> by Sendhil Mullainathan and Eldar Shafir</li>
-                          <li><em>Deep Work: Rules for Focused Success in a Distracted World</em> by Cal Newport</li>
-                          <li><em>Principles: Life and Work</em> by Ray Dalio</li>
-                          <li><em>穷查理宝典：查理·芒格智慧箴言录 (Poor Charlie's Almanack: The Essential Wit and Wisdom of Charles T. Munger)</em> by 查理·芒格 (Charles T. Munger), edited by Peter D. Kaufman</li>
-                          <li><em>四千周 (Four Thousand Weeks: Time Management for Mortals)</em> by 奥利弗·伯克曼 (Oliver Burkeman)</li>
-                          <li><em>系统之美 (Thinking in Systems: A Primer)</em> by 德内拉·梅多斯 (Donella H. Meadows)</li>
-                        </ul>
+                        <div class="mental-model">
+                          <h4>2. Decision-Making Under Uncertainty &amp; Risk</h4>
+                          <p class="mental-model-desc">How to reason when outcomes are uncertain, avoid ruin, and make robust decisions.</p>
+                          <ul>
+                            <li><em>Principles: Life and Work</em> by Ray Dalio <span class="reading-status status-reading">Reading</span></li>
+                            <li><em>穷查理宝典：查理·芒格智慧箴言录 (Poor Charlie's Almanack: The Essential Wit and Wisdom of Charles T. Munger)</em> by 查理·芒格 (Charles T. Munger), edited by Peter D. Kaufman <span class="reading-status status-reading">Reading</span></li>
+                            <li><em>The Most Important Thing</em> by Howard Marks <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Antifragile: Things That Gain from Disorder</em> by Nassim Nicholas Taleb <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Black Swan: The Impact of the Highly Improbable</em> by Nassim Nicholas Taleb <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Adapt: Why Success Always Starts with Failure</em> by Tim Harford <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Thinking, Fast and Slow</em> by Daniel Kahneman <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Thinking in Bets: Making Smarter Decisions When You Don't Have All the Facts</em> by Annie Duke <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Superforecasting: The Art and Science of Prediction</em> by Philip E. Tetlock and Dan Gardner <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
 
+                        <div class="mental-model">
+                          <h4>3. Systems, Incentives &amp; Strategic Interaction</h4>
+                          <p class="mental-model-desc">How systems behave, how incentives shape outcomes, and how other players respond.</p>
+                          <ul>
+                            <li><em>系统之美 (Thinking in Systems: A Primer)</em> by 德内拉·梅多斯 (Donella H. Meadows) <span class="reading-status status-reading">Reading</span></li>
+                            <li><em>Theory of Games and Economic Behavior</em> by John von Neumann and Oskar Morgenstern <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Art of Strategy: A Game Theorist's Guide to Success in Business and Life</em> by Avinash K. Dixit and Barry J. Nalebuff <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Getting to Yes: Negotiating an Agreement Without Giving In</em> by Roger Fisher, William Ury, and Bruce Patton <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Undercover Economist</em> by Tim Harford <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Principles for Dealing with the Changing World Order: Why Nations Succeed or Fail</em> by Ray Dalio <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Strategy of Conflict</em> by Thomas C. Schelling <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Micromotives and Macrobehavior</em> by Thomas C. Schelling <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Logic of Collective Action: Public Goods and the Theory of Groups</em> by Mancur Olson <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
 
-                        <h4>Plan to Read</h4>
-                        <ul>
-                          <li><em>Theory of Games and Economic Behavior</em> by John von Neumann and Oskar Morgenstern</li>
-                          <li><em>The Most Important Thing</em> by Howard Marks</li>
-                          <li><em>The Wealth Ladder: Proven Strategies for Every Step of Your Financial Life</em> by Nick Maggiulli</li>
-                          <li><em>The Seven Stages of Money Maturity: Understanding the Spirit and Value of Money in Your Life</em> by George Kinder</li>
-                          <li><em>Antifragile: Things That Gain from Disorder</em> by Nassim Nicholas Taleb</li>
-                          <li><em>What Got You Here Won't Get You There: How Successful People Become Even More Successful</em> by Marshall Goldsmith</li>
-                          <li><em>The Art of Strategy: A Game Theorist's Guide to Success in Business and Life</em> by Avinash K. Dixit and Barry J. Nalebuff</li>
-                          <li><em>The Little Book of Bitcoin: What You Need to Know That Wall Street Has Already Figured Out</em> by Anthony Scaramucci</li>
-                          <li><em>The Black Swan: The Impact of the Highly Improbable</em> by Nassim Nicholas Taleb</li>
-                          <li><em>The Science of Getting Rich</em> by Wallace D. Wattles</li>
-                          <li><em>The Little Book of Common Sense Investing: The Only Way to Guarantee Your Fair Share of Stock Market Returns</em> by John C. Bogle</li>
-                          <li><em>Adapt: Why Success Always Starts with Failure</em> by Tim Harford</li>
-                          <li><em>Getting to Yes: Negotiating an Agreement Without Giving In</em> by Roger Fisher, William Ury, and Bruce Patton</li>
-                          <li><em>Influence: The Psychology of Persuasion</em> by Robert B. Cialdini</li>
-                          <li><em>The Undercover Economist</em> by Tim Harford</li>
-                          <li><em>Source Code: My Beginnings</em> by Bill Gates</li>
-                          <li><em>Flow: The Psychology of Optimal Experience</em> by Mihaly Csikszentmihalyi</li>
-                          <li><em>Secrets of the Millionaire Mind</em> by T. Harv Eker</li>
-                          <li><em>Outliers: The Story of Success</em> by Malcolm Gladwell</li>
-                          <li><em>The Art of Doing Science and Engineering: Learning to Learn</em> by Richard Hamming</li>
-                          <li><em>The Dip: The Extraordinary Benefits of Knowing When to Quit (and When to Stick)</em> by Seth Godin</li>
-                          <li><em>Psycho-Cybernetics</em> by Maxwell Maltz</li>
-                          <li><em>I Will Teach You to Be Rich</em> by Ramit Sethi</li>
-                          <li><em>Thinking, Fast and Slow</em> by Daniel Kahneman</li>
-                          <li><em>The Book of Elon: A Guide to Purpose and Success</em> by Eric Jorgenson</li>
-                          <li><em>Boundaries: When to Say Yes, How to Say No to Take Control of Your Life</em> by Henry Cloud and John Townsend</li>
-                          <li><em>Principles for Dealing with the Changing World Order: Why Nations Succeed or Fail</em> by Ray Dalio</li>
-                          <li><em>The Snowball: Warren Buffett and the Business of Life</em> by Alice Schroeder</li>
-                          <li><em>The Warren Buffett Portfolio: Mastering the Power of the Focus Investment Strategy</em> by Robert G. Hagstrom</li>
-                        </ul>
-                        
+                        <div class="mental-model">
+                          <h4>4. Scarcity, Attention &amp; Time</h4>
+                          <p class="mental-model-desc">How limited time, attention, and bandwidth distort choices—and how to allocate them deliberately.</p>
+                          <ul>
+                            <li><em>Scarcity: The True Cost of Not Having Enough</em> by Sendhil Mullainathan and Eldar Shafir <span class="reading-status status-reading">Reading</span></li>
+                            <li><em>Deep Work: Rules for Focused Success in a Distracted World</em> by Cal Newport <span class="reading-status status-reading">Reading</span></li>
+                            <li><em>四千周 (Four Thousand Weeks: Time Management for Mortals)</em> by 奥利弗·伯克曼 (Oliver Burkeman) <span class="reading-status status-reading">Reading</span></li>
+                            <li><em>Essentialism: The Disciplined Pursuit of Less</em> by Greg McKeown <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Shallows: What the Internet Is Doing to Our Brains</em> by Nicholas Carr <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
 
-                    
+                        <div class="mental-model">
+                          <h4>5. Human Behavior, Influence &amp; Self-Management</h4>
+                          <p class="mental-model-desc">How motivation, persuasion, identity, boundaries, and psychological states shape behaviour.</p>
+                          <ul>
+                            <li><em>Influence: The Psychology of Persuasion</em> by Robert B. Cialdini <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Flow: The Psychology of Optimal Experience</em> by Mihaly Csikszentmihalyi <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Psycho-Cybernetics</em> by Maxwell Maltz <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Boundaries: When to Say Yes, How to Say No to Take Control of Your Life</em> by Henry Cloud and John Townsend <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Nudge: Improving Decisions About Health, Wealth, and Happiness</em> by Richard H. Thaler and Cass R. Sunstein <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Behave: The Biology of Humans at Our Best and Worst</em> by Robert M. Sapolsky <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Righteous Mind: Why Good People Are Divided by Politics and Religion</em> by Jonathan Haidt <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
+                        <div class="mental-model">
+                          <h4>6. Learning, Career &amp; Performance</h4>
+                          <p class="mental-model-desc">How to learn effectively, improve professional judgement, and decide what to persist with or stop.</p>
+                          <ul>
+                            <li><em>What Got You Here Won't Get You There: How Successful People Become Even More Successful</em> by Marshall Goldsmith <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Outliers: The Story of Success</em> by Malcolm Gladwell <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Art of Doing Science and Engineering: Learning to Learn</em> by Richard Hamming <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Dip: The Extraordinary Benefits of Knowing When to Quit (and When to Stick)</em> by Seth Godin <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Peak: Secrets from the New Science of Expertise</em> by Anders Ericsson and Robert Pool <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>So Good They Can't Ignore You: Why Skills Trump Passion in the Quest for Work You Love</em> by Cal Newport <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Range: Why Generalists Triumph in a Specialized World</em> by David Epstein <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
+                        <div class="mental-model">
+                          <h4>7. Builders, Investors &amp; Real-World Case Studies</h4>
+                          <p class="mental-model-desc">Biographical case studies of how people actually built companies, careers, and investment systems.</p>
+                          <ul>
+                            <li><em>Source Code: My Beginnings</em> by Bill Gates <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Book of Elon: A Guide to Purpose and Success</em> by Eric Jorgenson <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Snowball: Warren Buffett and the Business of Life</em> by Alice Schroeder <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Shoe Dog: A Memoir by the Creator of Nike</em> by Phil Knight <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success</em> by William N. Thorndike <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Everything Store: Jeff Bezos and the Age of Amazon</em> by Brad Stone <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
+                        <div class="mental-model">
+                          <h4>8. History, Institutions &amp; State Capacity</h4>
+                          <p class="mental-model-desc">How institutions emerge, persist, and shape long-run prosperity, power, and social outcomes.</p>
+                          <ul>
+                            <li><em>Why Nations Fail: The Origins of Power, Prosperity, and Poverty</em> by Daron Acemoglu and James A. Robinson <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Origins of Political Order: From Prehuman Times to the French Revolution</em> by Francis Fukuyama <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Lessons of History</em> by Will Durant and Ariel Durant <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
+                        <div class="mental-model">
+                          <h4>9. Epistemology, Scientific Reasoning &amp; Truth-Seeking</h4>
+                          <p class="mental-model-desc">How knowledge grows, how theories are challenged, and how to distinguish explanation from confident error.</p>
+                          <ul>
+                            <li><em>The Beginning of Infinity: Explanations That Transform the World</em> by David Deutsch <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Structure of Scientific Revolutions</em> by Thomas S. Kuhn <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Conjectures and Refutations: The Growth of Scientific Knowledge</em> by Karl Popper <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
+                        <div class="mental-model">
+                          <h4>10. Organizations, Power &amp; Execution</h4>
+                          <p class="mental-model-desc">How organizations convert strategy into coordinated action, and how incentives, authority, and power affect execution.</p>
+                          <ul>
+                            <li><em>Good Strategy/Bad Strategy: The Difference and Why It Matters</em> by Richard Rumelt <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>High Output Management</em> by Andrew S. Grove <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Power: Why Some People Have It—and Others Don't</em> by Jeffrey Pfeffer <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
+                        <div class="mental-model">
+                          <h4>11. Science, Technology &amp; Industrial Change</h4>
+                          <p class="mental-model-desc">How technological systems are built, scaled, financed, and turned into durable industrial advantage.</p>
+                          <ul>
+                            <li><em>The Innovators: How a Group of Hackers, Geniuses, and Geeks Created the Digital Revolution</em> by Walter Isaacson <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>The Idea Factory: Bell Labs and the Great Age of American Innovation</em> by Jon Gertner <span class="reading-status status-toread">To Read</span></li>
+                            <li><em>Chip War: The Fight for the World's Most Critical Technology</em> by Chris Miller <span class="reading-status status-toread">To Read</span></li>
+                          </ul>
+                        </div>
+
                     </div>
 
 
@@ -210,6 +354,24 @@
                 $(this).removeClass('open');
             }
         );
+
+        // Automatically count books by reading status.
+        function updateReadingStatusCounts() {
+            var readingList = document.querySelector('.entry-content');
+            if (!readingList) return;
+
+            var counts = {
+                read: readingList.querySelectorAll('.mental-model .status-read').length,
+                reading: readingList.querySelectorAll('.mental-model .status-reading').length,
+                toread: readingList.querySelectorAll('.mental-model .status-toread').length
+            };
+
+            document.getElementById('count-read').textContent = counts.read;
+            document.getElementById('count-reading').textContent = counts.reading;
+            document.getElementById('count-toread').textContent = counts.toread;
+        }
+
+        updateReadingStatusCounts();
     </script>
 </body>
 </html>
