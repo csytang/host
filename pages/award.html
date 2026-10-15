@@ -30,6 +30,51 @@
     <link href="../assets/css/sslab.css?1605632505.64" rel="stylesheet">
 
     <script src="../theme/js/jquery.min.js"></script>
+
+    <style>
+        .featured-awards {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+            margin: 0 0 36px;
+        }
+
+        .featured-award {
+            margin: 0;
+            text-align: center;
+        }
+
+        .featured-award img {
+            display: block;
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            border: 1px solid #ddd;
+            background: #fff;
+            padding: 8px;
+        }
+
+        .featured-award figcaption {
+            padding-top: 10px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .featured-award figcaption a {
+            color: inherit;
+        }
+
+        @media (max-width: 767px) {
+            .featured-awards {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-award img {
+                height: auto;
+                max-height: 520px;
+            }
+        }
+    </style>
     
      
 </head>
@@ -93,6 +138,27 @@
                 <h1 class="entry-title">Awards</h1>
                 
                 <div class="entry-content">
+                    <h3>Selected Best Paper Awards</h3>
+                    <div class="featured-awards" aria-label="Selected Best Paper Awards">
+                        <figure class="featured-award">
+                            <a href="../assets/awards/OOPSLADistinguishedPaper.pdf" target="_blank" rel="noopener">
+                                <img src="../assets/awards/OOPSLADistinguishedPaper.png" alt="OOPSLA Distinguished Paper Award certificate">
+                            </a>
+                            <figcaption><a href="../assets/awards/OOPSLADistinguishedPaper.pdf" target="_blank" rel="noopener">OOPSLA 2026<br>Distinguished Paper Award</a></figcaption>
+                        </figure>
+                        <figure class="featured-award">
+                            <a href="../assets/awards/ICSE-distinguished.pdf" target="_blank" rel="noopener">
+                                <img src="../assets/awards/ICSE-distinguished.png" alt="ICSE Distinguished Paper Award certificate">
+                            </a>
+                            <figcaption><a href="../assets/awards/ICSE-distinguished.pdf" target="_blank" rel="noopener">ICSE 2026<br>ACM SIGSOFT Distinguished Paper Award</a></figcaption>
+                        </figure>
+                        <figure class="featured-award">
+                            <a href="../assets/awards/issre.pdf" target="_blank" rel="noopener">
+                                <img src="../assets/awards/issre.png" alt="ISSRE Best Industry Paper Award certificate">
+                            </a>
+                            <figcaption><a href="../assets/awards/issre.pdf" target="_blank" rel="noopener">ISSRE 2018<br>Best Industry Paper Award</a></figcaption>
+                        </figure>
+                    </div>
                     <div class="entry-content">
                         <table id='cve' class="table-hover">
                             <thead>
@@ -108,7 +174,7 @@
                               <tr>
                                 <td></td>
                                 <td>2026</td>
-                                <td><a href="#" taget = "_blank">ACM SIGSOFT Distinguished Paper Award</a></td>
+                                <td><a href="../assets/awards/OOPSLADistinguishedPaper.pdf" target="_blank" rel="noopener">Distinguished Paper Award</a></td>
                                 <td>International Conference on Object-Oriented Programming Systems, Languages, and Applications (OOPSLA)</td>
                               </tr>
                             </tbody>
