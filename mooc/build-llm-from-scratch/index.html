@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yutian Tang">
+  <meta name="description" content="从零构建大型语言模型：中文课程，9 个教学模块、55 个课节，使用 Python 和 PyTorch 从基础概念到 GPT 模型实现与预训练。">
+  <title>Build a Large Language Model from Scratch – Yutian Tang</title>
+  <link rel="canonical" href="https://chrisyttang.org/mooc/build-llm-from-scratch/">
+  <link rel="shortcut icon" type="image/x-icon" href="../../assets/icons/UoG.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yutian Tang">
+  <meta property="og:title" content="Build a Large Language Model from Scratch">
+  <meta property="og:description" content="从零构建大型语言模型。九个模块、55 个课节，中文讲解 Python、PyTorch、Attention、GPT 与预训练。">
+  <!-- The three original Teaching-page stylesheets are kept in the same order. -->
+  <link rel="stylesheet" href="../../theme/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="../../theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../theme/css/pygments/native.css">
+  <link rel="stylesheet" href="../../theme/css/style.css" type="text/css">
+  <link rel="stylesheet" href="../../assets/css/sslab.css">
+  <link rel="stylesheet" href="./course.css">
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul id="logo" class="nav navbar-nav"></ul>
+      <ul class="nav navbar-nav">
+        <li><a href="../../index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+          <ul class="dropdown-menu"><li><a href="../../pages/research.html">Overview</a></li><li><a href="../../pages/publications.html">Publications</a></li><li><a href="../../pages/projects.html">Projects</a></li></ul>
+        </li>
+        <li class="active"><a href="../../pages/teaching.html">Teaching</a></li>
+        <li><a href="../../pages/join-our-group.html">Join us/Supervision</a></li>
+        <li><a href="../../pages/service.html">Service</a></li>
+        <li><a href="../../pages/grants.html">Grants</a></li>
+        <li><a href="../../pages/award.html">Awards/Patents/Copyright</a></li>
+        <li><a href="../../pages/misc.html">Misc</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<main class="container mooc-container" id="top">
+  <div class="course-hero">
+    <div class="course-kicker">ONLINE COURSE <span aria-hidden="true">/</span> 中文授课</div>
+    <h1 class="entry-title" id="course-title">Build a Large Language Model from Scratch</h1>
+    <p class="course-subtitle">从零构建大型语言模型</p>
+    <p class="course-intro">本课程以 Python 和 PyTorch 为主要工具，从文本分词、Embedding、注意力机制和 Transformer 开始，逐步实现 GPT 模型，并完成基础预训练。适合希望通过动手编程理解大语言模型工作原理的学习者。</p>
+    <div class="course-actions">
+      <!-- Replace this Udemy homepage URL with the specific course URL once published. -->
+      <a class="course-udemy" href="https://www.udemy.com/" target="_blank" rel="noopener noreferrer" title="当前为 Udemy 首页，正式课程链接将在发布后更新">Udemy 课程入口 <span aria-hidden="true">↗</span></a>
+      <a class="course-syllabus-link" href="#syllabus">查看课程大纲 <span aria-hidden="true">↓</span></a>
+    </div>
+    <p class="course-link-note">课程尚未提供正式的 Udemy 直达链接；当前按钮通往 Udemy 首页。</p>
+    <div class="course-meta" aria-label="课程信息">
+      <span><strong>V1</strong> 第一版</span>
+      <span><strong>9</strong> 教学模块</span>
+      <span><strong>55</strong> 个课节</span>
+      <span>Python · PyTorch</span>
+    </div>
+  </div>
+  <div class="learning-path" aria-label="课程学习路线"><strong>学习路线</strong><span>Text</span><i aria-hidden="true">→</i><span>Tokens &amp; Embeddings</span><i aria-hidden="true">→</i><span>Attention</span><i aria-hidden="true">→</i><span>GPT</span><i aria-hidden="true">→</i><span>Pretraining</span></div>
+
+  <section class="syllabus" id="syllabus" aria-labelledby="syllabus-title">
+    <div class="syllabus-head">
+      <h2 id="syllabus-title">课程大纲 <small>Course Syllabus</small></h2>
+      <p>第一版涵盖九个教学模块，所有课节列于下方。视频统一通过 Udemy 课程提供。</p>
+    </div>
+    <div class="module-grid"><section class="module" id="module-01" aria-labelledby="title-01">
+        <div class="module-header"><span class="module-num">01</span><div>
+          <h3 id="title-01">Introduction to Large Language Models</h3><p>认识 LLM：任务、架构与完整训练路线</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-01-01">
+          <span class="lesson-no">01.01</span>
+          <span class="lesson-copy"><span class="lesson-en">What Is an LLM?</span><span class="lesson-zh">什么是大语言模型（LLM）？</span></span>
+        </li><li id="lesson-01-02">
+          <span class="lesson-no">01.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Next-Token Prediction</span><span class="lesson-zh">预测下一个 Token</span></span>
+        </li><li id="lesson-01-03">
+          <span class="lesson-no">01.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Autoregressive text generation</span><span class="lesson-zh">从预测下一个Token到生产完整段落</span></span>
+        </li><li id="lesson-01-04">
+          <span class="lesson-no">01.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Pretraining vs Fine-Tuning</span><span class="lesson-zh">预训练与微调</span></span>
+        </li><li id="lesson-01-05">
+          <span class="lesson-no">01.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Transformer to GPT</span><span class="lesson-zh">从 Transformer 到 GPT</span></span>
+        </li><li id="lesson-01-06">
+          <span class="lesson-no">01.06</span>
+          <span class="lesson-copy"><span class="lesson-en">Course Roadmap and Outcomes</span><span class="lesson-zh">课程路线与学习成果</span></span>
+        </li></ol>
+      </section><section class="module" id="module-02" aria-labelledby="title-02">
+        <div class="module-header"><span class="module-num">02</span><div>
+          <h3 id="title-02">PyTorch Fundamentals for LLMs</h3><p>从 Tensor 到训练循环的必备 PyTorch</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-02-01">
+          <span class="lesson-no">02.01</span>
+          <span class="lesson-copy"><span class="lesson-en">Environment and PyTorch Setup</span><span class="lesson-zh">PyTorch 环境配置</span></span>
+        </li><li id="lesson-02-02">
+          <span class="lesson-no">02.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Tensors, Shapes and Dtypes</span><span class="lesson-zh">张量、形状与数据类型</span></span>
+        </li><li id="lesson-02-03">
+          <span class="lesson-no">02.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Matrix Multiplication and Broadcasting</span><span class="lesson-zh">矩阵乘法与广播机制</span></span>
+        </li><li id="lesson-02-04">
+          <span class="lesson-no">02.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Autograd and Computation Graphs</span><span class="lesson-zh">自动求导与计算图</span></span>
+        </li><li id="lesson-02-05">
+          <span class="lesson-no">02.05</span>
+          <span class="lesson-copy"><span class="lesson-en">nn.Module and Neural Layers</span><span class="lesson-zh">nn.Module 与神经网络层</span></span>
+        </li></ol>
+      </section><section class="module" id="module-03" aria-labelledby="title-03">
+        <div class="module-header"><span class="module-num">03</span><div>
+          <h3 id="title-03">Tokenization: From Text to Tokens</h3><p>从原始文本到 Token ID</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-03-01">
+          <span class="lesson-no">03.01</span>
+          <span class="lesson-copy"><span class="lesson-en">Tokenization Overview</span><span class="lesson-zh">文本分词概览</span></span>
+        </li><li id="lesson-03-02">
+          <span class="lesson-no">03.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Tokenizing Text</span><span class="lesson-zh">文本分词</span></span>
+        </li><li id="lesson-03-03">
+          <span class="lesson-no">03.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Token ID</span><span class="lesson-zh">Token 编号</span></span>
+        </li><li id="lesson-03-04">
+          <span class="lesson-no">03.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Special Context Tokens</span><span class="lesson-zh">特殊上下文 Token</span></span>
+        </li><li id="lesson-03-05">
+          <span class="lesson-no">03.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Byte Pair Encoding (BPE)</span><span class="lesson-zh">字节对编码（BPE）</span></span>
+        </li></ol>
+      </section><section class="module" id="module-04" aria-labelledby="title-04">
+        <div class="module-header"><span class="module-num">04</span><div>
+          <h3 id="title-04">Embeddings and Data Preparation</h3><p>从 Token ID 到可训练批数据</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-04-01">
+          <span class="lesson-no">04.01</span>
+          <span class="lesson-copy"><span class="lesson-en">Embedding Overview</span><span class="lesson-zh">理解 Token 嵌入</span></span>
+        </li><li id="lesson-04-02">
+          <span class="lesson-no">04.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Data Smapling with A Sliding Window</span><span class="lesson-zh">滑动窗口数据采样</span></span>
+        </li><li id="lesson-04-03">
+          <span class="lesson-no">04.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Token Embedding</span><span class="lesson-zh">Token嵌入</span></span>
+        </li><li id="lesson-04-04">
+          <span class="lesson-no">04.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Position Embedding</span><span class="lesson-zh">位置嵌入</span></span>
+        </li><li id="lesson-04-05">
+          <span class="lesson-no">04.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Batch, Context and Embedding Shapes</span><span class="lesson-zh">批次、上下文长度与嵌入维度</span></span>
+        </li><li id="lesson-04-06">
+          <span class="lesson-no">04.06</span>
+          <span class="lesson-copy"><span class="lesson-en">End-to-End Input Pipeline</span><span class="lesson-zh">端到端输入数据处理流程</span></span>
+        </li></ol>
+      </section><section class="module" id="module-05" aria-labelledby="title-05">
+        <div class="module-header"><span class="module-num">05</span><div>
+          <h3 id="title-05">Understanding Self-Attention</h3><p>从依赖关系到可训练 Q/K/V</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-05-01">
+          <span class="lesson-no">05.01</span>
+          <span class="lesson-copy"><span class="lesson-en">The Long-Sequence Problem</span><span class="lesson-zh">长序列建模问题</span></span>
+        </li><li id="lesson-05-02">
+          <span class="lesson-no">05.02</span>
+          <span class="lesson-copy"><span class="lesson-en">From Attention to Self-Attention</span><span class="lesson-zh">从注意力到自注意力机制</span></span>
+        </li><li id="lesson-05-03">
+          <span class="lesson-no">05.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Attention Scores and Dot Products</span><span class="lesson-zh">注意力分数与向量点积</span></span>
+        </li><li id="lesson-05-04">
+          <span class="lesson-no">05.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Softmax and Context Vectors</span><span class="lesson-zh">Softmax 归一化与上下文向量</span></span>
+        </li><li id="lesson-05-05">
+          <span class="lesson-no">05.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Attention for All Tokens</span><span class="lesson-zh">计算所有 Token 的注意力分数</span></span>
+        </li><li id="lesson-05-06">
+          <span class="lesson-no">05.06</span>
+          <span class="lesson-copy"><span class="lesson-en">Understanding Query, Key and Value</span><span class="lesson-zh">理解查询、键和值（Q、K、V）</span></span>
+        </li><li id="lesson-05-07">
+          <span class="lesson-no">05.07</span>
+          <span class="lesson-copy"><span class="lesson-en">Scaled Dot-Product Attention</span><span class="lesson-zh">缩放点积注意力机制</span></span>
+        </li><li id="lesson-05-08">
+          <span class="lesson-no">05.08</span>
+          <span class="lesson-copy"><span class="lesson-en">Implement a Self-Attention Class</span><span class="lesson-zh">实现 Self-Attention 类</span></span>
+        </li></ol>
+      </section><section class="module" id="module-06" aria-labelledby="title-06">
+        <div class="module-header"><span class="module-num">06</span><div>
+          <h3 id="title-06">Causal and Multi-Head Attention</h3><p>构建 GPT 所需的 Masked Multi-Head Attention</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-06-01">
+          <span class="lesson-no">06.01</span>
+          <span class="lesson-copy"><span class="lesson-en">Why Causal Masking Is Needed</span><span class="lesson-zh">为什么需要因果掩码？</span></span>
+        </li><li id="lesson-06-02">
+          <span class="lesson-no">06.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Implementing the Causal Mask</span><span class="lesson-zh">实现因果掩码</span></span>
+        </li><li id="lesson-06-03">
+          <span class="lesson-no">06.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Attention Dropout</span><span class="lesson-zh">注意力机制中的 Dropout</span></span>
+        </li><li id="lesson-06-04">
+          <span class="lesson-no">06.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Implementing Causal Attention in PyTorch</span><span class="lesson-zh">使用PyTorch 实现CausalAttention 模块</span></span>
+        </li><li id="lesson-06-05">
+          <span class="lesson-no">06.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Why Do We Need Multi-Head Attention</span><span class="lesson-zh">为什么我们需要多头注意力</span></span>
+        </li><li id="lesson-06-06">
+          <span class="lesson-no">06.06</span>
+          <span class="lesson-copy"><span class="lesson-en">Implementing Multi-Head Attention with Two Heads</span><span class="lesson-zh">使用两个注意力头实现多头注意力</span></span>
+        </li><li id="lesson-06-07">
+          <span class="lesson-no">06.07</span>
+          <span class="lesson-copy"><span class="lesson-en">Efficient Multi-Head Attention</span><span class="lesson-zh">高效实现多头注意力</span></span>
+        </li></ol>
+      </section><section class="module" id="module-07" aria-labelledby="title-07">
+        <div class="module-header"><span class="module-num">07</span><div>
+          <h3 id="title-07">Building Transformer Blocks</h3><p>从基础组件到可堆叠 Transformer Block</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-07-01">
+          <span class="lesson-no">07.01</span>
+          <span class="lesson-copy"><span class="lesson-en">GPT Architecture and Model Config</span><span class="lesson-zh">GPT 架构与模型配置</span></span>
+        </li><li id="lesson-07-02">
+          <span class="lesson-no">07.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Layer Normalization</span><span class="lesson-zh">层归一化（Layer Normalization）</span></span>
+        </li><li id="lesson-07-03">
+          <span class="lesson-no">07.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Feed-Forward Network and GELU</span><span class="lesson-zh">前馈神经网络与 GELU</span></span>
+        </li><li id="lesson-07-04">
+          <span class="lesson-no">07.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Residual Connections</span><span class="lesson-zh">残差连接</span></span>
+        </li><li id="lesson-07-05">
+          <span class="lesson-no">07.05</span>
+          <span class="lesson-copy"><span class="lesson-en">The Transformer Block</span><span class="lesson-zh">Transformer 模块</span></span>
+        </li></ol>
+      </section><section class="module" id="module-08" aria-labelledby="title-08">
+        <div class="module-header"><span class="module-num">08</span><div>
+          <h3 id="title-08">Building a GPT Model from Scratch</h3><p>完成 GPT 模型并首次执行文本生成</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-08-01">
+          <span class="lesson-no">08.01</span>
+          <span class="lesson-copy"><span class="lesson-en">The Full GPT Architecture and Computational Graph</span><span class="lesson-zh">GPT 完整架构与计算流程</span></span>
+        </li><li id="lesson-08-02">
+          <span class="lesson-no">08.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Implementing the GPT Model in PyTorch (1)</span><span class="lesson-zh">使用 PyTorch 实现 GPT 模型 (1)</span></span>
+        </li><li id="lesson-08-03">
+          <span class="lesson-no">08.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Implementing the GPT Model in PyTorch (2)</span><span class="lesson-zh">使用 PyTorch 实现 GPT 模型 (2)</span></span>
+        </li><li id="lesson-08-04">
+          <span class="lesson-no">08.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Forward Pass and Model Parameters</span><span class="lesson-zh">GPT 前向传播与模型参数分析</span></span>
+        </li><li id="lesson-08-05">
+          <span class="lesson-no">08.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Autoregressive Text Generation with an Untrained GPT (1)</span><span class="lesson-zh">使用未训练的 GPT 进行自回归文本生成 (1)</span></span>
+        </li><li id="lesson-08-06">
+          <span class="lesson-no">08.06</span>
+          <span class="lesson-copy"><span class="lesson-en">Autoregressive Text Generation with an Untrained GPT (2)</span><span class="lesson-zh">使用未训练的 GPT 进行自回归文本生成 (2)</span></span>
+        </li></ol>
+      </section><section class="module" id="module-09" aria-labelledby="title-09">
+        <div class="module-header"><span class="module-num">09</span><div>
+          <h3 id="title-09">Pretraining Your Own LLM</h3><p>损失函数、训练循环、优化与模型诊断</p>
+        </div></div>
+        <ol class="lesson-list"><li id="lesson-09-01">
+          <span class="lesson-no">09.01</span>
+          <span class="lesson-copy"><span class="lesson-en">From Logits to Next-Token Loss</span><span class="lesson-zh">从 Logits 到下一个 Token 的损失</span></span>
+        </li><li id="lesson-09-02">
+          <span class="lesson-no">09.02</span>
+          <span class="lesson-copy"><span class="lesson-en">Cross-Entropy and Perplexity</span><span class="lesson-zh">交叉熵与困惑度</span></span>
+        </li><li id="lesson-09-03">
+          <span class="lesson-no">09.03</span>
+          <span class="lesson-copy"><span class="lesson-en">Training and Validation Loss</span><span class="lesson-zh">训练损失与验证损失</span></span>
+        </li><li id="lesson-09-04">
+          <span class="lesson-no">09.04</span>
+          <span class="lesson-copy"><span class="lesson-en">Implement the Training Loop</span><span class="lesson-zh">实现模型训练循环</span></span>
+        </li><li id="lesson-09-05">
+          <span class="lesson-no">09.05</span>
+          <span class="lesson-copy"><span class="lesson-en">Learning Rate and Stability</span><span class="lesson-zh">学习率与训练稳定性</span></span>
+        </li><li id="lesson-09-06">
+          <span class="lesson-no">09.06</span>
+          <span class="lesson-copy"><span class="lesson-en">Diagnostics and Overfitting</span><span class="lesson-zh">训练诊断与过拟合</span></span>
+        </li><li id="lesson-09-07">
+          <span class="lesson-no">09.07</span>
+          <span class="lesson-copy"><span class="lesson-en">Save and Reproduce an Experiment</span><span class="lesson-zh">保存并复现实验</span></span>
+        </li></ol>
+      </section></div>
+  </section>
+
+  <section class="course-code-section" id="course-code" aria-labelledby="course-code-heading">
+    <div class="syllabus-head">
+      <h2 id="course-code-heading">课程代码 <small>Course Code</small></h2>
+      <p>课程配套的 Python、PyTorch 代码及 Jupyter Notebook 将统一发布在 GitHub，方便下载、运行与复现课程示例。</p>
+    </div>
+    <!-- When the course repository is available, replace the pending text below with:
+         <p class="course-code-access"><a href="https://github.com/OWNER/REPO" target="_blank" rel="noopener noreferrer">访问 GitHub 代码仓库 ↗</a></p>
+         Replace OWNER/REPO with the real course repository. -->
+    <p class="course-code-access is-pending">GitHub 代码仓库 · 即将开放</p>
+  </section>
+
+  <div class="page-note"><p><strong>About this course.</strong> 课程内容围绕 GPT 基础模型的实现与预训练组织；授课语言为中文，代码示例采用 Python 与 PyTorch。</p>
+  <p>参考阅读：<a href="https://sebastianraschka.com/llms-from-scratch/" target="_blank" rel="noopener noreferrer">Sebastian Raschka, <em>Build a Large Language Model (From Scratch)</em></a>。本课程为独立组织的教学内容。</p></div>
+</main>
+<footer class="container course-footer"><hr><p><a href="../../pages/teaching.html">← Back to Teaching</a><a href="#top">Back to top ↑</a></p></footer>
+<script src="../../theme/js/jquery.min.js"></script>
+<script src="../../theme/js/bootstrap.min.js"></script>
+<script src="../../assets/js/email.js"></script>
+<script src="../../assets/js/custom.js"></script>
+<script>if(window.jQuery){jQuery('.dropdown').hover(function(){jQuery(this).addClass('open');},function(){jQuery(this).removeClass('open');});}</script>
+</body>
+</html>

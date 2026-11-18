@@ -1,0 +1,52 @@
+/* /mooc/ catalogue: inherits the site's Georgia font and exact original Teaching header. */
+html { scroll-behavior: smooth; }
+.mooc-hub, .mooc-hub * { box-sizing: border-box; }
+.mooc-hub { padding-bottom: 28px; }
+.hub-intro { margin-top: 18px; padding: 6px 0 24px; border-bottom: 1px solid #d9dfe7; }
+.hub-eyebrow { font-family: Arial, Helvetica, sans-serif; color: #647083; font-size: 11px; font-weight: 700; letter-spacing: .13em; margin: 0 0 12px; }
+.hub-eyebrow span { color: #94263b; margin: 0 8px; }
+.hub-intro h1.entry-title { color: #003366; font-family: Georgia, 'Times New Roman', serif; font-size: 38px; line-height: 1.25; margin: 0 0 5px; font-weight: 700; }
+.hub-subtitle { margin: 0 0 15px; color: #333; font-size: 23px; font-weight: 600; }
+.hub-description { margin: 0; max-width: 850px; font-size: 16px; color: #42464d; line-height: 1.85; }
+.course-catalogue { margin-top: 28px; }
+.catalogue-heading { border-bottom: 1px solid #d9dfe7; padding-bottom: 9px; margin-bottom: 17px; }
+.catalogue-heading h2 { color: #003366; font-family: Georgia, 'Times New Roman', serif; font-size: 25px; font-weight: 700; margin: 0 0 7px; }
+.catalogue-heading h2:before { content: ''; display: inline-block; background: #8c1930; width: 4px; height: 22px; margin-right: 10px; vertical-align: -3px; }
+.catalogue-heading h2 small { font-size: 17px; font-weight: normal; color: #516174; margin-left: 6px; }
+.catalogue-heading p { margin: 0; color: #60666d; font-size: 14px; line-height: 1.7; }
+.course-row { display: flex; gap: 18px; padding: 23px 25px 20px 20px; border: 1px solid #dfe3e8; border-radius: 5px; background: #fff; min-width: 0; }
+.course-index { flex: 0 0 35px; font-family: Georgia, 'Times New Roman', serif; font-weight: 700; font-size: 25px; line-height: 1.3; color: #9a253f; }
+.course-body { min-width: 0; }
+.course-body h3 { margin: 0 0 6px; font-family: Georgia, 'Times New Roman', serif; font-size: 21px; line-height: 1.35; color: #003366; font-weight: 700; }
+.course-body h3 a { color: #003366; text-decoration: none; border-bottom: 0; }
+.course-body h3 a:hover, .course-body h3 a:focus { color: #8c1930; text-decoration: underline; }
+.course-zh { font-size: 16px; font-weight: 600; color: #414852; margin: 0 0 10px; }
+.course-description { font-size: 15px; line-height: 1.8; color: #4b5057; max-width: 850px; margin: 0 0 13px; }
+.course-facts { display: flex; flex-wrap: wrap; margin: 0 0 16px; gap: 7px 0; color: #656c75; font-size: 13px; }
+.course-facts span { padding: 0 14px; border-left: 1px solid #d4d8df; line-height: 1.35; }
+.course-facts span:first-child { padding-left: 0; border-left: 0; }
+.course-entry { margin: 0; }
+.course-entry a { display: inline-block; color: #003366; font-weight: 700; text-decoration: none; font-size: 14px; border-bottom: 1px solid #bac3cd; padding-bottom: 3px; }
+.course-entry a:hover, .course-entry a:focus { color: #8c1930; border-bottom-color: #8c1930; }
+.hub-footnote { font-size: 13px; line-height: 1.7; color: #747982; margin-top: 22px; }
+.hub-footnote p { margin: 0; }
+.hub-footnote a { color: #003366; text-decoration: none; border-bottom: 1px dotted #8799a9; }
+.hub-footer { font-size: 12px; color: #6b7078; padding-bottom: 18px; }
+.hub-footer hr { margin: 8px 0 10px; border-top: 1px solid #e5e8ec; }
+.hub-footer p { display: flex; align-items: center; justify-content: space-between; margin: 0; }
+.hub-footer a { color: #40536b; }
+@media(max-width:767px) {
+ .hub-intro { margin-top: 10px; padding-bottom: 19px; }
+ .hub-intro h1.entry-title { font-size: 30px; }
+ .hub-subtitle { font-size: 20px; }
+ .hub-description { font-size: 14px; }
+ .catalogue-heading h2 { font-size: 23px; }
+ .catalogue-heading h2 small { font-size: 15px; }
+ .course-row { padding: 17px 14px; gap: 12px; }
+ .course-index { flex-basis: 26px; font-size: 21px; }
+ .course-body h3 { font-size: 18px; }
+ .course-zh { font-size: 14px; }
+ .course-description { font-size: 14px; }
+ .course-facts span { padding: 0 8px; font-size: 12px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior: auto; } }

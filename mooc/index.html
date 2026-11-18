@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Yutian Tang">
+  <meta name="description" content="Yutian Tang 的在线课程目录：基于 Python 和 PyTorch 的大型语言模型、软件工程与人工智能课程。">
+  <title>Online Courses (MOOC) – Yutian Tang</title>
+  <link rel="canonical" href="https://chrisyttang.org/mooc/">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/icons/UoG.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Yutian Tang">
+  <meta property="og:title" content="Online Courses – Yutian Tang">
+  <meta property="og:description" content="在线课程目录：中文课程、课程大纲与学习资源。">
+
+  <!-- Follow the original teaching.html stylesheet order, without overriding the header font. -->
+  <link rel="stylesheet" href="../theme/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="../theme/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../theme/css/pygments/native.css">
+  <link rel="stylesheet" href="../theme/css/style.css" type="text/css">
+  <link rel="stylesheet" href="../assets/css/sslab.css">
+  <link rel="stylesheet" href="./mooc.css">
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul id="logo" class="nav navbar-nav"></ul>
+      <ul class="nav navbar-nav">
+        <li><a href="../index.html">Home</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="../pages/research.html">Overview</a></li>
+            <li><a href="../pages/publications.html">Publications</a></li>
+            <li><a href="../pages/projects.html">Projects</a></li>
+          </ul>
+        </li>
+        <li class="active"><a href="../pages/teaching.html">Teaching</a></li>
+        <li><a href="../pages/join-our-group.html">Join us/Supervision</a></li>
+        <li><a href="../pages/service.html">Service</a></li>
+        <li><a href="../pages/grants.html">Grants</a></li>
+        <li><a href="../pages/award.html">Awards/Patents/Copyright</a></li>
+        <li><a href="../pages/misc.html">Misc</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<main class="container mooc-hub" id="top">
+  <header class="hub-intro">
+    <p class="hub-eyebrow">TEACHING <span aria-hidden="true">/</span> ONLINE COURSES</p>
+    <h1 class="entry-title">Online Courses</h1>
+    <p class="hub-subtitle">在线课程</p>
+    <p class="hub-description">这里汇总我制作的在线课程，提供课程简介、详细大纲及学习入口。课程以清晰的原理讲解与动手实践为主，方便学习者循序渐进地掌握相关技术。</p>
+  </header>
+
+  <section class="course-catalogue" aria-labelledby="catalogue-heading">
+    <div class="catalogue-heading">
+      <h2 id="catalogue-heading">课程列表 <small>Course Catalogue</small></h2>
+      <p>点击下方课程，查看完整教学模块、课节安排及学习方式。</p>
+    </div>
+
+    <!-- Course 01: duplicate the article below when a new confirmed course is ready. -->
+    <article class="course-row" aria-labelledby="course-llm-title">
+      <div class="course-index" aria-hidden="true">01</div>
+      <div class="course-body">
+        <h3 id="course-llm-title"><a href="./build-llm-from-scratch/">Build a Large Language Model from Scratch</a></h3>
+        <p class="course-zh">从零构建大型语言模型</p>
+        <p class="course-description">使用 Python 和 PyTorch，从文本分词、Embedding、Attention 与 Transformer 开始，逐步构建 GPT 模型，并实现基础预训练。</p>
+        <p class="course-facts"><span>中文授课</span><span>Python · PyTorch</span><span>9 个教学模块</span><span>55 个课节</span></p>
+        <p class="course-entry"><a href="./build-llm-from-scratch/">查看课程介绍与完整大纲 <span aria-hidden="true">→</span></a></p>
+      </div>
+    </article>
+
+    <!-- Add the next verified course as another <article class="course-row">; do not add placeholders as real course listings. -->
+  </section>
+  <div class="hub-footnote"><p>其他在线课程将随着教学内容完成逐步加入。大学课程与授课记录请查看 <a href="../pages/teaching.html">Teaching</a> 页面。</p></div>
+</main>
+<footer class="container hub-footer"><hr><p><a href="../pages/teaching.html">← Back to Teaching</a><a href="#top">Back to top ↑</a></p></footer>
+<script src="../theme/js/jquery.min.js"></script>
+<script src="../theme/js/bootstrap.min.js"></script>
+<script src="../assets/js/email.js"></script>
+<script src="../assets/js/custom.js"></script>
+<script>if(window.jQuery){jQuery('.dropdown').hover(function(){jQuery(this).addClass('open');},function(){jQuery(this).removeClass('open');});}</script>
+</body>
+</html>

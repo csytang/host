@@ -1,0 +1,60 @@
+/* Course-only design. Global fonts and the navbar are inherited from the existing site. */
+html{scroll-behavior:smooth;scroll-padding-top:78px}
+.mooc-container{padding-bottom:18px}
+.mooc-container, .mooc-container *{box-sizing:border-box}
+.course-hero{padding:19px 0 22px;border-bottom:1px solid #d8dce2;max-width:100%}
+.course-kicker{font-family:Arial,Helvetica,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#647083;font-weight:700;margin-bottom:11px}
+.course-kicker span{padding:0 9px;color:#9a2239}
+.course-hero h1.entry-title{font-family:Georgia,"Times New Roman",serif;font-size:clamp(28px,3.3vw,39px);font-weight:700;line-height:1.22;letter-spacing:-.018em;color:#003366;margin:0 0 4px}
+.course-subtitle{font-size:23px;color:#333;margin:0 0 12px;line-height:1.4;font-weight:600}
+.course-intro{font-size:16px;line-height:1.85;color:#333;max-width:890px;margin:0 0 15px}
+.course-actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.course-actions a{display:inline-block;text-decoration:none;border-bottom:0!important;font-family:Georgia,"Times New Roman",serif;font-size:15px;font-weight:700}
+.course-udemy{padding:10px 17px;color:#fff!important;background:#8c1930;border:1px solid #8c1930;border-radius:4px;transition:background .15s ease}
+.course-udemy:hover,.course-udemy:focus{background:#6c1425;color:#fff!important;text-decoration:none}
+.course-syllabus-link{color:#003366!important;border-bottom:1px solid #9eaabd!important}
+.course-syllabus-link:hover{color:#a52641!important}
+.course-link-note{font-size:12px;color:#6b7179;margin:7px 0 0}
+.course-meta{display:flex;gap:0;flex-wrap:wrap;margin-top:18px;color:#4c4c4c;font-size:14px}
+.course-meta span{padding:0 20px;border-left:1px solid #d5d8dd;line-height:1.3}
+.course-meta span:first-child{border-left:none;padding-left:0}
+.course-meta strong{color:#003366}
+.learning-path{margin:16px 0 27px;background:#f7f7f8;border:1px solid #ebebed;border-radius:4px;padding:13px 16px;display:flex;gap:10px;justify-content:flex-start;align-items:center;flex-wrap:wrap;color:#475364;font-size:13px}
+.learning-path strong{color:#8c1930;margin-right:12px;font-size:14px}
+.learning-path span{white-space:nowrap}
+.learning-path i{font-style:normal;color:#9ea5af}
+.syllabus-head{border-bottom:1px solid #d9dfe7;margin-bottom:15px;padding-bottom:8px}
+.syllabus-head h2{font-family:Georgia,"Times New Roman",serif;font-size:25px;color:#003366;font-weight:700;margin:0 0 7px}
+.syllabus-head h2:before{content:"";display:inline-block;background:#8c1930;width:4px;height:22px;margin-right:10px;vertical-align:-3px}
+.syllabus-head h2 small{font-size:17px;color:#516174;font-weight:normal;margin-left:6px}
+.syllabus-head p{font-size:14px;line-height:1.7;color:#60666d;margin:0 0 4px}
+.module-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;align-items:stretch}
+.module{min-width:0;border:1px solid #e0e3e8;border-radius:5px;background:#fff;padding:0 0 4px}
+.module-header{display:flex;gap:12px;align-items:baseline;padding:14px 14px 10px;background:#fafafa;border-bottom:1px solid #ededee;min-height:81px}
+.module-num{font-size:21px;line-height:1.1;font-weight:700;color:#9a253f;flex:none}
+.module-header h3{font-family:Georgia,"Times New Roman",serif;margin:0 0 4px;font-size:16px;line-height:1.35;color:#003366;font-weight:700}
+.module-header p{margin:0;color:#686e75;font-size:12px;line-height:1.42}
+.lesson-list{padding:6px 14px 8px;margin:0;list-style:none}
+.lesson-list li{display:flex;gap:9px;padding:6px 0;border-bottom:1px solid #eff0f2;line-height:1.38}
+.lesson-list li:last-child{border-bottom:none}
+.lesson-no{flex:0 0 39px;color:#9b2540;font-size:12px;font-weight:700;font-family:Georgia,"Times New Roman",serif;line-height:1.5}
+.lesson-copy{display:block;min-width:0}
+.lesson-en{display:block;font-size:13px;color:#26384b;font-weight:600;overflow-wrap:anywhere}
+.lesson-zh{display:block;font-size:12px;color:#767b83;margin-top:2px;line-height:1.42}
+.page-note{border-top:1px solid #e3e5e8;padding:15px 2px 2px;margin-top:23px;color:#64686f;font-size:13px;line-height:1.8}
+.page-note p{margin:0 0 6px}
+.page-note a{color:#174b78;border-bottom:1px dotted #a9b4bd}
+.course-footer{color:#6c7178;font-size:12px;padding-bottom:18px}
+.course-footer hr{border-top:1px solid #e6e7e9;margin:7px 0 10px}
+.course-footer p{display:flex;justify-content:space-between;margin:0}
+.course-footer a{color:#40536b}
+@media(max-width:1120px){.module-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.course-hero h1.entry-title{font-size:32px}}
+@media(max-width:767px){html{scroll-padding-top:20px}.course-hero{padding:18px 0}.course-hero h1.entry-title{font-size:28px;line-height:1.3}.course-subtitle{font-size:20px}.course-intro{font-size:14px}.course-meta span{padding:0 10px;margin:4px 0;font-size:12px}.learning-path{font-size:12px;gap:6px;padding:10px}.learning-path strong{flex:0 0 100%;margin:0}.module-grid{grid-template-columns:1fr;gap:12px}.module-header{min-height:auto}.syllabus-head h2{font-size:23px}.syllabus-head h2 small{font-size:15px}.lesson-en{font-size:13px}.lesson-zh{font-size:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.course-udemy{transition:none}}
+
+/* Code section reuses the exact syllabus heading and introductory copy styles. */
+.course-code-section{margin-top:30px}
+.course-code-access{margin:10px 0 0 15px;font-size:14px;line-height:1.7;color:#003366}
+.course-code-access a{color:#003366;border-bottom:1px dotted #9ca8b4;text-decoration:none}
+.course-code-access a:hover,.course-code-access a:focus{color:#8c1930;border-bottom-style:solid}
+.course-code-access.is-pending{color:#767b83}
